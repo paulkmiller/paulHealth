@@ -1,0 +1,104 @@
+@import url('https://unpkg.com/@contentful/f36-tokens@4.0.1/dist/css/index.css');
+
+@font-face {
+  font-family: "PolySans Neutral";
+  src: url("https://cdn.assets.pluto-service.com/css/fonts/PolySans/PolySans-Neutral.woff") format("woff"), url("https://cdn.assets.pluto-service.com/css/fonts/PolySans/PolySans-Neutral.ttf")  format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PolySans Bulky";
+  src: url("https://cdn.assets.pluto-service.com/css/fonts/PolySans/PolySans-Bulky.woff") format("woff"), url("https://cdn.assets.pluto-service.com/css/fonts/PolySans/PolySans-Bulky.ttf")  format("truetype");
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PolySans Median";
+  src: url("https://cdn.assets.pluto-service.com/css/fonts/PolySans/PolySans-Median.woff") format("woff"), url("https://cdn.assets.pluto-service.com/css/fonts/PolySans/PolySans-Median.ttf")  format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PolySans Slim";
+  src: url("https://cdn.assets.pluto-service.com/css/fonts/PolySans/PolySans-Slim.woff") format("woff"), url("https://cdn.assets.pluto-service.com/css/fonts/PolySans/PolySans-Slim.ttf")  format("truetype");
+  font-weight: lighter;
+  font-display: swap;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+
+  font-family: 'PolySans Slim', Arial, sans-serif;
+}
+
+h1 {
+  font-family: 'PolySans Neutral', Arial, sans-serif;
+}
+
+.carousel p p {
+  font-family: 'PolySans Neutral', Arial, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.carousel p p a {
+  color: #DA2F5C;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-bottom: var(--spacing-l);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+  letter-spacing: -0.02rem;
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+}
+
+h5 {
+  font-size: var(--font-size-l);
+}
+
+p {
+  font-size: var(--font-size-l);
+  line-height: var(--line-height-m);
+  margin: var(--spacing-m) 0;
+}
+
+small {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.1;
+  display: block;
+}

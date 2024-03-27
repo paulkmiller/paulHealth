@@ -1,0 +1,50 @@
+runtime: nodejs20
+entrypoint: node index.js
+default_expiration: 0h
+handlers:
+  - url: /astronaut.svg
+    static_files: storage/astronaut.svg
+    upload: storage/astronaut.svg
+    secure: always
+  - url: /earth.svg
+    static_files: storage/earth.svg
+    upload: storage/earth.svg
+    secure: always
+  - url: /favicon.png
+    static_files: storage/favicon.png
+    upload: storage/favicon.png
+    secure: always
+  - url: /moon.svg
+    static_files: storage/moon.svg
+    upload: storage/moon.svg
+    secure: always
+  - url: /overlay_stars.svg
+    static_files: storage/overlay_stars.svg
+    upload: storage/overlay_stars.svg
+    secure: always
+  - url: /playIconBackground.png
+    static_files: storage/playIconBackground.png
+    upload: storage/playIconBackground.png
+    secure: always
+  - url: /pluto_logo.svg
+    static_files: storage/pluto_logo.svg
+    upload: storage/pluto_logo.svg
+    secure: always
+  - url: /pluto_logoDark.svg
+    static_files: storage/pluto_logoDark.svg
+    upload: storage/pluto_logoDark.svg
+    secure: always
+  - url: /rocket.svg
+    static_files: storage/rocket.svg
+    upload: storage/rocket.svg
+    secure: always
+  - url: /_app/immutable/
+    static_dir: storage/_app/immutable
+    expiration: 30d 0h
+    secure: always
+  - url: /_app/
+    static_dir: storage/_app
+    secure: always
+  - url: /.*
+    secure: always
+    script: auto

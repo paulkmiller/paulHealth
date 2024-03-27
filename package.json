@@ -1,0 +1,40 @@
+{
+  "name": "trypluto",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite dev --open",
+    "local": "vite dev --open --host",
+    "build": "vite build",
+    "package": "svelte-kit package",
+    "preview": "vite preview",
+    "lint": "prettier --check --plugin-search-dir=. .",
+    "format": "prettier --write --plugin-search-dir=. .",
+    "setup": "node ./contentful/setup.js"
+  },
+  "devDependencies": {
+    "contentful-import": "^8.5.43",
+    "dotenv": "^16.0.3",
+    "prettier": "^2.8.7",
+    "prettier-plugin-svelte": "^2.10.0",
+    "svelte-adapter-appengine": "^0.10.3",
+    "svelte-carousel": "^1.0.25",
+    "svelte-loading-spinners": "^0.3.4",
+    "svelte-youtube-embed": "^0.1.20",
+    "vite": "^4.2.1"
+  },
+  "type": "module",
+  "dependencies": {
+    "@contentful/rich-text-html-renderer": "^16.1.0",
+    "@contentful/rich-text-plain-text-renderer": "^16.0.6",
+    "@sveltejs/adapter-auto": "^2.0.0",
+    "@sveltejs/kit": "^1.22.4",
+    "contentful-management": "^10.39.2",
+    "path": "^0.12.7",
+    "postmark": "^3.0.19",
+    "svelte": "^3.58.0",
+    "svelte-collapsible": "^0.2.2",
+    "svelte-icons": "^2.1.0",
+    "svelte-split-pane": "^0.1.2",
+    "swiper": "^11.0.2"
+  }
+}
