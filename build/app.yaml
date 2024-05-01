@@ -1,4 +1,4 @@
-runtime: nodejs16
+runtime: nodejs20
 entrypoint: node index.js
 default_expiration: 0h
 handlers:
