@@ -47,11 +47,11 @@ contentful login --management-token YOUR_CONTENT_MANAGEMENT_TOKEN
 ### Example Export
 
 ```bash
-contentful space export --space-id 'qhzqj9nbcut3' --environment-id 'master' --management-token 'CFPAT-ryhsB5kmms2HjNY-hIkMyRo2Yv1YsjoMxA-mPw95P-0'
+contentful space export --space-id 'SPACE_ID' --environment-id 'master' --management-token 'MANAGEMENT_TOKEN'
 ```
 
 ### Example Import
 
 ```bash
-contentful space import --space-id 'qhzqj9nbcut3' --environment-id 'dev' --management-token 'CFPAT-ryhsB5kmms2HjNY-hIkMyRo2Yv1YsjoMxA-mPw95P-0' --content-file 'path_to_your_exported_file'
+contentful space import --space-id 'SPACE_ID' --environment-id 'dev' --management-token 'MANAGEMENT_TOKEN' --content-file 'path_to_your_exported_file'
 ```
