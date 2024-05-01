@@ -10,7 +10,7 @@ return {
 	assets: new Set(["astronaut.svg","earth.svg","favicon.png","moon.svg","overlay_stars.svg","playIconBackground.png","pluto_logo.svg","pluto_logoDark.svg","rocket.svg"]),
 	mimeTypes: {".svg":"image/svg+xml",".png":"image/png"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.b41aa8a7.js","app":"_app/immutable/entry/app.5638cf7e.js","imports":["_app/immutable/entry/start.b41aa8a7.js","_app/immutable/chunks/index.5190b064.js","_app/immutable/chunks/singletons.061ccc5d.js","_app/immutable/chunks/paths.ffa07807.js","_app/immutable/entry/app.5638cf7e.js","_app/immutable/chunks/index.5190b064.js"],"stylesheets":[],"fonts":[]},
+		client: {"start":"_app/immutable/entry/start.4ba39ed7.js","app":"_app/immutable/entry/app.5dc19dbb.js","imports":["_app/immutable/entry/start.4ba39ed7.js","_app/immutable/chunks/index.5190b064.js","_app/immutable/chunks/singletons.0e91b02d.js","_app/immutable/chunks/paths.85fe2585.js","_app/immutable/entry/app.5dc19dbb.js","_app/immutable/chunks/index.5190b064.js"],"stylesheets":[],"fonts":[]},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),

@@ -113,9 +113,9 @@ const CarouselWrapper = create_ssr_component(($$result, $$props, $$bindings, slo
       }
     )}</div></div>` : `<div class="container custom svelte-m7b8em"><div class="left-container svelte-m7b8em"><div class="top svelte-m7b8em"><img src="https://images.ctfassets.net/qhzqj9nbcut3/1zjqDdEWirjNiucHFkZtT4/e219d5c3df350b959e2ae43a4f8ee3f8/redLotus.png?h=250" alt="A logo of a red lotus." class="svelte-m7b8em">
         <p class="svelte-m7b8em">Don&#39;t just take our word for it...</p></div>
-      <div class="bottom svelte-m7b8em"><p class="${["svelte-m7b8em", "active"].join(" ").trim()}">For Patients</p>
-        <p class="${["svelte-m7b8em", ""].join(" ").trim()}">For Providers</p>
-        <p class="${["svelte-m7b8em", ""].join(" ").trim()}">For Researchers</p></div></div>
+      <div class="bottom svelte-m7b8em"><p class="${["svelte-m7b8em", "active"].join(" ").trim()}">For Lorem</p>
+        <p class="${["svelte-m7b8em", ""].join(" ").trim()}">For Ipsum</p>
+        <p class="${["svelte-m7b8em", ""].join(" ").trim()}">For Slipsum</p></div></div>
     <div class="right-container svelte-m7b8em"><div class="carousel-wrapper svelte-m7b8em">${validate_component(Carousel, "Carousel").$$render(
       $$result,
       {

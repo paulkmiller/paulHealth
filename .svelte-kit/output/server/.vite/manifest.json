@@ -335,7 +335,7 @@
     "src": "src/routes/home/+page.svelte"
   },
   "src/routes/how-it-works/+page.css": {
-    "file": "_app/immutable/assets/_page.65f11fa8.css",
+    "file": "_app/immutable/assets/_page.4c99d020.css",
     "src": "src/routes/how-it-works/+page.css"
   },
   "src/routes/how-it-works/+page.server.js": {
@@ -349,7 +349,7 @@
   },
   "src/routes/how-it-works/+page.svelte": {
     "css": [
-      "_app/immutable/assets/_page.65f11fa8.css"
+      "_app/immutable/assets/_page.4c99d020.css"
     ],
     "file": "entries/pages/how-it-works/_page.svelte.js",
     "imports": [
