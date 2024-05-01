@@ -146,11 +146,11 @@
       {/if} -->
       <form action="/contact" on:submit|preventDefault={submitForm} method="POST" id="contactForm">
         <div class="form-group">
-          <label for="plutoInputPassword1">Name</label>
+          <label for="paulInputPassword1">Name</label>
           <input
             type="text"
             class="form-control"
-            id="plutoInputPassword1"
+            id="paulInputPassword1"
             placeholder="Enter your name..."
             bind:value={name}
             name="name"
@@ -158,11 +158,11 @@
           />
         </div>
         <div class="form-group">
-          <label for="plutoInputEmail1">Email address</label>
+          <label for="paulInputEmail1">Email address</label>
           <input
             type="email"
             class="form-control"
-            id="plutoInputEmail1"
+            id="paulInputEmail1"
             aria-describedby="emailHelp"
             placeholder="Enter your email address..."
             bind:value={email}
@@ -171,10 +171,10 @@
           />
         </div>
         <div class="form-group">
-          <label for="plutoFormControlSelect1">Who are you?</label>
+          <label for="paulFormControlSelect1">Who are you?</label>
           <select
             class="form-control"
-            id="plutoFormControlSelect1"
+            id="paulFormControlSelect1"
             bind:value={who}
             name="who"
             required
@@ -197,21 +197,21 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="plutoInputPassword1">Your Company</label>
+          <label for="paulInputPassword1">Your Company</label>
           <input
             type="text"
             class="form-control"
-            id="plutoInputPassword1"
+            id="paulInputPassword1"
             placeholder="Enter your company name..."
             bind:value={company}
             name="company"
           />
         </div>
         <div class="form-group">
-          <label for="plutoFormControlTextarea1">How can we help?</label>
+          <label for="paulFormControlTextarea1">How can we help?</label>
           <textarea
             class="form-control"
-            id="plutoFormControlTextarea1"
+            id="paulFormControlTextarea1"
             rows="3"
             placeholder="Enter your message..."
             bind:value={message}
@@ -220,8 +220,8 @@
           />
         </div>
         <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="plutoCheck1" required />
-          <label class="form-check-label" for="plutoCheck1"
+          <input type="checkbox" class="form-check-input" id="paulCheck1" required />
+          <label class="form-check-label" for="paulCheck1"
             >I ALLOW THIS WEBSITE TO STORE MY SUBMISSION SO THEY CAN RESPOND TO MY INQUIRY.</label
           >
           <div class="invalid-feedback">You must agree before submitting.</div>

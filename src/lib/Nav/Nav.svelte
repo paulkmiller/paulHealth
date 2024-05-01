@@ -48,7 +48,7 @@
       <img
         class="{isNewsPage ? 'logoDark' : 'logoLight'} logo"
         src={isNewsPage ? logoDark : logoLight}
-        alt="The Pluto Health logo."
+        alt="The Paul Health logo."
       />
     </a>
   </div>

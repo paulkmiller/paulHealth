@@ -157,7 +157,7 @@
     background-color: transparent;
     border: none;
     box-shadow: none;
-    color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.8);
     transition: all .1s ease-in-out;
     cursor: pointer;
   }

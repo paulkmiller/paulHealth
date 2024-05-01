@@ -8,50 +8,45 @@
 
 <footer class="footer">
   <div class="left-section">
-    <div class="column">
-      <div class="logo_wrapper">
-        <a href="/" aria-label="Pluto Health logo that works as a link back to the home page.">
-          <div class="logo" style="background-image: url({logoLight})"/>
-        </a>
-      </div>
-      <p>WE'RE DEDICATED TO IMPROVING CARE. <br>
-      Everything we do orbits around patients.​</p>
-      <small>
-        <span>600 Park Offices Drive, Suite 300 Durham, NC 27709</span>
-        <br>
-        <span>© 2021 Pluto Health, Inc. All rights reserved.</span></small>
-    </div>
+     <div class="column">
+       <div class="logo_wrapper">
+         <a href="/" aria-label="Lorem ipsum logo that works as a link back to the home page.">
+           <div class="logo" style="background-image: url({logoLight})"/>
+         </a>
+       </div>
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
+       Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.​</p>
+       <small>
+         <span>1234 Lorem Ipsum Street, Suite 5678, Lorem City, LR 90001</span>
+         <br>
+         <span>© 2024 Lorem Ipsum Inc. All rights reserved.</span></small>
+     </div>
   </div>
   <div class="right-section">
-    <div class="column">
-      <a href="/how-it-works" aria-label="Link to Pluto Health's how it works page.">How it works</a>
-      <a href="/services/patients" aria-label="Link to Pluto Health's patients page.">Patients</a>
-      <a href="/services/clinicians" aria-label="Link to Pluto Health's clinicians page.">Clinicians</a>
-      <a href="/services/researchers" aria-label="Link to Pluto Health's researchers page.">Researchers</a>
-    </div>
-    <!-- <div class="column">
-      <a href="/news" aria-label="Link to Pluto Health's news page.">News</a>
-      <a href="/contact" aria-label="Link to Pluto Health's contact page.">Contact</a>
-      <a href="/about" aria-label="Link to Pluto Health's about page.">About</a>
-    </div> -->
-    <div class="column">
-      <a href="/contact" aria-label="Link to Pluto Health's contact page.">Contact</a>
-      <a href="https://plutohealth.zendesk.com/hc/en-us" aria-label="Link to Pluto Health's help center.">Help Center</a>
-      <a href="/legal" aria-label="Link to Pluto Health's privacy and terms of use page.">Privacy & <br> Terms of Use</a>
-    </div>
-    <div class="social-media-container">
-      <a href="https://twitter.com" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Link to Pluto Health's Twitter">
-        <FaTwitter />
-      </a>
-      <a href="https://facebook.com" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Link to Pluto Health's Facebook">
-        <FaFacebookF />
-      </a>
-      <a href="https://linkedin.com" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Link to Pluto Health's LinkedIn">
-        <FaLinkedinIn />
-      </a>
-    </div>
+     <div class="column">
+       <a href="/how-it-works" aria-label="Link to Lorem Ipsum's how it works page.">How it works</a>
+       <a href="/services/patients" aria-label="Link to Lorem Ipsum's patients page.">Patients</a>
+       <a href="/services/clinicians" aria-label="Link to Lorem Ipsum's clinicians page.">Clinicians</a>
+       <a href="/services/researchers" aria-label="Link to Lorem Ipsum's researchers page.">Researchers</a>
+     </div>
+     <div class="column">
+       <a href="/contact" aria-label="Link to Lorem Ipsum's contact page.">Contact</a>
+       <a href="https://loremipsum.zendesk.com/hc/en-us" aria-label="Link to Lorem Ipsum's help center.">Help Center</a>
+       <a href="/legal" aria-label="Link to Lorem Ipsum's privacy and terms of use page.">Privacy & <br> Terms of Use</a>
+     </div>
+     <div class="social-media-container">
+       <a href="https://twitter.com" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Link to Lorem Ipsum's Twitter">
+         <FaTwitter />
+       </a>
+       <a href="https://facebook.com" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Link to Lorem Ipsum's Facebook">
+         <FaFacebookF />
+       </a>
+       <a href="https://linkedin.com" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Link to Lorem Ipsum's LinkedIn">
+         <FaLinkedinIn />
+       </a>
+     </div>
   </div>
-</footer>
+ </footer>
 
 <style>
   .footer {

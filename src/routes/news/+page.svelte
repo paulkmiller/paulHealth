@@ -32,10 +32,10 @@
 </script>
 
 <svelte:head>
-  <title>Pluto Health: News</title>
-	<meta name="description" content="Find out what's on our radar here at Pluto Health.">
-	<meta property="og:title" content="Pluto Health: News">
-	<meta property="og:description" content="Find out what's on our radar here- at Pluto Health.">
+  <title>Paul Health: News</title>
+	<meta name="description" content="Find out what's on our radar here at Paul Health.">
+	<meta property="og:title" content="Paul Health: News">
+	<meta property="og:description" content="Find out what's on our radar here- at Paul Health.">
 	<meta property="og:image" content="/pluto_logo.svg">
 	<meta property="og:type" content="website">
 </svelte:head>
@@ -44,7 +44,7 @@
   <Row style="margin-top: 3rem;">
     <Col sm={12} md={6} lg={8} class="latest">
       <div class="main-content">
-        <h1>Pluto Health News</h1>
+        <h1>Paul Health News</h1>
         <span class="divider-full" />
         <img src={newsPages[0].image.url} alt={newsPages[0].headline} />
         <p class="date">{data.newsPages[0].pageContentCollection.items[0].publishDate}</p>

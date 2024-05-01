@@ -18,7 +18,7 @@
     <div class="circle" />
   </div>
   <figcaption>
-    <h4><strong>{entry.name || 'Plutonaut'}</strong></h4>
+    <h4><strong>{entry.name || 'Paulonaut'}</strong></h4>
     {#if entry.jobTitle}
       <h6>{entry.jobTitle}</h6>
     {/if}

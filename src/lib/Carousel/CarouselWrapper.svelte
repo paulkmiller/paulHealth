@@ -56,9 +56,9 @@
         <p>Don't just take our word for it...</p>
       </div>
       <div class="bottom">
-        <p class:active={currentPage === 0}>For Patients</p>
-        <p class:active={currentPage === 1}>For Providers</p>
-        <p class:active={currentPage === 2}>For Researchers</p>
+        <p class:active={currentPage === 0}>For Lorem</p>
+        <p class:active={currentPage === 1}>For Ipsum</p>
+        <p class:active={currentPage === 2}>For Slipsum</p>
       </div>
     </div>
     <div class="right-container">

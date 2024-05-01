@@ -25,10 +25,10 @@
 </script>
 
 <svelte:head>
-  <title>Pluto Health: News</title>
-	<meta name="description" content="Find out what's on our radar here at Pluto Health.">
-	<meta property="og:title" content="Pluto Health: News">
-	<meta property="og:description" content="Find out what's on our radar here- at Pluto Health.">
+  <title>Paul Health: News</title>
+	<meta name="description" content="Find out what's on our radar here at Paul Health.">
+	<meta property="og:title" content="Paul Health: News">
+	<meta property="og:description" content="Find out what's on our radar here- at Paul Health.">
 	<meta property="og:image" content="/pluto_logo.svg">
 	<meta property="og:type" content="website">
 </svelte:head>

@@ -60,7 +60,7 @@ export async function POST(event) {
 
   const emailContent = {
     "From": `"${email}"`,
-    "To": "hello@pluto.health",
+    "To": "hello@paul.health",
     "Subject": `New contact form submission from ${name}`,
     "TextBody": `Name: ${name}\nEmail: ${email}\nWho: ${who}\nCompany: ${company}\nMessage: ${message}`,
   };
