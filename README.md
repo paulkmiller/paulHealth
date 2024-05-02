@@ -3,9 +3,17 @@
 ## Features
 
 - Fetch data from the Contentful GraphQL API
-- Create dynamic routes
+- Dynamic routes
 - Utilize the Svelte component lifecycle
 - Handle contact form submissions and create entries in Contentful
+- Rearrange layout of each page in Contentful
+
+### Todo
+
+- Add animations
+- Improve accessibility
+- Performance optimization
+- Add testing
 
 # Getting Started
 
