@@ -217,11 +217,12 @@
     .custom.container {
       padding: 0rem 0rem 10rem 0rem;
     }
-    .custom button {
-      left: 1rem;
+    .custom :global(button.flex-center-center[slot="prev"]){
+      left: 5rem;
     }
-    .custom button:last-child {
-      left: 4rem;
+
+    .custom :global(button.flex-center-center[slot="next"]){
+      left: 9rem;
     }
   }
 

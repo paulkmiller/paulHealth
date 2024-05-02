@@ -251,6 +251,10 @@
 }
 
 @media only screen and (max-width: 768px) {
+  :global(.accordion-item .header) h2:before {
+    display: none;
+  }
+  
   .accordion-container img {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
