@@ -1,50 +1,53 @@
 <script>
-  import { afterUpdate } from 'svelte'
-  import { page } from '$app/stores'
-  import LinkItem from '$lib/Nav/LinkItem.svelte'
-  import DrawerToggleButton from '$lib/Nav/DrawerToggleButton.svelte'
+  import { afterUpdate } from 'svelte';
+  import { page } from '$app/stores';
+  import LinkItem from '$lib/Nav/LinkItem.svelte';
+  import DrawerToggleButton from '$lib/Nav/DrawerToggleButton.svelte';
 
-  export let data
-  export let isDropdownOpen
-  export let drawerToggle
-  export let dropdownClick
-  export let show
+  export let data;
+  export let isDropdownOpen;
+  export let drawerToggle;
+  export let dropdownClick;
+  export let show;
 
-  let y
-  let scrolled = false
-  let isNewsPage
+  let y;
+  let scrolled = false;
+  let isNewsPage;
 
-  let logoLight = '/pluto_logo.svg';
-  let logoDark = '/pluto_logoDark.svg';
+  let logoLight = '/paul_logo.svg';
+  let logoDark = '/paul_logoDark.svg';
 
-  const scrollNavBar = 60
+  const scrollNavBar = 60;
 
-  $: isNewsPage = $page.url.pathname.startsWith('/news')
+  $: isNewsPage = $page.url.pathname.startsWith('/news');
+
+  $: $page, isDropdownOpen = false;
 
   afterUpdate(() => {
     if (!isNewsPage) {
       window.onscroll = () => {
-        scrollFunction()
-      }
+        scrollFunction();
+      };
     } else {
-      window.onscroll = null
+      window.onscroll = null;
     }
-  })
+  });
 
   function scrollFunction() {
     if (window.scrollY > scrollNavBar) {
-      scrolled = true
+      scrolled = true;
     } else {
-      scrolled = false
+      scrolled = false;
     }
   }
 </script>
+
 
 <svelte:window bind:scrollY={y} />
 
 <nav class="navbar" id="navbar_nav" class:scrolled class:white={isNewsPage} class:open={show}>
   <div class="logo_wrapper">
-    <a href="/" aria-label="A link back to the home page">
+    <a href="/home" aria-label="A link back to the home page">
       <img
         class="{isNewsPage ? 'logoDark' : 'logoLight'} logo"
         src={isNewsPage ? logoDark : logoLight}

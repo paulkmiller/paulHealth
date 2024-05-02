@@ -296,15 +296,16 @@
   @media only screen and (max-width: 768px) {
     img {
       margin: 0 auto;
+      max-height: 300px;
     }
 
     .large-image img {
       max-height: 300px;
     }
 
-    .duplex-container.large-image,
-    .duplex-container.normal-image,
-    .duplex-container.small-image {
+    div.duplex-container.large-image,
+    div.duplex-container.normal-image,
+    div.duplex-container.small-image {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
     }

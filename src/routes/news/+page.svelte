@@ -36,7 +36,7 @@
 	<meta name="description" content="Find out what's on our radar here at Paul Health.">
 	<meta property="og:title" content="Paul Health: News">
 	<meta property="og:description" content="Find out what's on our radar here- at Paul Health.">
-	<meta property="og:image" content="/pluto_logo.svg">
+	<meta property="og:image" content="/paul_logo.svg">
 	<meta property="og:type" content="website">
 </svelte:head>
 
@@ -244,7 +244,9 @@
       padding-top: 2rem;
     }
     :global(.latest .row) {
-      padding: 0
+      display: block;
+      padding: 0;
+      margin: 0;
     }
     .main-content h1 {
       max-height: 40px;

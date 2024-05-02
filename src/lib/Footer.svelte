@@ -3,7 +3,7 @@
   import FaTwitter from 'svelte-icons/fa/FaTwitter.svelte'
   import FaLinkedinIn from 'svelte-icons/fa/FaLinkedinIn.svelte'
 
-  let logoLight = '/pluto_logo.svg';
+  let logoLight = '/paul_logo.svg';
 </script>
 
 <footer class="footer">

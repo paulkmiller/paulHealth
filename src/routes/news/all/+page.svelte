@@ -29,7 +29,7 @@
 	<meta name="description" content="Find out what's on our radar here at Paul Health.">
 	<meta property="og:title" content="Paul Health: News">
 	<meta property="og:description" content="Find out what's on our radar here- at Paul Health.">
-	<meta property="og:image" content="/pluto_logo.svg">
+	<meta property="og:image" content="/paul_logo.svg">
 	<meta property="og:type" content="website">
 </svelte:head>
 
@@ -38,15 +38,18 @@
     <Col sm={12} md={12} lg={12} class="more-news">
       <Row>
         {#each newsPages as { headline, image, previewText, publishDate, slug }}
-          <div class="show col-12 col-md-6 col-lg-3 mb-2">
-            <div class="content">
-              <img src={image.url} alt={headline} style="width:100%" />
-              <p class="date">{publishDate}</p>
-              <b><h7>{headline}</h7></b>
-              <p class="truncate-4">{@html previewText}</p>
-              <a href="/news/{slug}">READ MORE</a>
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="card">
+            <img src={image.url} class="card-img-top" alt={headline} />
+            <div class="card-body">
+              <h5 class="card-title">{headline}</h5>
+              <p class="card-text">{@html previewText}</p>
+              <p class="card-text"><small class="text-muted">{formatDate(publishDate)}</small></p>
+              <a href="/news/{slug}" class="btn btn-primary">Read More</a>
             </div>
           </div>
+        </div>
+        
         {/each}
       </Row>
       <ButtonLink

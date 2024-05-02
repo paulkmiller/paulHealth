@@ -1,6 +1,4 @@
 
-// Note: Old GCP config
-//
 import adapter from "svelte-adapter-appengine";
 
 /** @type {import('@sveltejs/kit').Config} */
