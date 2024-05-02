@@ -20,4 +20,4 @@ spaceImport({
   managementToken: CONTENTFUL_MANAGEMENT_TOKEN,
 })
   .then(() => console.log('✅ The content model of your space is set up!'))
-  .catch((e) => console.error(e))
+  .catch((e) => console.error(e)) 
