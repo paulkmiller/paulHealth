@@ -1,4 +1,4 @@
-runtime: nodejs20
+runtime: nodejs16
 entrypoint: node index.js
 default_expiration: 0h
 handlers:
@@ -22,17 +22,17 @@ handlers:
     static_files: storage/overlay_stars.svg
     upload: storage/overlay_stars.svg
     secure: always
+  - url: /paul_logo.svg
+    static_files: storage/paul_logo.svg
+    upload: storage/paul_logo.svg
+    secure: always
+  - url: /paul_logoDark.svg
+    static_files: storage/paul_logoDark.svg
+    upload: storage/paul_logoDark.svg
+    secure: always
   - url: /playIconBackground.png
     static_files: storage/playIconBackground.png
     upload: storage/playIconBackground.png
-    secure: always
-  - url: /pluto_logo.svg
-    static_files: storage/pluto_logo.svg
-    upload: storage/pluto_logo.svg
-    secure: always
-  - url: /pluto_logoDark.svg
-    static_files: storage/pluto_logoDark.svg
-    upload: storage/pluto_logoDark.svg
     secure: always
   - url: /rocket.svg
     static_files: storage/rocket.svg

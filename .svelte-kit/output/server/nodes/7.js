@@ -5,6 +5,6 @@ let component_cache;
 export const component = async () => component_cache ??= (await import('../entries/pages/legal/_page.svelte.js')).default;
 export { server };
 export const server_id = "src/routes/legal/+page.server.js";
-export const imports = ["_app/immutable/nodes/7.43b9893a.js","_app/immutable/chunks/index.5190b064.js","_app/immutable/chunks/Hero.1fb25a1f.js","_app/immutable/chunks/ButtonLink.2b86eb1a.js","_app/immutable/chunks/TextWithLineBreaks.a14c0ba8.js","_app/immutable/chunks/Faq.b60e3533.js","_app/immutable/chunks/stores.36c9debd.js","_app/immutable/chunks/singletons.aab9d718.js","_app/immutable/chunks/paths.767f9694.js","_app/immutable/chunks/Row.7099f54b.js","_app/immutable/chunks/Duplex.a6bac538.js"];
-export const stylesheets = ["_app/immutable/assets/7.84da6503.css","_app/immutable/assets/Hero.4a3cbd69.css","_app/immutable/assets/ButtonLink.e5fc3fc9.css","_app/immutable/assets/Faq.7ac5e4bc.css","_app/immutable/assets/Duplex.bb61849e.css"];
+export const imports = ["_app/immutable/nodes/7.70852fa8.js","_app/immutable/chunks/index.3e776b27.js","_app/immutable/chunks/Hero.b515af06.js","_app/immutable/chunks/ButtonLink.212aa9c5.js","_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js","_app/immutable/chunks/Faq.8eed3b04.js","_app/immutable/chunks/stores.0dfc96db.js","_app/immutable/chunks/singletons.11d00cf0.js","_app/immutable/chunks/paths.a2ff5da1.js","_app/immutable/chunks/Row.7408adfd.js","_app/immutable/chunks/Duplex.8d7b3d1f.js"];
+export const stylesheets = ["_app/immutable/assets/7.84da6503.css","_app/immutable/assets/Hero.4a3cbd69.css","_app/immutable/assets/ButtonLink.e5fc3fc9.css","_app/immutable/assets/Faq.7ac5e4bc.css","_app/immutable/assets/Duplex.dbce9a88.css"];
 export const fonts = [];

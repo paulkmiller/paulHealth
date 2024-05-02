@@ -183,8 +183,8 @@ const css$2 = {
   code: ".logo.svelte-p9s28g.svelte-p9s28g{max-height:3em;max-width:10rem}.navbar.svelte-p9s28g.svelte-p9s28g{position:fixed;width:100%;max-width:2300px;background-color:transparent;transition:all 0.5s ease-out;align-content:center;padding:1rem 2rem;opacity:1;z-index:10001}.navbar.open.svelte-p9s28g .logo_wrapper.svelte-p9s28g{opacity:0}.navbar.white.svelte-p9s28g.svelte-p9s28g{position:static;background-color:#fff}.navbar.white .navbar_nav_right a{color:black;letter-spacing:0.5px}.navbar.white .navbar_nav_right a:hover{color:black}.scrolled.svelte-p9s28g.svelte-p9s28g{background-color:#29397a;box-shadow:0 3px 5px rgba(0, 0, 0, 0.2)}.scrolled.open.svelte-p9s28g.svelte-p9s28g{background:transparent;box-shadow:none}.navbar_nav_right.svelte-p9s28g.svelte-p9s28g{list-style:none;margin:0;padding:0;display:flex}.spacer.svelte-p9s28g.svelte-p9s28g{flex:1}.logo_wrapper.svelte-p9s28g.svelte-p9s28g{margin-left:0.75em}@media(max-width: 768px){.navbar_nav_right.svelte-p9s28g.svelte-p9s28g{display:none}.logo.svelte-p9s28g.svelte-p9s28g{max-height:2em}}@media(max-width: 820px){.navbar.svelte-p9s28g.svelte-p9s28g{padding:1rem 2rem}}@media(max-width: 1440px){.logo.svelte-p9s28g.svelte-p9s28g{max-height:3em;max-width:10rem}.navbar.svelte-p9s28g.svelte-p9s28g{padding:1rem}}",
   map: null
 };
-let logoLight$1 = "/pluto_logo.svg";
-let logoDark = "/pluto_logoDark.svg";
+let logoLight$1 = "/paul_logo.svg";
+let logoDark = "/paul_logoDark.svg";
 const Nav = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $page, $$unsubscribe_page;
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
@@ -206,13 +206,16 @@ const Nav = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.show(show);
   $$result.css.add(css$2);
   isNewsPage = $page.url.pathname.startsWith("/news");
+  {
+    isDropdownOpen = false;
+  }
   $$unsubscribe_page();
   return `
 
 <nav class="${[
     "navbar svelte-p9s28g",
     " " + (isNewsPage ? "white" : "") + " " + (show ? "open" : "")
-  ].join(" ").trim()}" id="navbar_nav"><div class="logo_wrapper svelte-p9s28g"><a href="/" aria-label="A link back to the home page"><img class="${escape(isNewsPage ? "logoDark" : "logoLight", true) + " logo svelte-p9s28g"}"${add_attribute("src", isNewsPage ? logoDark : logoLight$1, 0)} alt="The Paul Health logo."></a></div>
+  ].join(" ").trim()}" id="navbar_nav"><div class="logo_wrapper svelte-p9s28g"><a href="/home" aria-label="A link back to the home page"><img class="${escape(isNewsPage ? "logoDark" : "logoLight", true) + " logo svelte-p9s28g"}"${add_attribute("src", isNewsPage ? logoDark : logoLight$1, 0)} alt="The Paul Health logo."></a></div>
 
   <div class="spacer svelte-p9s28g"></div>
 
@@ -269,7 +272,7 @@ const css$1 = {
   code: ".footer.svelte-15o1vvh.svelte-15o1vvh{display:flex;justify-content:space-between;padding:4rem;background-color:#29397a;color:#fff}small.svelte-15o1vvh.svelte-15o1vvh{font-size:14px;margin-top:4rem;text-transform:none}.left-section.svelte-15o1vvh.svelte-15o1vvh{display:flex;flex-direction:column;justify-content:space-between;max-width:500px;padding-right:2rem;order:1}.left-section.svelte-15o1vvh p.svelte-15o1vvh{font-family:'PolySans Neutral', Arial, sans-serif}.right-section.svelte-15o1vvh.svelte-15o1vvh{display:flex;justify-content:space-between;position:relative;order:2}.column.svelte-15o1vvh.svelte-15o1vvh{display:flex;flex-direction:column;margin-right:2rem}.column.svelte-15o1vvh a.svelte-15o1vvh{font-family:'PolySans Neutral', Arial, sans-serif;font-weight:400;text-decoration:none;margin-bottom:0.5rem;color:#fff}.column.svelte-15o1vvh a.svelte-15o1vvh:hover{text-decoration:underline}.social-icon.svelte-15o1vvh.svelte-15o1vvh{color:#fff}.logo.svelte-15o1vvh.svelte-15o1vvh{background-position:center;background-repeat:no-repeat;background-size:contain;height:3em;width:5rem}.social-media-container.svelte-15o1vvh.svelte-15o1vvh{display:flex;justify-content:space-between;position:absolute;bottom:0;right:0;margin-top:1rem;margin-bottom:8px;margin-right:5px}.social-icon.svelte-15o1vvh.svelte-15o1vvh{text-decoration:none;max-height:20px;max-width:30px}.social-icon.svelte-15o1vvh.svelte-15o1vvh:hover{opacity:0.7}@media screen and (max-width: 1000px){.footer.svelte-15o1vvh.svelte-15o1vvh{padding:4rem 2rem}}@media screen and (max-width: 767px){.footer.svelte-15o1vvh.svelte-15o1vvh{flex-direction:column-reverse;padding:3rem 2rem;text-align:center}.left-section.svelte-15o1vvh.svelte-15o1vvh{max-width:100%}.left-section.svelte-15o1vvh p.svelte-15o1vvh{margin:3rem 0}.right-section.svelte-15o1vvh.svelte-15o1vvh{flex-direction:column;align-items:flex-start}.column.svelte-15o1vvh.svelte-15o1vvh{margin-bottom:1rem;width:100%}.social-media-container.svelte-15o1vvh.svelte-15o1vvh{visibility:hidden}small.svelte-15o1vvh.svelte-15o1vvh{margin-top:0}.logo.svelte-15o1vvh.svelte-15o1vvh{margin-left:calc(50% - 20px);margin-right:calc(-50%)}}",
   map: null
 };
-let logoLight = "/pluto_logo.svg";
+let logoLight = "/paul_logo.svg";
 const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
   return `<footer class="footer svelte-15o1vvh"><div class="left-section svelte-15o1vvh"><div class="column svelte-15o1vvh"><div class="logo_wrapper"><a href="/" aria-label="Lorem ipsum logo that works as a link back to the home page." class="svelte-15o1vvh"><div class="logo svelte-15o1vvh" style="${"background-image: url(" + escape(logoLight, true) + ")"}"></div></a></div>
