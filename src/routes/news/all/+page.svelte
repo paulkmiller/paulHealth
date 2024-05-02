@@ -84,27 +84,9 @@
     color: rgba(0,0,0,.85)
   }
 
-  .date {
-    font-family: 'PolySans Neutral', Arial, sans-serif;
-    font-size: 0.875rem;
-    color: #636363;
-    margin: 1rem 0 0.75rem;
-  }
-
-  h7 {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    font-family: 'PolySans Neutral', Arial, sans-serif;
-    font-weight: 500;
-  }
-
   img {
     aspect-ratio: 3/2;
     object-fit: cover;
-  }
-
-  .show {
-    display: flex;
   }
 
   :global(.custom.container) {

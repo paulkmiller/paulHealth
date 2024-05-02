@@ -20,7 +20,7 @@
     "src": "Duplex.css"
   },
   "DynamicDuplex.css": {
-    "file": "_app/immutable/assets/DynamicDuplex.4278e752.css",
+    "file": "_app/immutable/assets/DynamicDuplex.9f4130cb.css",
     "src": "DynamicDuplex.css"
   },
   "Faq.css": {
@@ -73,7 +73,7 @@
   },
   "_DynamicDuplex.js": {
     "css": [
-      "_app/immutable/assets/DynamicDuplex.4278e752.css"
+      "_app/immutable/assets/DynamicDuplex.9f4130cb.css"
     ],
     "file": "chunks/DynamicDuplex.js",
     "imports": [
@@ -310,7 +310,7 @@
     "src": "src/routes/contact/+server.js"
   },
   "src/routes/home/+page.css": {
-    "file": "_app/immutable/assets/_page.1e7a32a0.css",
+    "file": "_app/immutable/assets/_page.4279f1b4.css",
     "src": "src/routes/home/+page.css"
   },
   "src/routes/home/+page.server.js": {
@@ -324,7 +324,7 @@
   },
   "src/routes/home/+page.svelte": {
     "css": [
-      "_app/immutable/assets/_page.1e7a32a0.css"
+      "_app/immutable/assets/_page.4279f1b4.css"
     ],
     "file": "entries/pages/home/_page.svelte.js",
     "imports": [
@@ -453,7 +453,7 @@
     "src": "src/routes/news/[slug]/+page.svelte"
   },
   "src/routes/news/all/+page.css": {
-    "file": "_app/immutable/assets/_page.e7c168c1.css",
+    "file": "_app/immutable/assets/_page.a1c4feeb.css",
     "src": "src/routes/news/all/+page.css"
   },
   "src/routes/news/all/+page.server.js": {
@@ -467,7 +467,7 @@
   },
   "src/routes/news/all/+page.svelte": {
     "css": [
-      "_app/immutable/assets/_page.e7c168c1.css"
+      "_app/immutable/assets/_page.a1c4feeb.css"
     ],
     "file": "entries/pages/news/all/_page.svelte.js",
     "imports": [

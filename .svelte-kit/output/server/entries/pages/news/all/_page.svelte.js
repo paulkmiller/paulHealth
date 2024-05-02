@@ -4,7 +4,7 @@ import { C as Col } from "../../../../chunks/Col.js";
 import { B as ButtonLink } from "../../../../chunks/ButtonLink.js";
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
-  code: "a.svelte-1kfxjeu{display:block;margin:0 0 1rem 0;color:#D93561;text-transform:uppercase;cursor:pointer}a.svelte-1kfxjeu:hover{color:#29397a;text-decoration:underline}p.svelte-1kfxjeu{margin:0 0 0.5rem;position:relative;color:rgba(0,0,0,.85)\n  }img.svelte-1kfxjeu{aspect-ratio:3/2;object-fit:cover}.custom.container{max-width:1440px}.latest,.more-news{padding:0 1.5rem}.more-news{margin-bottom:6rem}@media(max-width: 768px){img.svelte-1kfxjeu{width:100%;max-height:340px;margin:0 auto}.more-news{margin-bottom:0rem}}",
+  code: "a.svelte-1xjzeq2{display:block;margin:0 0 1rem 0;color:#D93561;text-transform:uppercase;cursor:pointer}a.svelte-1xjzeq2:hover{color:#29397a;text-decoration:underline}p.svelte-1xjzeq2{margin:0 0 0.5rem;position:relative;color:rgba(0,0,0,.85)\n  }img.svelte-1xjzeq2{aspect-ratio:3/2;object-fit:cover}.custom.container{max-width:1440px}.latest,.more-news{padding:0 1.5rem}.more-news{margin-bottom:6rem}@media(max-width: 768px){img.svelte-1xjzeq2{width:100%;max-height:340px;margin:0 auto}.more-news{margin-bottom:0rem}}",
   map: null
 };
 function formatDate(dateString) {
@@ -52,11 +52,11 @@ ${validate_component(Container, "Container").$$render($$result, { class: "custom
                 return `${validate_component(Row, "Row").$$render($$result, {}, {}, {
                   default: () => {
                     return `${each(newsPages, ({ headline, image, previewText, publishDate, slug }) => {
-                      return `<div class="col-12 col-md-6 col-lg-3 mb-4"><div class="card"><img${add_attribute("src", image.url, 0)} class="card-img-top svelte-1kfxjeu"${add_attribute("alt", headline, 0)}>
+                      return `<div class="col-12 col-md-6 col-lg-3 mb-4"><div class="card"><img${add_attribute("src", image.url, 0)} class="card-img-top svelte-1xjzeq2"${add_attribute("alt", headline, 0)}>
             <div class="card-body"><h5 class="card-title">${escape(headline)}</h5>
-              <p class="card-text svelte-1kfxjeu"><!-- HTML_TAG_START -->${previewText}<!-- HTML_TAG_END --></p>
-              <p class="card-text svelte-1kfxjeu"><small class="text-muted">${escape(formatDate(publishDate))}</small></p>
-              <a href="${"/news/" + escape(slug, true)}" class="btn btn-primary svelte-1kfxjeu">Read More</a>
+              <p class="card-text svelte-1xjzeq2"><!-- HTML_TAG_START -->${previewText}<!-- HTML_TAG_END --></p>
+              <p class="card-text svelte-1xjzeq2"><small class="text-muted">${escape(formatDate(publishDate))}</small></p>
+              <a href="${"/news/" + escape(slug, true)}" class="btn btn-primary svelte-1xjzeq2">Read More</a>
             </div></div>
         </div>`;
                     })}`;

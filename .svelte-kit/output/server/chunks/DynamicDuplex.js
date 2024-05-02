@@ -63,10 +63,10 @@ const AccordionItem = create_ssr_component(($$result, $$props, $$bindings, slots
 const DynamicDuplex_svelte_svelte_type_style_lang = "";
 const css = {
   code: `.container .accordion{width:100%;max-width:100%
-}.cta.svelte-13q8uc4.svelte-13q8uc4,.cta.svelte-13q8uc4 a{text-align:center}.cta.svelte-13q8uc4.svelte-13q8uc4{margin-top:2rem}.accordion-container.svelte-13q8uc4.svelte-13q8uc4{display:grid;grid-template-columns:1fr 1fr;position:relative}.accordion-container.svelte-13q8uc4 img.svelte-13q8uc4{position:absolute;right:0;top:0;padding:2rem;height:100%;max-width:calc(50% - 2rem);object-fit:contain;aspect-ratio:3/2;opacity:0;transition:opacity 0.5s ease-in-out}.container.svelte-13q8uc4 .accordion-container.svelte-13q8uc4 .active{opacity:1;transition:opacity 0.5s ease-in-out}.left-container.svelte-13q8uc4.svelte-13q8uc4{display:grid;max-width:800px;margin:0 auto}.right-container.svelte-13q8uc4.svelte-13q8uc4{padding:0}.accordion-container.svelte-13q8uc4 h3{font-family:'PolySans Neutral', Arial, Helvetica, sans-serif;font-weight:500;font-size:2.3rem;margin-bottom:0.25rem;align-self:self-end}.accordion-container.svelte-13q8uc4 p{font-family:'PolySans Slim', Arial, Helvetica, sans-serif;font-size:1.125rem;line-height:1.5rem;letter-spacing:0.25px;margin:0.5rem;text-align:left;align-self:center}.accordion-container.svelte-13q8uc4 .accordion-item-header{width:100%;margin-bottom:-1.375rem}.accordion-container.svelte-13q8uc4 .accordion-item button *{text-align:left}.accordion-container.svelte-13q8uc4 .header{color:#29397A}.accordion-container.svelte-13q8uc4 .header *{font-size:4.5rem}.dynamic-duplex.svelte-13q8uc4.svelte-13q8uc4{padding:3rem 0}.dynamic-duplex.svelte-13q8uc4 .right-container.svelte-13q8uc4{max-height:440px;margin:0 auto}.accordion-item img{display:none}.accordion-item .header h2.svelte-13q8uc4.svelte-13q8uc4:before{float:left;position:absolute;left:-40px;top:55px;font:bold 1rem sans-serif;text-align:center;color:#fff;line-height:2rem;width:2rem;height:2rem;background:#29397a;-moz-border-radius:100%;border-radius:100%}.accordion-item:first-child .header h2:before{content:"1"}.accordion-item:nth-child(2) .header h2:before{content:"2"}.accordion-item:nth-child(3) .header h2:before{content:"3"}
+}.cta.svelte-1l3i357.svelte-1l3i357,.cta.svelte-1l3i357 a{text-align:center}.cta.svelte-1l3i357.svelte-1l3i357{margin-top:2rem}.accordion-container.svelte-1l3i357.svelte-1l3i357{display:grid;grid-template-columns:1fr 1fr;position:relative}.accordion-container.svelte-1l3i357 img.svelte-1l3i357{position:absolute;right:0;top:0;padding:2rem;height:100%;max-width:calc(50% - 2rem);object-fit:contain;aspect-ratio:3/2;opacity:0;transition:opacity 0.5s ease-in-out}.container.svelte-1l3i357 .accordion-container.svelte-1l3i357 .active{opacity:1;transition:opacity 0.5s ease-in-out}.left-container.svelte-1l3i357.svelte-1l3i357{display:grid;max-width:800px;margin:0 auto}.right-container.svelte-1l3i357.svelte-1l3i357{padding:0}.accordion-container.svelte-1l3i357 h3{font-family:'PolySans Neutral', Arial, Helvetica, sans-serif;font-weight:500;font-size:2.3rem;margin-bottom:0.25rem;align-self:self-end}.accordion-container.svelte-1l3i357 p{font-family:'PolySans Slim', Arial, Helvetica, sans-serif;font-size:1.125rem;line-height:1.5rem;letter-spacing:0.25px;margin:0.5rem;text-align:left;align-self:center}.accordion-container.svelte-1l3i357 .accordion-item-header{width:100%;margin-bottom:-1.375rem}.accordion-container.svelte-1l3i357 .accordion-item button *{text-align:left}.accordion-container.svelte-1l3i357 .header{color:#29397A}.accordion-container.svelte-1l3i357 .header *{font-size:4.5rem}.dynamic-duplex.svelte-1l3i357.svelte-1l3i357{padding:3rem 0}.dynamic-duplex.svelte-1l3i357 .right-container.svelte-1l3i357{max-height:440px;margin:0 auto}.accordion-item img{display:none}.accordion-item .header h2.svelte-1l3i357.svelte-1l3i357:before{float:left;position:absolute;left:-40px;top:55px;font:bold 1rem sans-serif;text-align:center;color:#fff;line-height:2rem;width:2rem;height:2rem;background:#29397a;-moz-border-radius:100%;border-radius:100%}.accordion-item:first-child .header h2:before{content:"1"}.accordion-item:nth-child(2) .header h2:before{content:"2"}.accordion-item:nth-child(3) .header h2:before{content:"3"}
   .container .accordion, 
   .container .accordion-item,
-  .container .accordion-item-header{border:none;box-shadow:none;position:relative}.accordion{width:100%;max-width:450px;margin:0 auto}.accordion-item{border-bottom:1px solid rgb(100, 120, 140)}@media only screen and (max-width: 768px){.accordion-container.svelte-13q8uc4 img.svelte-13q8uc4{grid-template-columns:1fr;grid-template-rows:1fr}.left-container.svelte-13q8uc4.svelte-13q8uc4{width:100%;padding:3rem}.left-container.svelte-13q8uc4.svelte-13q8uc4{margin:4rem auto;text-align:center}.left-container.svelte-13q8uc4 h3{font-size:2rem;margin:1rem auto}.left-container.svelte-13q8uc4 p{max-width:97.5%;margin:0 auto}.left-container.svelte-13q8uc4 a{margin:1rem auto 0 auto}}@media only screen and (max-width: 991px){.accordion-container.svelte-13q8uc4.svelte-13q8uc4{grid-template-columns:1fr}.dynamic-duplex.svelte-13q8uc4 .right-container.svelte-13q8uc4{display:none}.accordion-item img{display:block}.accordion-container.svelte-13q8uc4 .accordion-item img.svelte-13q8uc4{display:block;position:relative !important;opacity:1;width:100%;max-width:100%;margin:0 auto;padding:1rem}.accordion-item-body{height:auto !important}}@media only screen and (max-width: 1250px){.left-container.svelte-13q8uc4.svelte-13q8uc4{padding:2rem 1rem}}@media only screen and (max-width: 1680px){.left-container.svelte-13q8uc4.svelte-13q8uc4{max-width:640px;margin:0 auto;padding:2rem}}`,
+  .container .accordion-item-header{border:none;box-shadow:none;position:relative}.accordion{width:100%;max-width:450px;margin:0 auto}.accordion-item{border-bottom:1px solid rgb(100, 120, 140)}@media only screen and (max-width: 768px){.accordion-item .header h2.svelte-1l3i357.svelte-1l3i357:before{display:none}.accordion-container.svelte-1l3i357 img.svelte-1l3i357{grid-template-columns:1fr;grid-template-rows:1fr}.left-container.svelte-1l3i357.svelte-1l3i357{width:100%;padding:3rem}.left-container.svelte-1l3i357.svelte-1l3i357{margin:4rem auto;text-align:center}.left-container.svelte-1l3i357 h3{font-size:2rem;margin:1rem auto}.left-container.svelte-1l3i357 p{max-width:97.5%;margin:0 auto}.left-container.svelte-1l3i357 a{margin:1rem auto 0 auto}}@media only screen and (max-width: 991px){.accordion-container.svelte-1l3i357.svelte-1l3i357{grid-template-columns:1fr}.dynamic-duplex.svelte-1l3i357 .right-container.svelte-1l3i357{display:none}.accordion-item img{display:block}.accordion-container.svelte-1l3i357 .accordion-item img.svelte-1l3i357{display:block;position:relative !important;opacity:1;width:100%;max-width:100%;margin:0 auto;padding:1rem}.accordion-item-body{height:auto !important}}@media only screen and (max-width: 1250px){.left-container.svelte-1l3i357.svelte-1l3i357{padding:2rem 1rem}}@media only screen and (max-width: 1680px){.left-container.svelte-1l3i357.svelte-1l3i357{max-width:640px;margin:0 auto;padding:2rem}}`,
   map: null
 };
 const DynamicDuplex = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -79,7 +79,7 @@ const DynamicDuplex = create_ssr_component(($$result, $$props, $$bindings, slots
   let $$rendered;
   do {
     $$settled = true;
-    $$rendered = `<div class="dynamic-duplex container svelte-13q8uc4"><div class="accordion-container svelte-13q8uc4"><div class="left-container svelte-13q8uc4">${validate_component(Accordion, "Accordion").$$render(
+    $$rendered = `<div class="dynamic-duplex container svelte-1l3i357"><div class="accordion-container svelte-1l3i357"><div class="left-container svelte-1l3i357">${validate_component(Accordion, "Accordion").$$render(
       $$result,
       { key },
       {
@@ -95,10 +95,10 @@ const DynamicDuplex = create_ssr_component(($$result, $$props, $$bindings, slots
               return `<div slot="body" class="body"><p><!-- HTML_TAG_START -->${data.bodyText}<!-- HTML_TAG_END --></p></div>`;
             },
             header: () => {
-              return `<div slot="header" class="header"><h2 class="svelte-13q8uc4">${escape(data.headline)}</h2></div>`;
+              return `<div slot="header" class="header"><h2 class="svelte-1l3i357">${escape(data.headline)}</h2></div>`;
             },
             default: () => {
-              return `<img src="${escape(data.image.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", data.image.description, 0)} class="${"content " + escape(key === 0 ? "active" : "", true) + " svelte-13q8uc4"}">`;
+              return `<img src="${escape(data.image.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", data.image.description, 0)} class="${"content " + escape(key === 0 ? "active" : "", true) + " svelte-1l3i357"}">`;
             }
           })}
         ${validate_component(AccordionItem, "AccordionItem").$$render($$result, { key: 1 }, {}, {
@@ -106,10 +106,10 @@ const DynamicDuplex = create_ssr_component(($$result, $$props, $$bindings, slots
               return `<div slot="body" class="body"><p><!-- HTML_TAG_START -->${data.bodyText2}<!-- HTML_TAG_END --></p></div>`;
             },
             header: () => {
-              return `<div slot="header" class="header"><h2 class="svelte-13q8uc4">${escape(data.headline2)}</h2></div>`;
+              return `<div slot="header" class="header"><h2 class="svelte-1l3i357">${escape(data.headline2)}</h2></div>`;
             },
             default: () => {
-              return `<img src="${escape(data.image2.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", data.image2.description, 0)} class="${escape(null_to_empty(key === 1 ? "active" : ""), true) + " svelte-13q8uc4"}">`;
+              return `<img src="${escape(data.image2.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", data.image2.description, 0)} class="${escape(null_to_empty(key === 1 ? "active" : ""), true) + " svelte-1l3i357"}">`;
             }
           })}
         ${validate_component(AccordionItem, "AccordionItem").$$render($$result, { key: 2 }, {}, {
@@ -117,19 +117,19 @@ const DynamicDuplex = create_ssr_component(($$result, $$props, $$bindings, slots
               return `<div slot="body" class="body"><p><!-- HTML_TAG_START -->${data.bodyText3}<!-- HTML_TAG_END --></p></div>`;
             },
             header: () => {
-              return `<div slot="header" class="header"><h2 class="svelte-13q8uc4">${escape(data.headline3)}</h2></div>`;
+              return `<div slot="header" class="header"><h2 class="svelte-1l3i357">${escape(data.headline3)}</h2></div>`;
             },
             default: () => {
-              return `<img src="${escape(data.image3.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", data.image3.description, 0)} class="${escape(null_to_empty(key === 2 ? "active" : ""), true) + " svelte-13q8uc4"}">`;
+              return `<img src="${escape(data.image3.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", data.image3.description, 0)} class="${escape(null_to_empty(key === 2 ? "active" : ""), true) + " svelte-1l3i357"}">`;
             }
           })}`;
         }
       }
     )}</div>
-    <div class="right-container svelte-13q8uc4"><img src="${escape(data.image.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", data.image.description, 0)} class="${escape(null_to_empty(key === 0 ? "active" : ""), true) + " svelte-13q8uc4"}">
-      <img src="${escape(data.image2.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", data.image2.description, 0)} class="${escape(null_to_empty(key === 1 ? "active" : ""), true) + " svelte-13q8uc4"}">
-      <img src="${escape(data.image3.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", data.image3.description, 0)} class="${escape(null_to_empty(key === 2 ? "active" : ""), true) + " svelte-13q8uc4"}"></div></div>
-  <div class="cta svelte-13q8uc4">${validate_component(ButtonLink, "ButtonLink").$$render(
+    <div class="right-container svelte-1l3i357"><img src="${escape(data.image.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", data.image.description, 0)} class="${escape(null_to_empty(key === 0 ? "active" : ""), true) + " svelte-1l3i357"}">
+      <img src="${escape(data.image2.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", data.image2.description, 0)} class="${escape(null_to_empty(key === 1 ? "active" : ""), true) + " svelte-1l3i357"}">
+      <img src="${escape(data.image3.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", data.image3.description, 0)} class="${escape(null_to_empty(key === 2 ? "active" : ""), true) + " svelte-1l3i357"}"></div></div>
+  <div class="cta svelte-1l3i357">${validate_component(ButtonLink, "ButtonLink").$$render(
       $$result,
       {
         text: data.ctaText || "Learn More",

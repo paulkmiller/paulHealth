@@ -55,7 +55,7 @@ const FaArrowCircleLeft = create_ssr_component(($$result, $$props, $$bindings, s
 });
 const CarouselWrapper_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".custom.container.svelte-m7b8em.svelte-m7b8em{display:flex;position:relative;background-color:#29397a;color:#fff;padding:6rem 4rem 10rem 4rem;margin:6rem auto}.custom.svelte-m7b8em .top.svelte-m7b8em{display:flex}.custom.svelte-m7b8em .top img.svelte-m7b8em{height:40px;width:40px}.custom.svelte-m7b8em .top p.svelte-m7b8em{max-width:180px;padding:0 20px;margin:0}.custom.svelte-m7b8em .bottom.svelte-m7b8em{display:flex;flex-direction:column;text-align:left;height:calc(100% - 2.5rem);justify-content:center;vertical-align:middle}.custom.svelte-m7b8em .bottom p.svelte-m7b8em{font-size:1.75rem;color:rgba(173, 235, 239, 0.3)}.custom.svelte-m7b8em .bottom .active.svelte-m7b8em{color:#ADEBEF}.custom.svelte-m7b8em .left-container.svelte-m7b8em{flex:1;max-width:300px}.custom.svelte-m7b8em .right-container.svelte-m7b8em{flex:2;width:calc(100% - 300px)}.custom.svelte-m7b8em .right-container .ctaLink.svelte-m7b8em{position:absolute;bottom:3rem;right:4rem}.custom.svelte-m7b8em .right-container .ctaLink.svelte-m7b8em a:hover{color:#fff}.custom.svelte-m7b8em .right-container .ctaLink.svelte-m7b8em a{background:#adebef;color:#000}.custom.svelte-m7b8em .carousel-wrapper.svelte-m7b8em{padding:0}.custom.svelte-m7b8em button.svelte-m7b8em{position:absolute;left:0;bottom:-5rem}.custom.svelte-m7b8em button.svelte-m7b8em:last-child{left:3rem}.custom.svelte-m7b8em svg{color:#adebef}.carousel-wrapper.svelte-m7b8em.svelte-m7b8em{margin:0 auto;padding:6rem 2rem;font-size:1rem;text-align:center}.carousel-wrapper.svelte-m7b8em button.svelte-m7b8em{background:transparent;border:none}.icon.svelte-m7b8em.svelte-m7b8em{height:2rem;width:2rem;color:#29397a}.icon.svelte-m7b8em.svelte-m7b8em:hover{cursor:pointer}.custom.svelte-m7b8em .sc-carousel-dots__container{display:none !important}@media only screen and (max-width: 550px){.custom.container.svelte-m7b8em.svelte-m7b8em{padding:0rem 0rem 10rem 0rem}.custom.svelte-m7b8em button.svelte-m7b8em{left:1rem}.custom.svelte-m7b8em button.svelte-m7b8em:last-child{left:4rem}}@media only screen and (max-width: 768px){.custom.svelte-m7b8em .left-container.svelte-m7b8em{display:none}.custom.svelte-m7b8em .right-container.svelte-m7b8em{max-width:100%}}@media only screen and (max-width: 991px){.custom.container.svelte-m7b8em.svelte-m7b8em{max-width:100%;margin:0}.custom.svelte-m7b8em .carousel p p{font-size:1.25rem;line-height:1.5rem}}@media only screen and (max-width: 1200px){.custom.svelte-m7b8em .carousel p p{font-size:1.25rem;line-height:1.25rem;padding:inherit}}",
+  code: '.custom.container.svelte-16s0ie8.svelte-16s0ie8{display:flex;position:relative;background-color:#29397a;color:#fff;padding:6rem 4rem 10rem 4rem;margin:6rem auto}.custom.svelte-16s0ie8 .top.svelte-16s0ie8{display:flex}.custom.svelte-16s0ie8 .top img.svelte-16s0ie8{height:40px;width:40px}.custom.svelte-16s0ie8 .top p.svelte-16s0ie8{max-width:180px;padding:0 20px;margin:0}.custom.svelte-16s0ie8 .bottom.svelte-16s0ie8{display:flex;flex-direction:column;text-align:left;height:calc(100% - 2.5rem);justify-content:center;vertical-align:middle}.custom.svelte-16s0ie8 .bottom p.svelte-16s0ie8{font-size:1.75rem;color:rgba(173, 235, 239, 0.3)}.custom.svelte-16s0ie8 .bottom .active.svelte-16s0ie8{color:#ADEBEF}.custom.svelte-16s0ie8 .left-container.svelte-16s0ie8{flex:1;max-width:300px}.custom.svelte-16s0ie8 .right-container.svelte-16s0ie8{flex:2;width:calc(100% - 300px)}.custom.svelte-16s0ie8 .right-container .ctaLink.svelte-16s0ie8{position:absolute;bottom:3rem;right:4rem}.custom.svelte-16s0ie8 .right-container .ctaLink.svelte-16s0ie8 a:hover{color:#fff}.custom.svelte-16s0ie8 .right-container .ctaLink.svelte-16s0ie8 a{background:#adebef;color:#000}.custom.svelte-16s0ie8 .carousel-wrapper.svelte-16s0ie8{padding:0}.custom.svelte-16s0ie8 button.svelte-16s0ie8{position:absolute;left:0;bottom:-5rem}.custom.svelte-16s0ie8 button.svelte-16s0ie8:last-child{left:3rem}.custom.svelte-16s0ie8 svg{color:#adebef}.carousel-wrapper.svelte-16s0ie8.svelte-16s0ie8{margin:0 auto;padding:6rem 2rem;font-size:1rem;text-align:center}.carousel-wrapper.svelte-16s0ie8 button.svelte-16s0ie8{background:transparent;border:none}.icon.svelte-16s0ie8.svelte-16s0ie8{height:2rem;width:2rem;color:#29397a}.icon.svelte-16s0ie8.svelte-16s0ie8:hover{cursor:pointer}.custom.svelte-16s0ie8 .sc-carousel-dots__container{display:none !important}@media only screen and (max-width: 550px){.custom.container.svelte-16s0ie8.svelte-16s0ie8{padding:0rem 0rem 10rem 0rem}.custom.svelte-16s0ie8 button.flex-center-center[slot="prev"]{left:5rem}.custom.svelte-16s0ie8 button.flex-center-center[slot="next"]{left:9rem}}@media only screen and (max-width: 768px){.custom.svelte-16s0ie8 .left-container.svelte-16s0ie8{display:none}.custom.svelte-16s0ie8 .right-container.svelte-16s0ie8{max-width:100%}}@media only screen and (max-width: 991px){.custom.container.svelte-16s0ie8.svelte-16s0ie8{max-width:100%;margin:0}.custom.svelte-16s0ie8 .carousel p p{font-size:1.25rem;line-height:1.5rem}}@media only screen and (max-width: 1200px){.custom.svelte-16s0ie8 .carousel p p{font-size:1.25rem;line-height:1.25rem;padding:inherit}}',
   map: null
 };
 const CarouselWrapper = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -85,7 +85,7 @@ const CarouselWrapper = create_ssr_component(($$result, $$props, $$bindings, slo
   let $$rendered;
   do {
     $$settled = true;
-    $$rendered = `${data.configuration ? `<div class="container"><div class="carousel-wrapper svelte-m7b8em">${validate_component(Carousel, "Carousel").$$render(
+    $$rendered = `${data.configuration ? `<div class="container"><div class="carousel-wrapper svelte-16s0ie8">${validate_component(Carousel, "Carousel").$$render(
       $$result,
       {
         autoplay: "true",
@@ -100,10 +100,10 @@ const CarouselWrapper = create_ssr_component(($$result, $$props, $$bindings, slo
       },
       {
         next: ({ showPrevPage, showNextPage }) => {
-          return `<button class="flex-center-center svelte-m7b8em" slot="next"><div class="icon svelte-m7b8em">${validate_component(FaArrowCircleRight, "FaArrowCircleRight").$$render($$result, {}, {}, {})}</div></button>`;
+          return `<button class="flex-center-center svelte-16s0ie8" slot="next"><div class="icon svelte-16s0ie8">${validate_component(FaArrowCircleRight, "FaArrowCircleRight").$$render($$result, {}, {}, {})}</div></button>`;
         },
         prev: ({ showPrevPage, showNextPage }) => {
-          return `<button class="flex-center-center svelte-m7b8em" slot="prev"><div class="icon svelte-m7b8em">${validate_component(FaArrowCircleLeft, "FaArrowCircleLeft").$$render($$result, {}, {}, {})}</div></button>`;
+          return `<button class="flex-center-center svelte-16s0ie8" slot="prev"><div class="icon svelte-16s0ie8">${validate_component(FaArrowCircleLeft, "FaArrowCircleLeft").$$render($$result, {}, {}, {})}</div></button>`;
         },
         default: ({ showPrevPage, showNextPage }) => {
           return `${each(quotes, (entry) => {
@@ -111,12 +111,12 @@ const CarouselWrapper = create_ssr_component(($$result, $$props, $$bindings, slo
           })}`;
         }
       }
-    )}</div></div>` : `<div class="container custom svelte-m7b8em"><div class="left-container svelte-m7b8em"><div class="top svelte-m7b8em"><img src="https://images.ctfassets.net/qhzqj9nbcut3/1zjqDdEWirjNiucHFkZtT4/e219d5c3df350b959e2ae43a4f8ee3f8/redLotus.png?h=250" alt="A logo of a red lotus." class="svelte-m7b8em">
-        <p class="svelte-m7b8em">Don&#39;t just take our word for it...</p></div>
-      <div class="bottom svelte-m7b8em"><p class="${["svelte-m7b8em", "active"].join(" ").trim()}">For Lorem</p>
-        <p class="${["svelte-m7b8em", ""].join(" ").trim()}">For Ipsum</p>
-        <p class="${["svelte-m7b8em", ""].join(" ").trim()}">For Slipsum</p></div></div>
-    <div class="right-container svelte-m7b8em"><div class="carousel-wrapper svelte-m7b8em">${validate_component(Carousel, "Carousel").$$render(
+    )}</div></div>` : `<div class="container custom svelte-16s0ie8"><div class="left-container svelte-16s0ie8"><div class="top svelte-16s0ie8"><img src="https://images.ctfassets.net/qhzqj9nbcut3/1zjqDdEWirjNiucHFkZtT4/e219d5c3df350b959e2ae43a4f8ee3f8/redLotus.png?h=250" alt="A logo of a red lotus." class="svelte-16s0ie8">
+        <p class="svelte-16s0ie8">Don&#39;t just take our word for it...</p></div>
+      <div class="bottom svelte-16s0ie8"><p class="${["svelte-16s0ie8", "active"].join(" ").trim()}">For Lorem</p>
+        <p class="${["svelte-16s0ie8", ""].join(" ").trim()}">For Ipsum</p>
+        <p class="${["svelte-16s0ie8", ""].join(" ").trim()}">For Slipsum</p></div></div>
+    <div class="right-container svelte-16s0ie8"><div class="carousel-wrapper svelte-16s0ie8">${validate_component(Carousel, "Carousel").$$render(
       $$result,
       {
         autoplay: "true",
@@ -131,10 +131,10 @@ const CarouselWrapper = create_ssr_component(($$result, $$props, $$bindings, slo
       },
       {
         next: ({ showPrevPage, showNextPage }) => {
-          return `<button class="flex-center-center svelte-m7b8em" slot="next"><div class="icon svelte-m7b8em">${validate_component(FaArrowCircleRight, "FaArrowCircleRight").$$render($$result, {}, {}, {})}</div></button>`;
+          return `<button class="flex-center-center svelte-16s0ie8" slot="next"><div class="icon svelte-16s0ie8">${validate_component(FaArrowCircleRight, "FaArrowCircleRight").$$render($$result, {}, {}, {})}</div></button>`;
         },
         prev: ({ showPrevPage, showNextPage }) => {
-          return `<button class="flex-center-center svelte-m7b8em" slot="prev"><div class="icon svelte-m7b8em">${validate_component(FaArrowCircleLeft, "FaArrowCircleLeft").$$render($$result, {}, {}, {})}</div></button>`;
+          return `<button class="flex-center-center svelte-16s0ie8" slot="prev"><div class="icon svelte-16s0ie8">${validate_component(FaArrowCircleLeft, "FaArrowCircleLeft").$$render($$result, {}, {}, {})}</div></button>`;
         },
         default: ({ showPrevPage, showNextPage }) => {
           return `${each(quotes, (entry) => {
@@ -143,7 +143,7 @@ const CarouselWrapper = create_ssr_component(($$result, $$props, $$bindings, slo
         }
       }
     )}
-        <div class="ctaLink svelte-m7b8em">${validate_component(ButtonLink, "ButtonLink").$$render(
+        <div class="ctaLink svelte-16s0ie8">${validate_component(ButtonLink, "ButtonLink").$$render(
       $$result,
       {
         text: data.ctaText || "Learn More",
