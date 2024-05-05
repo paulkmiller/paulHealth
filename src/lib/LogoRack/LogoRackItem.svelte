@@ -51,7 +51,7 @@
     <h2 style="color: {color}" data-aos="fade-up" data-aos-delay="100"><TextWithLineBreaks inputText={logos[0].header} /></h2>
   {/if}
   {#each logos as logo, index (index)}
-    <div class="logo-wrapper" data-aos="fade-left" data-aos-delay="{index * 400}">
+    <div class="logo-wrapper" data-aos="fade-right" data-aos-delay="{index * 400}">
       <img src="{logo.image}?fm=webp&q=80" alt={logo.alt} />
       {#if logo.headline} 
         <h4 style="color: {color}" class="headline"><TextWithLineBreaks inputText={logo.headline} /></h4>

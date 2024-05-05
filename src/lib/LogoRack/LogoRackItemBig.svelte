@@ -45,7 +45,7 @@
 
 <div class="text-center divider big-logo blocks-{numOfBlocks}">
   {#each logos as logo, index (index)}
-    <div class="logo-wrapper" data-aos="fade-left" data-aos-delay="{index * 400}">
+    <div class="logo-wrapper" data-aos="fade-right" data-aos-delay="{index * 400}">
       {#if numOfBlocks == 1}
         <img src="{logo.image}?fm=webp&q=80" alt={logo.alt} />
         {#if logo.headline}
