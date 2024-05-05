@@ -6,31 +6,31 @@ async function load({ request, setHeaders }) {
   const isAuthenticated = cookies.passwordAuthenticated === "true";
   const query = `
     query {
-        navigationMenu(id: "4Vtc0yrr7IsXwAdeoJBqzm") {
-            menuItemsCollection {
+      navigationMenu(id: "4Vtc0yrr7IsXwAdeoJBqzm") {
+        menuItemsCollection {
+          items {
+            ... on MenuItem {
+              path
+              internalName
+              childItemsCollection {
                 items {
-                    ... on MenuItem {
-                        path
-                        internalName
-                        childItemsCollection {
-                            items {
-                                ... on MenuItem {
-                                    path
-                                    internalName
-                                }
-                            }
-                        }
-                    }
+                  ... on MenuItem {
+                    path
+                    internalName
+                  }
                 }
+              }
             }
+          }
         }
+      }
     }
     `;
   const response = await contentfulFetch(query);
   if (!response.ok) {
     throw error(404, {
       message: `Mistakes were made: Error ${response.status} - ${response.statusText} 
-            ${response.url}`
+        ${response.url}`
     });
   }
   const { data } = await response.json();

@@ -1,6 +1,7 @@
 import { c as create_ssr_component, e as escape, v as validate_component, a as add_attribute, b as add_styles, d as each, n as null_to_empty, f as subscribe, g as add_classes } from "../../chunks/index3.js";
 import { I as IconBase } from "../../chunks/IconBase.js";
 import { p as page, n as navigating } from "../../chunks/stores.js";
+import AOS from "aos";
 const Circle_svelte_svelte_type_style_lang = "";
 const Circle2_svelte_svelte_type_style_lang = "";
 const Circle3_svelte_svelte_type_style_lang = "";
@@ -246,6 +247,7 @@ async function getHeroBanner() {
   const heroBanners = await response.json();
   return heroBanners;
 }
+const aos = "";
 const FaFacebookF = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${validate_component(IconBase, "IconBase").$$render($$result, Object.assign({}, { viewBox: "0 0 320 512" }, $$props), {}, {
     default: () => {
@@ -306,9 +308,9 @@ async function load() {
   };
 }
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let $$unsubscribe_page;
+  let $page, $$unsubscribe_page;
   let $navigating, $$unsubscribe_navigating;
-  $$unsubscribe_page = subscribe(page, (value) => value);
+  $$unsubscribe_page = subscribe(page, (value) => $page = value);
   $$unsubscribe_navigating = subscribe(navigating, (value) => $navigating = value);
   let { data } = $$props;
   let container;
@@ -337,6 +339,9 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
   {
     show = false;
+  }
+  {
+    $page.url, AOS.refresh();
   }
   $$unsubscribe_page();
   $$unsubscribe_navigating();

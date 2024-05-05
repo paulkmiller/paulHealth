@@ -43366,12 +43366,12 @@ var require_contentful_management_node = __commonJS({
             };
             const toObjectSet = (arrayOrString, delimiter) => {
               const obj = {};
-              const define = (arr) => {
+              const define2 = (arr) => {
                 arr.forEach((value) => {
                   obj[value] = true;
                 });
               };
-              isArray(arrayOrString) ? define(arrayOrString) : define(String(arrayOrString).split(delimiter));
+              isArray(arrayOrString) ? define2(arrayOrString) : define2(String(arrayOrString).split(delimiter));
               return obj;
             };
             const noop2 = () => {
@@ -44223,31 +44223,31 @@ async function load({ request, setHeaders }) {
   const isAuthenticated = cookies.passwordAuthenticated === "true";
   const query5 = `
     query {
-        navigationMenu(id: "4Vtc0yrr7IsXwAdeoJBqzm") {
-            menuItemsCollection {
+      navigationMenu(id: "4Vtc0yrr7IsXwAdeoJBqzm") {
+        menuItemsCollection {
+          items {
+            ... on MenuItem {
+              path
+              internalName
+              childItemsCollection {
                 items {
-                    ... on MenuItem {
-                        path
-                        internalName
-                        childItemsCollection {
-                            items {
-                                ... on MenuItem {
-                                    path
-                                    internalName
-                                }
-                            }
-                        }
-                    }
+                  ... on MenuItem {
+                    path
+                    internalName
+                  }
                 }
+              }
             }
+          }
         }
+      }
     }
     `;
   const response = await contentfulFetch(query5);
   if (!response.ok) {
     throw error2(404, {
       message: `Mistakes were made: Error ${response.status} - ${response.statusText} 
-            ${response.url}`
+        ${response.url}`
     });
   }
   const { data } = await response.json();
@@ -44592,6 +44592,384 @@ var init_stores = __esm({
   }
 });
 
+// node_modules/aos/dist/aos.js
+var require_aos = __commonJS({
+  "node_modules/aos/dist/aos.js"(exports, module2) {
+    !function(e, t) {
+      "object" == typeof exports && "object" == typeof module2 ? module2.exports = t() : "function" == typeof define && define.amd ? define([], t) : "object" == typeof exports ? exports.AOS = t() : e.AOS = t();
+    }(exports, function() {
+      return function(e) {
+        function t(o) {
+          if (n[o])
+            return n[o].exports;
+          var i = n[o] = { exports: {}, id: o, loaded: false };
+          return e[o].call(i.exports, i, i.exports, t), i.loaded = true, i.exports;
+        }
+        var n = {};
+        return t.m = e, t.c = n, t.p = "dist/", t(0);
+      }([function(e, t, n) {
+        "use strict";
+        function o(e2) {
+          return e2 && e2.__esModule ? e2 : { default: e2 };
+        }
+        var i = Object.assign || function(e2) {
+          for (var t2 = 1; t2 < arguments.length; t2++) {
+            var n2 = arguments[t2];
+            for (var o2 in n2)
+              Object.prototype.hasOwnProperty.call(n2, o2) && (e2[o2] = n2[o2]);
+          }
+          return e2;
+        }, r = n(1), a = (o(r), n(6)), u = o(a), c = n(7), s2 = o(c), f = n(8), d = o(f), l = n(9), p = o(l), m = n(10), b = o(m), v = n(11), y = o(v), g = n(14), h = o(g), w = [], k = false, x = { offset: 120, delay: 0, easing: "ease", duration: 400, disable: false, once: false, startEvent: "DOMContentLoaded", throttleDelay: 99, debounceDelay: 50, disableMutationObserver: false }, j = function() {
+          var e2 = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          if (e2 && (k = true), k)
+            return w = (0, y.default)(w, x), (0, b.default)(w, x.once), w;
+        }, O = function() {
+          w = (0, h.default)(), j();
+        }, M = function() {
+          w.forEach(function(e2, t2) {
+            e2.node.removeAttribute("data-aos"), e2.node.removeAttribute("data-aos-easing"), e2.node.removeAttribute("data-aos-duration"), e2.node.removeAttribute("data-aos-delay");
+          });
+        }, S = function(e2) {
+          return e2 === true || "mobile" === e2 && p.default.mobile() || "phone" === e2 && p.default.phone() || "tablet" === e2 && p.default.tablet() || "function" == typeof e2 && e2() === true;
+        }, _ = function(e2) {
+          x = i(x, e2), w = (0, h.default)();
+          var t2 = document.all && !window.atob;
+          return S(x.disable) || t2 ? M() : (x.disableMutationObserver || d.default.isSupported() || (console.info('\n      aos: MutationObserver is not supported on this browser,\n      code mutations observing has been disabled.\n      You may have to call "refreshHard()" by yourself.\n    '), x.disableMutationObserver = true), document.querySelector("body").setAttribute("data-aos-easing", x.easing), document.querySelector("body").setAttribute("data-aos-duration", x.duration), document.querySelector("body").setAttribute("data-aos-delay", x.delay), "DOMContentLoaded" === x.startEvent && ["complete", "interactive"].indexOf(document.readyState) > -1 ? j(true) : "load" === x.startEvent ? window.addEventListener(x.startEvent, function() {
+            j(true);
+          }) : document.addEventListener(x.startEvent, function() {
+            j(true);
+          }), window.addEventListener("resize", (0, s2.default)(j, x.debounceDelay, true)), window.addEventListener("orientationchange", (0, s2.default)(j, x.debounceDelay, true)), window.addEventListener("scroll", (0, u.default)(function() {
+            (0, b.default)(w, x.once);
+          }, x.throttleDelay)), x.disableMutationObserver || d.default.ready("[data-aos]", O), w);
+        };
+        e.exports = { init: _, refresh: j, refreshHard: O };
+      }, function(e, t) {
+      }, , , , , function(e, t) {
+        (function(t2) {
+          "use strict";
+          function n(e2, t3, n2) {
+            function o2(t4) {
+              var n3 = b2, o3 = v2;
+              return b2 = v2 = void 0, k2 = t4, g2 = e2.apply(o3, n3);
+            }
+            function r2(e3) {
+              return k2 = e3, h2 = setTimeout(f2, t3), M ? o2(e3) : g2;
+            }
+            function a2(e3) {
+              var n3 = e3 - w2, o3 = e3 - k2, i2 = t3 - n3;
+              return S ? j(i2, y2 - o3) : i2;
+            }
+            function c2(e3) {
+              var n3 = e3 - w2, o3 = e3 - k2;
+              return void 0 === w2 || n3 >= t3 || n3 < 0 || S && o3 >= y2;
+            }
+            function f2() {
+              var e3 = O();
+              return c2(e3) ? d2(e3) : void (h2 = setTimeout(f2, a2(e3)));
+            }
+            function d2(e3) {
+              return h2 = void 0, _ && b2 ? o2(e3) : (b2 = v2 = void 0, g2);
+            }
+            function l2() {
+              void 0 !== h2 && clearTimeout(h2), k2 = 0, b2 = w2 = v2 = h2 = void 0;
+            }
+            function p2() {
+              return void 0 === h2 ? g2 : d2(O());
+            }
+            function m2() {
+              var e3 = O(), n3 = c2(e3);
+              if (b2 = arguments, v2 = this, w2 = e3, n3) {
+                if (void 0 === h2)
+                  return r2(w2);
+                if (S)
+                  return h2 = setTimeout(f2, t3), o2(w2);
+              }
+              return void 0 === h2 && (h2 = setTimeout(f2, t3)), g2;
+            }
+            var b2, v2, y2, g2, h2, w2, k2 = 0, M = false, S = false, _ = true;
+            if ("function" != typeof e2)
+              throw new TypeError(s2);
+            return t3 = u(t3) || 0, i(n2) && (M = !!n2.leading, S = "maxWait" in n2, y2 = S ? x(u(n2.maxWait) || 0, t3) : y2, _ = "trailing" in n2 ? !!n2.trailing : _), m2.cancel = l2, m2.flush = p2, m2;
+          }
+          function o(e2, t3, o2) {
+            var r2 = true, a2 = true;
+            if ("function" != typeof e2)
+              throw new TypeError(s2);
+            return i(o2) && (r2 = "leading" in o2 ? !!o2.leading : r2, a2 = "trailing" in o2 ? !!o2.trailing : a2), n(e2, t3, { leading: r2, maxWait: t3, trailing: a2 });
+          }
+          function i(e2) {
+            var t3 = "undefined" == typeof e2 ? "undefined" : c(e2);
+            return !!e2 && ("object" == t3 || "function" == t3);
+          }
+          function r(e2) {
+            return !!e2 && "object" == ("undefined" == typeof e2 ? "undefined" : c(e2));
+          }
+          function a(e2) {
+            return "symbol" == ("undefined" == typeof e2 ? "undefined" : c(e2)) || r(e2) && k.call(e2) == d;
+          }
+          function u(e2) {
+            if ("number" == typeof e2)
+              return e2;
+            if (a(e2))
+              return f;
+            if (i(e2)) {
+              var t3 = "function" == typeof e2.valueOf ? e2.valueOf() : e2;
+              e2 = i(t3) ? t3 + "" : t3;
+            }
+            if ("string" != typeof e2)
+              return 0 === e2 ? e2 : +e2;
+            e2 = e2.replace(l, "");
+            var n2 = m.test(e2);
+            return n2 || b.test(e2) ? v(e2.slice(2), n2 ? 2 : 8) : p.test(e2) ? f : +e2;
+          }
+          var c = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e2) {
+            return typeof e2;
+          } : function(e2) {
+            return e2 && "function" == typeof Symbol && e2.constructor === Symbol && e2 !== Symbol.prototype ? "symbol" : typeof e2;
+          }, s2 = "Expected a function", f = NaN, d = "[object Symbol]", l = /^\s+|\s+$/g, p = /^[-+]0x[0-9a-f]+$/i, m = /^0b[01]+$/i, b = /^0o[0-7]+$/i, v = parseInt, y = "object" == ("undefined" == typeof t2 ? "undefined" : c(t2)) && t2 && t2.Object === Object && t2, g = "object" == ("undefined" == typeof self ? "undefined" : c(self)) && self && self.Object === Object && self, h = y || g || Function("return this")(), w = Object.prototype, k = w.toString, x = Math.max, j = Math.min, O = function() {
+            return h.Date.now();
+          };
+          e.exports = o;
+        }).call(t, function() {
+          return this;
+        }());
+      }, function(e, t) {
+        (function(t2) {
+          "use strict";
+          function n(e2, t3, n2) {
+            function i2(t4) {
+              var n3 = b2, o2 = v2;
+              return b2 = v2 = void 0, O = t4, g2 = e2.apply(o2, n3);
+            }
+            function r2(e3) {
+              return O = e3, h2 = setTimeout(f2, t3), M ? i2(e3) : g2;
+            }
+            function u2(e3) {
+              var n3 = e3 - w2, o2 = e3 - O, i3 = t3 - n3;
+              return S ? x(i3, y2 - o2) : i3;
+            }
+            function s3(e3) {
+              var n3 = e3 - w2, o2 = e3 - O;
+              return void 0 === w2 || n3 >= t3 || n3 < 0 || S && o2 >= y2;
+            }
+            function f2() {
+              var e3 = j();
+              return s3(e3) ? d2(e3) : void (h2 = setTimeout(f2, u2(e3)));
+            }
+            function d2(e3) {
+              return h2 = void 0, _ && b2 ? i2(e3) : (b2 = v2 = void 0, g2);
+            }
+            function l2() {
+              void 0 !== h2 && clearTimeout(h2), O = 0, b2 = w2 = v2 = h2 = void 0;
+            }
+            function p2() {
+              return void 0 === h2 ? g2 : d2(j());
+            }
+            function m2() {
+              var e3 = j(), n3 = s3(e3);
+              if (b2 = arguments, v2 = this, w2 = e3, n3) {
+                if (void 0 === h2)
+                  return r2(w2);
+                if (S)
+                  return h2 = setTimeout(f2, t3), i2(w2);
+              }
+              return void 0 === h2 && (h2 = setTimeout(f2, t3)), g2;
+            }
+            var b2, v2, y2, g2, h2, w2, O = 0, M = false, S = false, _ = true;
+            if ("function" != typeof e2)
+              throw new TypeError(c);
+            return t3 = a(t3) || 0, o(n2) && (M = !!n2.leading, S = "maxWait" in n2, y2 = S ? k(a(n2.maxWait) || 0, t3) : y2, _ = "trailing" in n2 ? !!n2.trailing : _), m2.cancel = l2, m2.flush = p2, m2;
+          }
+          function o(e2) {
+            var t3 = "undefined" == typeof e2 ? "undefined" : u(e2);
+            return !!e2 && ("object" == t3 || "function" == t3);
+          }
+          function i(e2) {
+            return !!e2 && "object" == ("undefined" == typeof e2 ? "undefined" : u(e2));
+          }
+          function r(e2) {
+            return "symbol" == ("undefined" == typeof e2 ? "undefined" : u(e2)) || i(e2) && w.call(e2) == f;
+          }
+          function a(e2) {
+            if ("number" == typeof e2)
+              return e2;
+            if (r(e2))
+              return s2;
+            if (o(e2)) {
+              var t3 = "function" == typeof e2.valueOf ? e2.valueOf() : e2;
+              e2 = o(t3) ? t3 + "" : t3;
+            }
+            if ("string" != typeof e2)
+              return 0 === e2 ? e2 : +e2;
+            e2 = e2.replace(d, "");
+            var n2 = p.test(e2);
+            return n2 || m.test(e2) ? b(e2.slice(2), n2 ? 2 : 8) : l.test(e2) ? s2 : +e2;
+          }
+          var u = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e2) {
+            return typeof e2;
+          } : function(e2) {
+            return e2 && "function" == typeof Symbol && e2.constructor === Symbol && e2 !== Symbol.prototype ? "symbol" : typeof e2;
+          }, c = "Expected a function", s2 = NaN, f = "[object Symbol]", d = /^\s+|\s+$/g, l = /^[-+]0x[0-9a-f]+$/i, p = /^0b[01]+$/i, m = /^0o[0-7]+$/i, b = parseInt, v = "object" == ("undefined" == typeof t2 ? "undefined" : u(t2)) && t2 && t2.Object === Object && t2, y = "object" == ("undefined" == typeof self ? "undefined" : u(self)) && self && self.Object === Object && self, g = v || y || Function("return this")(), h = Object.prototype, w = h.toString, k = Math.max, x = Math.min, j = function() {
+            return g.Date.now();
+          };
+          e.exports = n;
+        }).call(t, function() {
+          return this;
+        }());
+      }, function(e, t) {
+        "use strict";
+        function n(e2) {
+          var t2 = void 0, o2 = void 0, i2 = void 0;
+          for (t2 = 0; t2 < e2.length; t2 += 1) {
+            if (o2 = e2[t2], o2.dataset && o2.dataset.aos)
+              return true;
+            if (i2 = o2.children && n(o2.children))
+              return true;
+          }
+          return false;
+        }
+        function o() {
+          return window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+        }
+        function i() {
+          return !!o();
+        }
+        function r(e2, t2) {
+          var n2 = window.document, i2 = o(), r2 = new i2(a);
+          u = t2, r2.observe(n2.documentElement, { childList: true, subtree: true, removedNodes: true });
+        }
+        function a(e2) {
+          e2 && e2.forEach(function(e3) {
+            var t2 = Array.prototype.slice.call(e3.addedNodes), o2 = Array.prototype.slice.call(e3.removedNodes), i2 = t2.concat(o2);
+            if (n(i2))
+              return u();
+          });
+        }
+        Object.defineProperty(t, "__esModule", { value: true });
+        var u = function() {
+        };
+        t.default = { isSupported: i, ready: r };
+      }, function(e, t) {
+        "use strict";
+        function n(e2, t2) {
+          if (!(e2 instanceof t2))
+            throw new TypeError("Cannot call a class as a function");
+        }
+        function o() {
+          return navigator.userAgent || navigator.vendor || window.opera || "";
+        }
+        Object.defineProperty(t, "__esModule", { value: true });
+        var i = function() {
+          function e2(e3, t2) {
+            for (var n2 = 0; n2 < t2.length; n2++) {
+              var o2 = t2[n2];
+              o2.enumerable = o2.enumerable || false, o2.configurable = true, "value" in o2 && (o2.writable = true), Object.defineProperty(e3, o2.key, o2);
+            }
+          }
+          return function(t2, n2, o2) {
+            return n2 && e2(t2.prototype, n2), o2 && e2(t2, o2), t2;
+          };
+        }(), r = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i, a = /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i, u = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i, c = /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i, s2 = function() {
+          function e2() {
+            n(this, e2);
+          }
+          return i(e2, [{ key: "phone", value: function() {
+            var e3 = o();
+            return !(!r.test(e3) && !a.test(e3.substr(0, 4)));
+          } }, { key: "mobile", value: function() {
+            var e3 = o();
+            return !(!u.test(e3) && !c.test(e3.substr(0, 4)));
+          } }, { key: "tablet", value: function() {
+            return this.mobile() && !this.phone();
+          } }]), e2;
+        }();
+        t.default = new s2();
+      }, function(e, t) {
+        "use strict";
+        Object.defineProperty(t, "__esModule", { value: true });
+        var n = function(e2, t2, n2) {
+          var o2 = e2.node.getAttribute("data-aos-once");
+          t2 > e2.position ? e2.node.classList.add("aos-animate") : "undefined" != typeof o2 && ("false" === o2 || !n2 && "true" !== o2) && e2.node.classList.remove("aos-animate");
+        }, o = function(e2, t2) {
+          var o2 = window.pageYOffset, i = window.innerHeight;
+          e2.forEach(function(e3, r) {
+            n(e3, i + o2, t2);
+          });
+        };
+        t.default = o;
+      }, function(e, t, n) {
+        "use strict";
+        function o(e2) {
+          return e2 && e2.__esModule ? e2 : { default: e2 };
+        }
+        Object.defineProperty(t, "__esModule", { value: true });
+        var i = n(12), r = o(i), a = function(e2, t2) {
+          return e2.forEach(function(e3, n2) {
+            e3.node.classList.add("aos-init"), e3.position = (0, r.default)(e3.node, t2.offset);
+          }), e2;
+        };
+        t.default = a;
+      }, function(e, t, n) {
+        "use strict";
+        function o(e2) {
+          return e2 && e2.__esModule ? e2 : { default: e2 };
+        }
+        Object.defineProperty(t, "__esModule", { value: true });
+        var i = n(13), r = o(i), a = function(e2, t2) {
+          var n2 = 0, o2 = 0, i2 = window.innerHeight, a2 = { offset: e2.getAttribute("data-aos-offset"), anchor: e2.getAttribute("data-aos-anchor"), anchorPlacement: e2.getAttribute("data-aos-anchor-placement") };
+          switch (a2.offset && !isNaN(a2.offset) && (o2 = parseInt(a2.offset)), a2.anchor && document.querySelectorAll(a2.anchor) && (e2 = document.querySelectorAll(a2.anchor)[0]), n2 = (0, r.default)(e2).top, a2.anchorPlacement) {
+            case "top-bottom":
+              break;
+            case "center-bottom":
+              n2 += e2.offsetHeight / 2;
+              break;
+            case "bottom-bottom":
+              n2 += e2.offsetHeight;
+              break;
+            case "top-center":
+              n2 += i2 / 2;
+              break;
+            case "bottom-center":
+              n2 += i2 / 2 + e2.offsetHeight;
+              break;
+            case "center-center":
+              n2 += i2 / 2 + e2.offsetHeight / 2;
+              break;
+            case "top-top":
+              n2 += i2;
+              break;
+            case "bottom-top":
+              n2 += e2.offsetHeight + i2;
+              break;
+            case "center-top":
+              n2 += e2.offsetHeight / 2 + i2;
+          }
+          return a2.anchorPlacement || a2.offset || isNaN(t2) || (o2 = t2), n2 + o2;
+        };
+        t.default = a;
+      }, function(e, t) {
+        "use strict";
+        Object.defineProperty(t, "__esModule", { value: true });
+        var n = function(e2) {
+          for (var t2 = 0, n2 = 0; e2 && !isNaN(e2.offsetLeft) && !isNaN(e2.offsetTop); )
+            t2 += e2.offsetLeft - ("BODY" != e2.tagName ? e2.scrollLeft : 0), n2 += e2.offsetTop - ("BODY" != e2.tagName ? e2.scrollTop : 0), e2 = e2.offsetParent;
+          return { top: n2, left: t2 };
+        };
+        t.default = n;
+      }, function(e, t) {
+        "use strict";
+        Object.defineProperty(t, "__esModule", { value: true });
+        var n = function(e2) {
+          return e2 = e2 || document.querySelectorAll("[data-aos]"), Array.prototype.map.call(e2, function(e3) {
+            return { node: e3 };
+          });
+        };
+        t.default = n;
+      }]);
+    });
+  }
+});
+
 // .svelte-kit/output/server/entries/pages/_layout.svelte.js
 var layout_svelte_exports = {};
 __export(layout_svelte_exports, {
@@ -44615,12 +44993,13 @@ async function load2() {
     props: { heroBanners, personCollections }
   };
 }
-var css$7, Circle3, css$6, Backdrop, FaChevronDown, css$5, LinkItem, css$4, SideDrawer, css$3, DrawerToggleButton, css$2, logoLight$1, logoDark, Nav, FaFacebookF, FaTwitter, FaLinkedinIn, css$1, logoLight, Footer, css2, Layout;
+var import_aos, css$7, Circle3, css$6, Backdrop, FaChevronDown, css$5, LinkItem, css$4, SideDrawer, css$3, DrawerToggleButton, css$2, logoLight$1, logoDark, Nav, FaFacebookF, FaTwitter, FaLinkedinIn, css$1, logoLight, Footer, css2, Layout;
 var init_layout_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/_layout.svelte.js"() {
     init_index3();
     init_IconBase();
     init_stores();
+    import_aos = __toESM(require_aos(), 1);
     css$7 = {
       code: ".wrapper.svelte-7wj78d{width:var(--size);height:var(--size);display:flex;justify-content:center;align-items:center;line-height:0;box-sizing:border-box}.inner.svelte-7wj78d{transform:scale(calc(var(--floatSize) / 52))}.ball-container.svelte-7wj78d{animation:svelte-7wj78d-ballTwo var(--duration) infinite;width:44px;height:44px;flex-shrink:0;position:relative}.single-ball.svelte-7wj78d{width:44px;height:44px;position:absolute}.ball.svelte-7wj78d{width:20px;height:20px;border-radius:50%;position:absolute;animation:svelte-7wj78d-ballOne var(--duration) infinite ease}.pause-animation.svelte-7wj78d{animation-play-state:paused}.ball-top-left.svelte-7wj78d{background-color:var(--ballTopLeftColor);top:0;left:0}.ball-top-right.svelte-7wj78d{background-color:var(--ballTopRightColor);top:0;left:24px}.ball-bottom-left.svelte-7wj78d{background-color:var(--ballBottomLeftColor);top:24px;left:0}.ball-bottom-right.svelte-7wj78d{background-color:var(--ballBottomRightColor);top:24px;left:24px}@keyframes svelte-7wj78d-ballOne{0%{position:absolute}50%{top:12px;left:12px;position:absolute;opacity:0.5}100%{position:absolute}}@keyframes svelte-7wj78d-ballTwo{0%{transform:rotate(0deg) scale(1)}50%{transform:rotate(360deg) scale(1.3)}100%{transform:rotate(720deg) scale(1)}}",
       map: null
@@ -44875,9 +45254,9 @@ var init_layout_svelte = __esm({
       map: null
     };
     Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let $$unsubscribe_page;
+      let $page, $$unsubscribe_page;
       let $navigating, $$unsubscribe_navigating;
-      $$unsubscribe_page = subscribe(page, (value) => value);
+      $$unsubscribe_page = subscribe(page, (value) => $page = value);
       $$unsubscribe_navigating = subscribe(navigating, (value) => $navigating = value);
       let { data } = $$props;
       let container;
@@ -44906,6 +45285,9 @@ var init_layout_svelte = __esm({
       $$result.css.add(css2);
       {
         show = false;
+      }
+      {
+        $page.url, import_aos.default.refresh();
       }
       $$unsubscribe_page();
       $$unsubscribe_navigating();
@@ -44958,8 +45340,8 @@ var init__ = __esm({
     index = 0;
     component = async () => component_cache ??= (await Promise.resolve().then(() => (init_layout_svelte(), layout_svelte_exports))).default;
     server_id = "src/routes/+layout.server.js";
-    imports = ["_app/immutable/nodes/0.a8083c69.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/IconBase.aa9b8a72.js", "_app/immutable/chunks/stores.9e0b2c81.js", "_app/immutable/chunks/singletons.71120f5f.js", "_app/immutable/chunks/paths.01dbe2f7.js"];
-    stylesheets = ["_app/immutable/assets/0.c0095674.css", "_app/immutable/assets/IconBase.6bf551a2.css"];
+    imports = ["_app/immutable/nodes/0.2c67a248.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/IconBase.aa9b8a72.js", "_app/immutable/chunks/stores.d5090ce3.js", "_app/immutable/chunks/singletons.94de24d0.js", "_app/immutable/chunks/paths.bdc3fcd1.js", "_app/immutable/chunks/_commonjsHelpers.725317a4.js"];
+    stylesheets = ["_app/immutable/assets/0.fa23c092.css", "_app/immutable/assets/IconBase.6bf551a2.css"];
     fonts = [];
   }
 });
@@ -44980,6 +45362,9 @@ var init_ButtonLink = __esm({
       let { color = "" } = $$props;
       let { ariaText } = $$props;
       let { ariaLink } = $$props;
+      let { delay = 0 } = $$props;
+      let { aos_delay = 200 } = $$props;
+      let { aos_anim } = $$props;
       if (background_color === "") {
         background_color = "#fff";
       }
@@ -45000,8 +45385,14 @@ var init_ButtonLink = __esm({
         $$bindings.ariaText(ariaText);
       if ($$props.ariaLink === void 0 && $$bindings.ariaLink && ariaLink !== void 0)
         $$bindings.ariaLink(ariaLink);
+      if ($$props.delay === void 0 && $$bindings.delay && delay !== void 0)
+        $$bindings.delay(delay);
+      if ($$props.aos_delay === void 0 && $$bindings.aos_delay && aos_delay !== void 0)
+        $$bindings.aos_delay(aos_delay);
+      if ($$props.aos_anim === void 0 && $$bindings.aos_anim && aos_anim !== void 0)
+        $$bindings.aos_anim(aos_anim);
       $$result.css.add(css3);
-      return `<a${add_attribute("href", path2, 0)} style="${"--link-color: " + escape(color, true) + "; --background-color: " + escape(background_color, true) + ";"}" aria-label="${"A call to action button inviting the user to " + escape(ariaText, true) + " by visiting the " + escape(ariaLink, true) + " page."}" class="svelte-5r4rcn">${escape(text2)}
+      return `<a${add_attribute("href", path2, 0)} style="${"--link-color: " + escape(color, true) + "; --background-color: " + escape(background_color, true) + ";"}" aria-label="${"A call to action button inviting the user to " + escape(ariaText, true) + " by visiting the " + escape(ariaLink, true) + " page."}"${add_attribute("data-aos", aos_anim, 0)} data-aos-easing="ease-in-back"${add_attribute("data-aos-delay", delay + aos_delay, 0)} data-aos-offset="0" class="svelte-5r4rcn">${escape(text2)}
   </a>`;
     });
   }
@@ -45068,7 +45459,7 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => component_cache2 ??= (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default;
-    imports2 = ["_app/immutable/nodes/1.7c023d94.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/ButtonLink.212aa9c5.js"];
+    imports2 = ["_app/immutable/nodes/1.378b5bef.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/ButtonLink.5274dc1a.js"];
     stylesheets2 = ["_app/immutable/assets/1.6b9275b8.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css"];
     fonts2 = [];
   }
@@ -45126,7 +45517,7 @@ var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     index3 = 2;
     component3 = async () => component_cache3 ??= (await Promise.resolve().then(() => (init_page_svelte(), page_svelte_exports))).default;
-    imports3 = ["_app/immutable/nodes/2.2f4ab74b.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/singletons.71120f5f.js", "_app/immutable/chunks/paths.01dbe2f7.js"];
+    imports3 = ["_app/immutable/nodes/2.bd4995d5.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/singletons.94de24d0.js", "_app/immutable/chunks/paths.bdc3fcd1.js"];
     stylesheets3 = ["_app/immutable/assets/2.239c46b0.css"];
     fonts3 = [];
   }
@@ -45938,14 +46329,37 @@ var init_TextWithLineBreaks = __esm({
 });
 
 // .svelte-kit/output/server/chunks/Hero.js
-var css6, Hero;
+var css$12, TextReveal, css6, Hero;
 var init_Hero = __esm({
   ".svelte-kit/output/server/chunks/Hero.js"() {
     init_index3();
     init_ButtonLink();
     init_TextWithLineBreaks();
+    css$12 = {
+      code: "#text.svelte-vd4nic{opacity:0;transition:opacity 0.5s ease-out}.cover_container.svelte-vd4nic{position:absolute;top:0;right:0;bottom:0;left:0;overflow:hidden;pointer-events:none}#cover.svelte-vd4nic{position:absolute;top:0;right:0;bottom:0;left:0;background-color:currentColor;transform:translateZ(0) translateX(-101%)}.reveal #text{opacity:1 !important}@keyframes svelte-vd4nic-slideReveal{from{transform:translateX(-100%)}to{transform:translateX(100%)}}#cover.svelte-vd4nic{animation:svelte-vd4nic-slideReveal 1s forwards}",
+      map: null
+    };
+    TextReveal = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { delay = 200 } = $$props;
+      let { aos_delay = 200 } = $$props;
+      let { aos_anim = "fade-zoom-in" } = $$props;
+      let { once: once2 = false } = $$props;
+      let textReveal;
+      if ($$props.delay === void 0 && $$bindings.delay && delay !== void 0)
+        $$bindings.delay(delay);
+      if ($$props.aos_delay === void 0 && $$bindings.aos_delay && aos_delay !== void 0)
+        $$bindings.aos_delay(aos_delay);
+      if ($$props.aos_anim === void 0 && $$bindings.aos_anim && aos_anim !== void 0)
+        $$bindings.aos_anim(aos_anim);
+      if ($$props.once === void 0 && $$bindings.once && once2 !== void 0)
+        $$bindings.once(once2);
+      $$result.css.add(css$12);
+      return `<div style="position: relative; display: inline-block;"${add_attribute("this", textReveal, 0)}><span id="text" style="${"animation-delay: " + escape(delay, true) + "ms"}" class="svelte-vd4nic"><span${add_attribute("data-aos", aos_anim, 0)} data-aos-easing="ease-in-back"${add_attribute("data-aos-delay", delay + aos_delay, 0)} data-aos-offset="0">${slots.default ? slots.default({}) : ``}</span></span>
+  <div class="cover_container svelte-vd4nic"><div id="cover" style="${"animation-delay: " + escape(delay, true) + "ms"}" class="svelte-vd4nic"></div></div>
+</div>`;
+    });
     css6 = {
-      code: ".headline.svelte-l9uojd.svelte-l9uojd{font-family:'PolySans Slim', Arial, Helvetica, sans-serif;font-size:72px;line-height:72px;font-weight:500}.subline.svelte-l9uojd.svelte-l9uojd{color:#adebef;font-family:'PolySans Bulky', Arial, Helvetica, sans-serif;font-size:1rem;line-height:1.5;margin-left:3px;margin-top:1rem;margin-bottom:1rem;letter-spacing:1.4px}.content.svelte-l9uojd.svelte-l9uojd{margin-bottom:1rem}.heroBanner.svelte-l9uojd a{align-self:auto}.heroBanner.svelte-l9uojd.svelte-l9uojd{height:clamp(40rem, 60vw, 60vh);position:relative;background-size:cover;color:white}.heroImage.svelte-l9uojd.svelte-l9uojd{width:100%;height:100%;object-fit:cover;position:absolute;z-index:-1}.content-left.svelte-l9uojd.svelte-l9uojd,.content-right.svelte-l9uojd.svelte-l9uojd{display:flex;flex-direction:column;width:100%;height:100%;backdrop-filter:brightness(80%)}.content-left.svelte-l9uojd.svelte-l9uojd{align-items:flex-end;justify-content:center;padding-right:calc(50% + 1rem);padding-left:2rem}.content-left.svelte-l9uojd .content.svelte-l9uojd{margin-bottom:3rem}.content-left.svelte-l9uojd .headline.svelte-l9uojd,.content-left.svelte-l9uojd .subline.svelte-l9uojd,.content-left.svelte-l9uojd .content.svelte-l9uojd{text-align:right}.content-left.svelte-l9uojd .headline.svelte-l9uojd{font-size:clamp(3rem, -0.875rem + 8.333vw, 4.5rem)}.content-right.svelte-l9uojd.svelte-l9uojd{align-items:flex-start;justify-content:center;padding-left:calc(50% + 1rem);padding-right:2rem}.content-right.svelte-l9uojd .headline.svelte-l9uojd{text-align:left}.content-right.svelte-l9uojd .headline.svelte-l9uojd{font-size:clamp(3rem, -0.875rem + 8.333vw, 4.5rem);max-width:50rem}.heroBanner .content p{font-family:'PolySans Neutral', Arial, Helvetica, sans-serif;font-size:1.2rem;line-height:1.5rem;font-weight:500;padding-left:5px;margin-top:0}.content-right .content p{font-family:'PolySans Neutral', Arial, Helvetica, sans-serif;font-size:1.2rem;line-height:1.5rem;font-weight:500;padding-left:5px;margin-top:0}@media(max-width: 768px){.content-left.svelte-l9uojd.svelte-l9uojd{justify-content:center;align-items:center;padding:2rem}.content-left.svelte-l9uojd p{text-align:center}.content-right.svelte-l9uojd.svelte-l9uojd{align-items:center;padding-left:1rem}.content-right.svelte-l9uojd .headline.svelte-l9uojd,.content-right.svelte-l9uojd .content.svelte-l9uojd,.content-left.svelte-l9uojd .headline.svelte-l9uojd,.content-left.svelte-l9uojd .content.svelte-l9uojd{text-align:center;padding:0 2rem}.content-left.svelte-l9uojd.svelte-l9uojd,.content-right.svelte-l9uojd.svelte-l9uojd{backdrop-filter:brightness(50%)}}@media(max-width: 500px){.content-left.svelte-l9uojd h1.svelte-l9uojd,.content-left.svelte-l9uojd .content.svelte-l9uojd{padding:0 1rem}}",
+      code: ".headline.svelte-1tclrzj.svelte-1tclrzj{font-family:'PolySans Slim', Arial, Helvetica, sans-serif;font-size:72px;line-height:72px;font-weight:500}.subline.svelte-1tclrzj.svelte-1tclrzj{color:#adebef;font-family:'PolySans Bulky', Arial, Helvetica, sans-serif;font-size:1rem;line-height:1.5;margin-left:3px;margin-top:1rem;margin-bottom:1rem;letter-spacing:1.4px}.content.svelte-1tclrzj.svelte-1tclrzj{margin-bottom:1rem}.heroBanner.svelte-1tclrzj a{align-self:auto}.heroBanner.svelte-1tclrzj.svelte-1tclrzj{height:clamp(40rem, 60vw, 60vh);position:relative;background-size:cover;color:white}.heroImage.svelte-1tclrzj.svelte-1tclrzj{width:100%;height:100%;object-fit:cover;position:absolute;z-index:-1}.content-left.svelte-1tclrzj.svelte-1tclrzj,.content-right.svelte-1tclrzj.svelte-1tclrzj{display:flex;flex-direction:column;width:100%;height:100%}.content-left.svelte-1tclrzj.svelte-1tclrzj{align-items:flex-end;justify-content:center;padding-right:calc(50% + 1rem);padding-left:2rem}.content-left.svelte-1tclrzj .content.svelte-1tclrzj{margin-bottom:3rem}.content-left.svelte-1tclrzj .headline.svelte-1tclrzj,.content-left.svelte-1tclrzj .subline.svelte-1tclrzj,.content-left.svelte-1tclrzj .content.svelte-1tclrzj{text-align:right}.content-left.svelte-1tclrzj .headline.svelte-1tclrzj{font-size:clamp(3rem, -0.875rem + 8.333vw, 4.5rem)}.content-right.svelte-1tclrzj.svelte-1tclrzj{align-items:flex-start;justify-content:center;padding-left:calc(50% + 1rem);padding-right:2rem}.content-right.svelte-1tclrzj .headline.svelte-1tclrzj{text-align:left}.content-right.svelte-1tclrzj .headline.svelte-1tclrzj{font-size:clamp(3rem, -0.875rem + 8.333vw, 4.5rem);max-width:50rem}.heroBanner .content p{font-family:'PolySans Neutral', Arial, Helvetica, sans-serif;font-size:1.2rem;line-height:1.5rem;font-weight:500;padding-left:5px;margin-top:0}.content-right .content p{font-family:'PolySans Neutral', Arial, Helvetica, sans-serif;font-size:1.2rem;line-height:1.5rem;font-weight:500;padding-left:5px;margin-top:0}@media(max-width: 768px){.content-left.svelte-1tclrzj.svelte-1tclrzj{justify-content:center;align-items:center;padding:2rem}.content-left.svelte-1tclrzj p{text-align:center}.content-right.svelte-1tclrzj.svelte-1tclrzj{align-items:center;padding-left:1rem}.content-right.svelte-1tclrzj .headline.svelte-1tclrzj,.content-right.svelte-1tclrzj .content.svelte-1tclrzj,.content-left.svelte-1tclrzj .headline.svelte-1tclrzj,.content-left.svelte-1tclrzj .content.svelte-1tclrzj{text-align:center;padding:0 2rem}.content-left.svelte-1tclrzj.svelte-1tclrzj,.content-right.svelte-1tclrzj.svelte-1tclrzj{backdrop-filter:brightness(50%)}}@media(max-width: 500px){.content-left.svelte-1tclrzj h1.svelte-1tclrzj,.content-left.svelte-1tclrzj .content.svelte-1tclrzj{padding:0 1rem}}",
       map: null
     };
     Hero = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -45953,10 +46367,49 @@ var init_Hero = __esm({
       if ($$props.data === void 0 && $$bindings.data && data !== void 0)
         $$bindings.data(data);
       $$result.css.add(css6);
-      return `${data ? `<section class="heroBanner svelte-l9uojd"><img class="heroImage svelte-l9uojd" src="${escape(data.image.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", data.image.description, 0)}>
-    <div class="${escape(null_to_empty(data.contentStyle ? "content-left" : "content-right"), true) + " svelte-l9uojd"}">${data.tagline ? `<span class="subline svelte-l9uojd">${escape(data.tagline)}</span>` : ``}
-      <h1 class="headline svelte-l9uojd">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: data.headline }, {}, {})}</h1>
-      <div class="content svelte-l9uojd"><!-- HTML_TAG_START -->${data.bodyText}<!-- HTML_TAG_END --></div>
+      return `${data ? `<section class="heroBanner svelte-1tclrzj"><img class="heroImage svelte-1tclrzj" src="${escape(data.image.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", data.image.description, 0)}>
+    <div class="${escape(null_to_empty(data.contentStyle ? "content-left" : "content-right"), true) + " svelte-1tclrzj"}">${data.subline ? `<span class="subline svelte-1tclrzj">${validate_component(TextReveal, "TextReveal").$$render(
+        $$result,
+        {
+          delay: 300,
+          aos_delay: 100,
+          text: data.headline
+        },
+        {},
+        {
+          default: () => {
+            return `${escape(data.subline)}`;
+          }
+        }
+      )}</span>` : ``}
+      <h1 class="headline svelte-1tclrzj">${validate_component(TextReveal, "TextReveal").$$render(
+        $$result,
+        {
+          delay: 600,
+          aos_delay: 200,
+          text: data.headline
+        },
+        {},
+        {
+          default: () => {
+            return `${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: data.headline }, {}, {})}`;
+          }
+        }
+      )}</h1>
+        ${validate_component(TextReveal, "TextReveal").$$render(
+        $$result,
+        {
+          delay: 900,
+          aos_delay: 300,
+          text: data.headline
+        },
+        {},
+        {
+          default: () => {
+            return `<div class="content svelte-1tclrzj"><!-- HTML_TAG_START -->${data.bodyText}<!-- HTML_TAG_END --></div>`;
+          }
+        }
+      )}
       ${data.targetPage ? `${validate_component(ButtonLink, "ButtonLink").$$render(
         $$result,
         {
@@ -45964,7 +46417,9 @@ var init_Hero = __esm({
           text: data.ctaText,
           background_color: "#fff",
           ariaText: data.ctaText,
-          ariaLink: data.targetPage
+          ariaLink: data.targetPage,
+          aos_delay: 1300,
+          aos_anim: "fade-in"
         },
         {},
         {}
@@ -46090,7 +46545,7 @@ var init_Row = __esm({
 });
 
 // .svelte-kit/output/server/chunks/Faq.js
-var css$52, InfoBlockItem, css$42, InfoBlock, css$32, LogoRackItem, css$22, LogoRack, css$12, FaqItem, css7, Faq;
+var css$52, InfoBlockItem, css$42, InfoBlock, css$32, LogoRackItem, css$22, LogoRack, css$13, FaqItem, css7, Faq;
 var init_Faq = __esm({
   ".svelte-kit/output/server/chunks/Faq.js"() {
     init_index3();
@@ -46160,10 +46615,10 @@ var init_Faq = __esm({
       ].join(" ").trim()}" style="${"background-color: " + escape(background_color, true) + ";"}"><div class="${[
         "content svelte-h8evwa",
         (isLegalPage ? "legal" : "") + " " + (alignment ? "container" : "")
-      ].join(" ").trim()}" style="${"color: " + escape(color, true)}"><div class="item svelte-h8evwa">${data.tagline ? `<p class="tagline svelte-h8evwa" style="${"color: " + escape(taglineColor, true)}">${escape(data.tagline)}</p>` : ``}
-          ${data.headline ? `<h3 class="headline svelte-h8evwa">${escape(data.headline)}</h3>` : ``}
-          ${data.subline ? `<h4 class="subline svelte-h8evwa">${escape(data.subline)}</h4>` : ``}
-          ${data.content1 ? `<div class="content1 svelte-h8evwa"><!-- HTML_TAG_START -->${data.content1}<!-- HTML_TAG_END --></div>` : ``}
+      ].join(" ").trim()}" style="${"color: " + escape(color, true)}"><div class="item svelte-h8evwa">${data.tagline ? `<p class="tagline svelte-h8evwa" style="${"color: " + escape(taglineColor, true)}" data-aos="fade-in-up">${escape(data.tagline)}</p>` : ``}
+          ${data.headline ? `<h3 class="headline svelte-h8evwa" data-aos="fade-in-up" data-aos-delay="100">${escape(data.headline)}</h3>` : ``}
+          ${data.subline ? `<h4 class="subline svelte-h8evwa" data-aos="fade-in-up" data-aos-delay="200">${escape(data.subline)}</h4>` : ``}
+          ${data.content1 ? `<div class="content1 svelte-h8evwa" data-aos="fade-in-up" data-aos-delay="300"><!-- HTML_TAG_START -->${data.content1}<!-- HTML_TAG_END --></div>` : ``}
           ${data.ctaLink ? `${validate_component(ButtonLink, "ButtonLink").$$render(
         $$result,
         {
@@ -46175,8 +46630,8 @@ var init_Faq = __esm({
         },
         {},
         {}
-      )}` : ``}</div></div></div>` : `${data.infoBlockConfig === "Ordered List" ? `<div class="ol-container svelte-h8evwa"><div class="list-wrapper svelte-h8evwa" style="${"background-image: url(" + escape(data.block1Image.url, true) + ")"}">${data.headline ? `<h3 class="headline svelte-h8evwa">${escape(data.headline)}</h3>` : ``}
-        <div class="list svelte-h8evwa"><!-- HTML_TAG_START -->${data.content1}<!-- HTML_TAG_END --></div></div></div>` : `${data.infoBlockConfig === "Letter" ? `<div class="letter_container svelte-h8evwa"><!-- HTML_TAG_START -->${data.content1}<!-- HTML_TAG_END -->
+      )}` : ``}</div></div></div>` : `${data.infoBlockConfig === "Ordered List" ? `<div class="ol-container svelte-h8evwa"><div class="list-wrapper svelte-h8evwa" style="${"background-image: url(" + escape(data.block1Image.url, true) + ")"}">${data.headline ? `<h3 class="headline svelte-h8evwa" data-aos="fade-in-up" data-aos-delay="0">${escape(data.headline)}</h3>` : ``}
+        <div class="list svelte-h8evwa" data-aos="fade-in-up" data-aos-delay="200"><!-- HTML_TAG_START -->${data.content1}<!-- HTML_TAG_END --></div></div></div>` : `${data.infoBlockConfig === "Letter" ? `<div class="letter_container svelte-h8evwa"><!-- HTML_TAG_START -->${data.content1}<!-- HTML_TAG_END -->
       <div class="svelte-h8evwa"><span class="letter-avatar svelte-h8evwa" style="${"background-image: url(" + escape(data.block1Image.url, true) + ")"}"${add_attribute("alt", data.block1Image.description, 0)}></span>
         <span class="letter-avatar svelte-h8evwa" style="${"background-image: url(" + escape(data.block2Image.url, true) + ")"}"${add_attribute("alt", data.block2Image.description, 0)}></span></div>
       <div class="letter-name svelte-h8evwa"><!-- HTML_TAG_START -->${data.content2}<!-- HTML_TAG_END --></div></div>` : ``}`}`}`;
@@ -46245,9 +46700,9 @@ var init_Faq = __esm({
       if ($$props.color === void 0 && $$bindings.color && color !== void 0)
         $$bindings.color(color);
       $$result.css.add(css$32);
-      return `<div class="${"text-center small-logo blocks-" + escape(data.logosPerRow, true) + " svelte-8xhu7z"}">${logos[0].header ? `<h2 style="${"color: " + escape(color, true)}" class="svelte-8xhu7z">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: logos[0].header }, {}, {})}</h2>` : ``}
+      return `<div class="${"text-center small-logo blocks-" + escape(data.logosPerRow, true) + " svelte-8xhu7z"}">${logos[0].header ? `<h2 style="${"color: " + escape(color, true)}" data-aos="fade-up" data-aos-delay="100" class="svelte-8xhu7z">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: logos[0].header }, {}, {})}</h2>` : ``}
   ${each(logos, (logo, index13) => {
-        return `<div class="logo-wrapper svelte-8xhu7z"><img src="${escape(logo.image, true) + "?fm=webp&q=80"}"${add_attribute("alt", logo.alt, 0)} class="svelte-8xhu7z">
+        return `<div class="logo-wrapper svelte-8xhu7z" data-aos="fade-left"${add_attribute("data-aos-delay", index13 * 400, 0)}><img src="${escape(logo.image, true) + "?fm=webp&q=80"}"${add_attribute("alt", logo.alt, 0)} class="svelte-8xhu7z">
       ${logo.headline ? `<h4 style="${"color: " + escape(color, true)}" class="headline svelte-8xhu7z">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: logo.headline }, {}, {})}</h4>` : ``}
       ${logo.body ? `<p style="${"color: " + escape(color, true)}" class="logo-body svelte-8xhu7z"><!-- HTML_TAG_START -->${logo.body}<!-- HTML_TAG_END --></p>` : ``}
     </div>`;
@@ -46309,8 +46764,8 @@ var init_Faq = __esm({
             {},
             {
               default: () => {
-                return `${data.tagline ? `<p class="tagline svelte-172r10c" style="${"color: " + escape(taglineColor, true)}">${escape(data.tagline)}</p>` : ``}
-      ${data.headline ? `<h3 class="headline">${escape(data.headline)}</h3>` : ``}
+                return `${data.tagline ? `<p class="tagline svelte-172r10c" style="${"color: " + escape(taglineColor, true)}" data-aos="fade-up" data-aos-delay="0">${escape(data.tagline)}</p>` : ``}
+      ${data.headline ? `<h3 class="headline" data-aos="fade-up" data-aos-delay="100">${escape(data.headline)}</h3>` : ``}
       ${data.logoSize ? `${validate_component(LogoRackItem, "LogoRackItem").$$render($$result, { data, color }, {}, {})}` : ``}`;
               }
             }
@@ -46319,7 +46774,7 @@ var init_Faq = __esm({
       })}
 </div>`;
     });
-    css$12 = {
+    css$13 = {
       code: "button.svelte-1phxj0l.svelte-1phxj0l{border:none;border-bottom:1px solid rgba(255, 255, 255, 0.2);border-radius:0;background:none;display:flex;justify-content:space-between;color:inherit;font-size:1rem;font-family:'PolySans Neutral', arial, sans-serif;cursor:pointer;width:100%;margin:0 auto;padding:1.75em 0 0.5rem}.answer.svelte-1phxj0l.svelte-1phxj0l{padding:1rem;background:#fff;color:#000;font-size:.95rem}.answer.svelte-1phxj0l ul{background-color:#e6e9de;color:#000;margin:0;padding:1rem 2rem;border-bottom:2px solid #fff;border-radius:0.2rem}svg.svelte-1phxj0l.svelte-1phxj0l{transition:transform 0.2s ease-in}[aria-expanded='true'].svelte-1phxj0l svg.svelte-1phxj0l{transform:rotate(0.25turn)}",
       map: null
     };
@@ -46370,7 +46825,7 @@ var init_Faq = __esm({
       ].filter((faq) => faq.question || faq.answer).map((faq) => ({ ...faq, isOpen: false }));
       if ($$props.entry === void 0 && $$bindings.entry && entry !== void 0)
         $$bindings.entry(entry);
-      $$result.css.add(css$12);
+      $$result.css.add(css$13);
       return `${each(faqs, (faq, index13) => {
         return `<button${add_attribute("aria-expanded", faq.isOpen, 0)} class="svelte-1phxj0l">${faq.question ? `${escape(faq.question)}` : ``}
     <svg style="tran" width="20" height="20" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="svelte-1phxj0l"><path d="M9 5l7 7-7 7"></path></svg></button>
@@ -46454,7 +46909,7 @@ var init_index2 = __esm({
 });
 
 // .svelte-kit/output/server/chunks/DynamicDuplex.js
-var css$23, Accordion, css$13, AccordionItem, css8, DynamicDuplex;
+var css$23, Accordion, css$14, AccordionItem, css8, DynamicDuplex;
 var init_DynamicDuplex = __esm({
   ".svelte-kit/output/server/chunks/DynamicDuplex.js"() {
     init_index3();
@@ -46489,7 +46944,7 @@ var init_DynamicDuplex = __esm({
       return `<ul class="accordion svelte-da9j5z">${slots.default ? slots.default({}) : ``}
 </ul>`;
     });
-    css$13 = {
+    css$14 = {
       code: ".accordion-item-header.svelte-c582kf{user-select:none;cursor:pointer}button.svelte-c582kf{background:transparent;border:none !important}",
       map: null
     };
@@ -46501,7 +46956,7 @@ var init_DynamicDuplex = __esm({
       $$unsubscribe_store = subscribe(store, (value) => $store = value);
       if ($$props.key === void 0 && $$bindings.key && key2 !== void 0)
         $$bindings.key(key2);
-      $$result.css.add(css$13);
+      $$result.css.add(css$14);
       params = {
         open: $store.key === key2,
         duration: $store.duration,
@@ -46534,7 +46989,7 @@ var init_DynamicDuplex = __esm({
       let $$rendered;
       do {
         $$settled = true;
-        $$rendered = `<div class="dynamic-duplex container svelte-1l3i357"><div class="accordion-container svelte-1l3i357"><div class="left-container svelte-1l3i357">${validate_component(Accordion, "Accordion").$$render(
+        $$rendered = `<div class="dynamic-duplex container svelte-1l3i357" data-aos="fade-up" data-aos-delay="600" data-aos-duration="700"><div class="accordion-container svelte-1l3i357"><div class="left-container svelte-1l3i357">${validate_component(Accordion, "Accordion").$$render(
           $$result,
           { key: key2 },
           {
@@ -46605,19 +47060,19 @@ var init_DynamicDuplex = __esm({
 });
 
 // .svelte-kit/output/server/chunks/Duplex.js
-var css$14, NewsletterInput, css9, Duplex;
+var css$15, NewsletterInput, css9, Duplex;
 var init_Duplex = __esm({
   ".svelte-kit/output/server/chunks/Duplex.js"() {
     init_index3();
     init_ButtonLink();
     init_TextWithLineBreaks();
-    css$14 = {
+    css$15 = {
       code: ".form-control.svelte-10mahkx{max-width:800px;border:2px solid #6e6f70}button.svelte-10mahkx{position:relative;display:inline-block;padding:1rem 3rem;background:#29397a;border:none;border-radius:10px;color:#fff;line-height:1.1rem;font-size:1.1rem;text-align:center;text-decoration:none;transition:all 0.25s ease-out;z-index:1;margin:.75rem 0 0;width:fit-content}",
       map: null
     };
     NewsletterInput = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let email = "";
-      $$result.css.add(css$14);
+      $$result.css.add(css$15);
       return `<form><label for="exampleInputEmail1">Email address:</label>
   <input type="email" class="form-control svelte-10mahkx" required${add_attribute("value", email, 0)}>
   <button type="submit" class="svelte-10mahkx">Subscribe</button>
@@ -46633,8 +47088,8 @@ var init_Duplex = __esm({
       if ($$props.data === void 0 && $$bindings.data && data !== void 0)
         $$bindings.data(data);
       $$result.css.add(css9);
-      return `${data.containerSize === "Small" ? `<div class="small-container container svelte-16mh5ps"><div class="${"duplex-container small-image " + escape(data.containerLayout ? "" : "row-reverse", true) + " svelte-16mh5ps"}"><div class="left-container svelte-16mh5ps"><img src="${escape((_a = data.image) == null ? void 0 : _a.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", (_b = data.image) == null ? void 0 : _b.description, 0)} class="svelte-16mh5ps"></div>
-        <div class="right-container svelte-16mh5ps">${data.tagline ? `<p class="tagline svelte-16mh5ps">${escape(data.tagline)}</p>` : ``}
+      return `${data.containerSize === "Small" ? `<div class="small-container container svelte-16mh5ps"><div class="${"duplex-container small-image " + escape(data.containerLayout ? "" : "row-reverse", true) + " svelte-16mh5ps"}"><div class="left-container svelte-16mh5ps" data-aos="fade-right" data-aos-delay="100"><img src="${escape((_a = data.image) == null ? void 0 : _a.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", (_b = data.image) == null ? void 0 : _b.description, 0)} class="svelte-16mh5ps"></div>
+        <div class="right-container svelte-16mh5ps" data-aos="fade-left" data-aos-delay="400">${data.tagline ? `<p class="tagline svelte-16mh5ps">${escape(data.tagline)}</p>` : ``}
           ${data.headline ? `<h3 class="small svelte-16mh5ps">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: data.headline }, {}, {})}</h3>` : ``}
           ${data.bodyText ? `<p class="svelte-16mh5ps"><!-- HTML_TAG_START -->${data.bodyText}<!-- HTML_TAG_END --></p>` : ``}
           ${data.newsletterInput ? `${validate_component(NewsletterInput, "NewsletterInput").$$render($$result, {}, {}, {})}` : ``}
@@ -46650,8 +47105,8 @@ var init_Duplex = __esm({
         },
         {},
         {}
-      )}` : ``}</div></div></div>` : `${data.containerSize === "Normal" ? `<div class="normal-container container svelte-16mh5ps"><div class="${"duplex-container normal-image " + escape(data.containerLayout ? "" : "row-reverse", true) + " svelte-16mh5ps"}"><div class="left-container svelte-16mh5ps"><img src="${escape((_c = data.image) == null ? void 0 : _c.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", (_d = data.image) == null ? void 0 : _d.description, 0)} class="svelte-16mh5ps"></div>
-        <div class="right-container svelte-16mh5ps">${data.tagline ? `<p class="tagline svelte-16mh5ps">${escape(data.tagline)}</p>` : ``}
+      )}` : ``}</div></div></div>` : `${data.containerSize === "Normal" ? `<div class="normal-container container svelte-16mh5ps"><div class="${"duplex-container normal-image " + escape(data.containerLayout ? "" : "row-reverse", true) + " svelte-16mh5ps"}"><div class="left-container svelte-16mh5ps" data-aos="fade-right" data-aos-delay="100"><img src="${escape((_c = data.image) == null ? void 0 : _c.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", (_d = data.image) == null ? void 0 : _d.description, 0)} class="svelte-16mh5ps"></div>
+        <div class="right-container svelte-16mh5ps" data-aos="fade-left" data-aos-delay="400">${data.tagline ? `<p class="tagline svelte-16mh5ps">${escape(data.tagline)}</p>` : ``}
           ${data.headline ? `<h3 class="svelte-16mh5ps">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: data.headline }, {}, {})}</h3>` : ``}
           ${data.bodyText ? `<p class="svelte-16mh5ps"><!-- HTML_TAG_START -->${data.bodyText}<!-- HTML_TAG_END --></p>` : ``}
           ${data.newsletterInput ? `${validate_component(NewsletterInput, "NewsletterInput").$$render($$result, {}, {}, {})}` : ``}
@@ -46667,8 +47122,8 @@ var init_Duplex = __esm({
         },
         {},
         {}
-      )}` : ``}</div></div></div>` : `${data.containerSize == "Large" ? `<div class="${"duplex-container large-image " + escape(data.containerLayout ? "" : "row-reverse", true) + " svelte-16mh5ps"}"><div class="left-container svelte-16mh5ps"><img src="${escape((_e = data.image) == null ? void 0 : _e.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", (_f = data.image) == null ? void 0 : _f.description, 0)} class="svelte-16mh5ps"></div>
-    <div class="right-container svelte-16mh5ps">${data.tagline ? `<p class="tagline svelte-16mh5ps">${escape(data.tagline)}</p>` : ``}
+      )}` : ``}</div></div></div>` : `${data.containerSize == "Large" ? `<div class="${"duplex-container large-image " + escape(data.containerLayout ? "" : "row-reverse", true) + " svelte-16mh5ps"}"><div class="left-container svelte-16mh5ps" data-aos="fade-right" data-aos-delay="100"><img src="${escape((_e = data.image) == null ? void 0 : _e.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", (_f = data.image) == null ? void 0 : _f.description, 0)} class="svelte-16mh5ps"></div>
+    <div class="right-container svelte-16mh5ps" data-aos="fade-right" data-aos-delay="400">${data.tagline ? `<p class="tagline svelte-16mh5ps">${escape(data.tagline)}</p>` : ``}
       ${data.headline && !data.bodyText ? `<h3 class="big svelte-16mh5ps">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: data.headline }, {}, {})}</h3>` : `${data.headline ? `<h3 class="svelte-16mh5ps">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: data.headline }, {}, {})}</h3>` : ``}`}
       ${data.bodyText ? `<p class="svelte-16mh5ps"><!-- HTML_TAG_START -->${data.bodyText}<!-- HTML_TAG_END --></p>` : ``}
       ${data.newsletterInput ? `${validate_component(NewsletterInput, "NewsletterInput").$$render($$result, {}, {}, {})}` : ``}
@@ -46727,7 +47182,7 @@ function getComponentData(item) {
       return {};
   }
 }
-var css$15, BioCardsItem, css10, BioCards, Page2;
+var css$16, BioCardsItem, css10, BioCards, Page2;
 var init_page_svelte2 = __esm({
   ".svelte-kit/output/server/entries/pages/about/_page.svelte.js"() {
     init_index3();
@@ -46736,7 +47191,7 @@ var init_page_svelte2 = __esm({
     init_DynamicDuplex();
     init_Duplex();
     init_SEOMetaData();
-    css$15 = {
+    css$16 = {
       code: "figure.svelte-1kkd1wl.svelte-1kkd1wl{padding:2rem 1.5rem;border-radius:0.6rem;text-align:center;border-radius:0.6rem;max-width:22rem;height:100%}figure.svelte-1kkd1wl .avatar.svelte-1kkd1wl{height:5.825rem;width:5.825rem;margin:0 auto;border-radius:100%;background-position:center;background-repeat:no-repeat;background-size:contain;position:relative;z-index:2}figure.svelte-1kkd1wl .circle.svelte-1kkd1wl{height:2.5rem;width:5rem;border-radius:10rem 10rem 0 0;z-index:1}figcaption.svelte-1kkd1wl.svelte-1kkd1wl{margin-top:-2.5rem}h4.svelte-1kkd1wl.svelte-1kkd1wl{margin:1rem auto}h6.svelte-1kkd1wl.svelte-1kkd1wl{font-family:'PolySans Median';font-size:.95rem;color:#adebef;margin:-0.8rem auto 0 auto}figure.employee.svelte-1kkd1wl.svelte-1kkd1wl{max-width:20rem}.employee.svelte-1kkd1wl h6.svelte-1kkd1wl{color:#D93561}.bio-text.svelte-1kkd1wl.svelte-1kkd1wl{margin:0.5rem auto 0 auto}.bio-text.svelte-1kkd1wl p{font-family:'PolySans Neutral', Arial, Helvetica, sans-serif;font-size:0.95rem;line-height:1.125rem}.bio-text.svelte-1kkd1wl b{font-family:'PolySans Median', Arial, Helvetica, sans-serif;color:#FF80A8}.bio-text.svelte-1kkd1wl p:first-of-type{min-height:105px}.bio-cards-section.bioCard-0 .bio-cards-wrapper.leadership{margin-bottom:4rem}.bio-cards-wrapper.leadership figure:nth-child(1){margin-left:auto;margin-right:0}.bio-cards-wrapper.leadership figure:nth-child(2){margin-left:0;margin-right:auto}@media screen and (max-width: 720px){figure.svelte-1kkd1wl.svelte-1kkd1wl{max-width:27rem}}@media screen and (max-width: 768px){.bio-cards-wrapper.leadership figure.leadership{margin:auto}.bio-text.svelte-1kkd1wl p{font-size:0.9rem;margin:0 auto}}",
       map: null
     };
@@ -46748,7 +47203,7 @@ var init_page_svelte2 = __esm({
       let color;
       if ($$props.entry === void 0 && $$bindings.entry && entry !== void 0)
         $$bindings.entry(entry);
-      $$result.css.add(css$15);
+      $$result.css.add(css$16);
       {
         {
           role = entry.cardStyle == true ? "leadership" : "employee";
@@ -46804,7 +47259,8 @@ var init_page_svelte2 = __esm({
       })}</div>` : ``}
 
   <div class="employees svelte-1m5gwyp">${each(employees, (person, index22) => {
-        return `${validate_component(BioCardsItem, "BioCardsItem").$$render($$result, { entry: person, index: index22 }, {}, {})}`;
+        return `<span data-aos="fade-up"${add_attribute("data-aos-delay", index22 * 200, 0)}>${validate_component(BioCardsItem, "BioCardsItem").$$render($$result, { entry: person, index: index22 }, {}, {})}
+    </span>`;
       })}</div>
 
 </div>`;
@@ -46849,8 +47305,8 @@ var init__4 = __esm({
     index4 = 3;
     component4 = async () => component_cache4 ??= (await Promise.resolve().then(() => (init_page_svelte2(), page_svelte_exports2))).default;
     server_id2 = "src/routes/about/+page.server.js";
-    imports4 = ["_app/immutable/nodes/3.4409db35.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/Hero.b515af06.js", "_app/immutable/chunks/ButtonLink.212aa9c5.js", "_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js", "_app/immutable/chunks/Faq.fad7f3c9.js", "_app/immutable/chunks/stores.9e0b2c81.js", "_app/immutable/chunks/singletons.71120f5f.js", "_app/immutable/chunks/paths.01dbe2f7.js", "_app/immutable/chunks/Row.7408adfd.js", "_app/immutable/chunks/DynamicDuplex.feb41c2a.js", "_app/immutable/chunks/Duplex.8d7b3d1f.js", "_app/immutable/chunks/SEOMetaData.901255a3.js"];
-    stylesheets4 = ["_app/immutable/assets/3.16a4ee6a.css", "_app/immutable/assets/Hero.4a3cbd69.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css", "_app/immutable/assets/Faq.7ac5e4bc.css", "_app/immutable/assets/DynamicDuplex.b9baba17.css", "_app/immutable/assets/Duplex.dbce9a88.css"];
+    imports4 = ["_app/immutable/nodes/3.1f82bcd5.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/Hero.e9f4fbf4.js", "_app/immutable/chunks/ButtonLink.5274dc1a.js", "_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js", "_app/immutable/chunks/Faq.7e4f104f.js", "_app/immutable/chunks/stores.d5090ce3.js", "_app/immutable/chunks/singletons.94de24d0.js", "_app/immutable/chunks/paths.bdc3fcd1.js", "_app/immutable/chunks/Row.7408adfd.js", "_app/immutable/chunks/DynamicDuplex.0e2611bb.js", "_app/immutable/chunks/Duplex.755a8b52.js", "_app/immutable/chunks/SEOMetaData.901255a3.js"];
+    stylesheets4 = ["_app/immutable/assets/3.16a4ee6a.css", "_app/immutable/assets/Hero.0d25076f.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css", "_app/immutable/assets/Faq.7ac5e4bc.css", "_app/immutable/assets/DynamicDuplex.b9baba17.css", "_app/immutable/assets/Duplex.dbce9a88.css"];
     fonts4 = [];
   }
 });
@@ -49831,7 +50287,7 @@ function createCarousel(onChange) {
   const [data, methods] = reactive;
   return [{ data, progressManager }, methods, reactive._internal];
 }
-var css$43, Dot, css$33, Dots, PREV, NEXT, css$24, Arrow, css$16, MAX_PERCENT, Progress, get2, switcher, setIntervalImmediate, STEP_MS, MAX_VALUE, ProgressManager, css11, Carousel;
+var css$43, Dot, css$33, Dots, PREV, NEXT, css$24, Arrow, css$17, MAX_PERCENT, Progress, get2, switcher, setIntervalImmediate, STEP_MS, MAX_VALUE, ProgressManager, css11, Carousel;
 var init_Carousel = __esm({
   ".svelte-kit/output/server/chunks/Carousel.js"() {
     init_index3();
@@ -49892,7 +50348,7 @@ var init_Carousel = __esm({
       ].join(" ").trim()}"></i>
 </button>`;
     });
-    css$16 = {
+    css$17 = {
       code: ".sc-carousel-progress__indicator.svelte-nuyenl{height:100%;background-color:var(--sc-color-hex-dark-50p)}",
       map: null
     };
@@ -49902,7 +50358,7 @@ var init_Carousel = __esm({
       let { value = 0 } = $$props;
       if ($$props.value === void 0 && $$bindings.value && value !== void 0)
         $$bindings.value(value);
-      $$result.css.add(css$16);
+      $$result.css.add(css$17);
       width = Math.min(Math.max(value * MAX_PERCENT, 0), MAX_PERCENT);
       return `<div class="sc-carousel-progress__indicator svelte-nuyenl" style="${"width: " + escape(width, true) + "%;"}"></div>`;
     });
@@ -50169,7 +50625,7 @@ __export(page_svelte_exports3, {
 async function GET() {
   return new Response(null, { status: 200 });
 }
-var css$25, Button, css$17, CarouselDefault, css12, Page3;
+var css$25, Button, css$18, CarouselDefault, css12, Page3;
 var init_page_svelte3 = __esm({
   ".svelte-kit/output/server/entries/pages/contact/_page.svelte.js"() {
     init_index3();
@@ -50208,13 +50664,13 @@ var init_page_svelte3 = __esm({
       return `<button${add_attribute("type", type, 0)} style="${"--link-color: " + escape(color, true) + "; --background-color: " + escape(background_color, true) + ";"}" class="svelte-zc8ai1">${escape(text2)}
   </button>`;
     });
-    css$17 = {
+    css$18 = {
       code: "img.svelte-wayqns{height:100%;object-fit:contain;object-position:center}@media only screen and (max-width: 768px){img.svelte-wayqns{margin:0 auto}}",
       map: null
     };
     CarouselDefault = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let images = [];
-      $$result.css.add(css$17);
+      $$result.css.add(css$18);
       return `${validate_component(Carousel, "Carousel").$$render($$result, { autoplay: true }, {}, {
         default: () => {
           return `${each(images, (image) => {
@@ -50335,8 +50791,8 @@ var init__5 = __esm({
     index5 = 4;
     component5 = async () => component_cache5 ??= (await Promise.resolve().then(() => (init_page_svelte3(), page_svelte_exports3))).default;
     server_id3 = "src/routes/contact/+page.server.js";
-    imports5 = ["_app/immutable/nodes/4.a6ad7125.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/paths.01dbe2f7.js", "_app/immutable/chunks/Hero.b515af06.js", "_app/immutable/chunks/ButtonLink.212aa9c5.js", "_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js", "_app/immutable/chunks/Row.7408adfd.js", "_app/immutable/chunks/Col.a2f13094.js", "_app/immutable/chunks/SEOMetaData.901255a3.js", "_app/immutable/chunks/Carousel.2c2ec9b3.js"];
-    stylesheets5 = ["_app/immutable/assets/4.717b8588.css", "_app/immutable/assets/Hero.4a3cbd69.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css", "_app/immutable/assets/Carousel.f76ac12e.css"];
+    imports5 = ["_app/immutable/nodes/4.5781c7dd.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/paths.bdc3fcd1.js", "_app/immutable/chunks/Hero.e9f4fbf4.js", "_app/immutable/chunks/ButtonLink.5274dc1a.js", "_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js", "_app/immutable/chunks/Row.7408adfd.js", "_app/immutable/chunks/Col.a2f13094.js", "_app/immutable/chunks/SEOMetaData.901255a3.js", "_app/immutable/chunks/Carousel.bc75531f.js", "_app/immutable/chunks/_commonjsHelpers.725317a4.js"];
+    stylesheets5 = ["_app/immutable/assets/4.717b8588.css", "_app/immutable/assets/Hero.0d25076f.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css", "_app/immutable/assets/Carousel.f76ac12e.css"];
     fonts5 = [];
   }
 });
@@ -50778,7 +51234,7 @@ function getComponentData2(item) {
       return {};
   }
 }
-var css$26, CarouselItem, css$18, CustomCarouselItem, FaArrowCircleRight, FaArrowCircleLeft, css13, CarouselWrapper, Page4;
+var css$26, CarouselItem, css$19, CustomCarouselItem, FaArrowCircleRight, FaArrowCircleLeft, css13, CarouselWrapper, Page4;
 var init_page_svelte4 = __esm({
   ".svelte-kit/output/server/entries/pages/home/_page.svelte.js"() {
     init_index3();
@@ -50805,7 +51261,7 @@ var init_page_svelte4 = __esm({
     ${entry.quoteSource !== null ? `<span class="svelte-1atzm64">${escape(entry.quoteSource.name)}</span>` : ``}</div>
 </div>`;
     });
-    css$18 = {
+    css$19 = {
       code: ".carousel.svelte-ff5ueg p.svelte-ff5ueg{font-family:'PolySans Neutral';font-size:2rem;line-height:2.5rem}.carousel.svelte-ff5ueg span.svelte-ff5ueg{font-family:'PolySans Neutral';font-size:1.125rem}.half.svelte-ff5ueg.svelte-ff5ueg{background:#fff;color:#000}.custom.svelte-ff5ueg .quote.svelte-ff5ueg{padding:0 2rem;text-align:left}.carousel-avatar.svelte-ff5ueg.svelte-ff5ueg{display:inline-block;height:2.5rem;width:2.5em;margin:0 0.75rem;border-radius:50%;background-position:center;background-repeat:no-repeat;background-size:contain}.flex-center-center.svelte-ff5ueg.svelte-ff5ueg{display:flex;flex-direction:column;height:100%}.carousel-image.svelte-ff5ueg.svelte-ff5ueg,.quote.svelte-ff5ueg.svelte-ff5ueg{flex:0 0 50%;max-height:200px}.carousel-image.svelte-ff5ueg.svelte-ff5ueg{padding:2.5rem;margin-top:2rem}",
       map: null
     };
@@ -50814,7 +51270,7 @@ var init_page_svelte4 = __esm({
       let { entry } = $$props;
       if ($$props.entry === void 0 && $$bindings.entry && entry !== void 0)
         $$bindings.entry(entry);
-      $$result.css.add(css$18);
+      $$result.css.add(css$19);
       return `<div class="custom carousel svelte-ff5ueg">${entry.image !== null ? `<div class="flex-center-center half svelte-ff5ueg"><img class="carousel-image svelte-ff5ueg" src="${escape((_a = entry.image) == null ? void 0 : _a.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", (_b = entry.image) == null ? void 0 : _b.description, 0)}>
       ${entry.quote !== null ? `<p class="quote svelte-ff5ueg"><!-- HTML_TAG_START -->${entry.quote}<!-- HTML_TAG_END --></p>` : ``}</div>` : `<div class="flex quote svelte-ff5ueg">${entry.quote !== null ? `<p class="svelte-ff5ueg"><!-- HTML_TAG_START -->${entry.quote}<!-- HTML_TAG_END --></p>` : ``}
       <img class="carousel-avatar svelte-ff5ueg" src="${escape((_c = entry.quoteSource) == null ? void 0 : _c.avatar.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", (_d = entry.quoteSource) == null ? void 0 : _d.avatar.description, 0)}>
@@ -50981,8 +51437,8 @@ var init__6 = __esm({
     index6 = 5;
     component6 = async () => component_cache6 ??= (await Promise.resolve().then(() => (init_page_svelte4(), page_svelte_exports4))).default;
     server_id4 = "src/routes/home/+page.server.js";
-    imports6 = ["_app/immutable/nodes/5.5b031c76.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/Hero.b515af06.js", "_app/immutable/chunks/ButtonLink.212aa9c5.js", "_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js", "_app/immutable/chunks/Carousel.2c2ec9b3.js", "_app/immutable/chunks/IconBase.aa9b8a72.js", "_app/immutable/chunks/DynamicDuplex.feb41c2a.js", "_app/immutable/chunks/singletons.71120f5f.js", "_app/immutable/chunks/paths.01dbe2f7.js", "_app/immutable/chunks/Faq.fad7f3c9.js", "_app/immutable/chunks/stores.9e0b2c81.js", "_app/immutable/chunks/Row.7408adfd.js", "_app/immutable/chunks/Duplex.8d7b3d1f.js", "_app/immutable/chunks/SEOMetaData.901255a3.js"];
-    stylesheets6 = ["_app/immutable/assets/5.4279f1b4.css", "_app/immutable/assets/Hero.4a3cbd69.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css", "_app/immutable/assets/Carousel.f76ac12e.css", "_app/immutable/assets/IconBase.6bf551a2.css", "_app/immutable/assets/DynamicDuplex.b9baba17.css", "_app/immutable/assets/Faq.7ac5e4bc.css", "_app/immutable/assets/Duplex.dbce9a88.css"];
+    imports6 = ["_app/immutable/nodes/5.0d1355b7.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/Hero.e9f4fbf4.js", "_app/immutable/chunks/ButtonLink.5274dc1a.js", "_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js", "_app/immutable/chunks/Carousel.bc75531f.js", "_app/immutable/chunks/_commonjsHelpers.725317a4.js", "_app/immutable/chunks/IconBase.aa9b8a72.js", "_app/immutable/chunks/DynamicDuplex.0e2611bb.js", "_app/immutable/chunks/singletons.94de24d0.js", "_app/immutable/chunks/paths.bdc3fcd1.js", "_app/immutable/chunks/Faq.7e4f104f.js", "_app/immutable/chunks/stores.d5090ce3.js", "_app/immutable/chunks/Row.7408adfd.js", "_app/immutable/chunks/Duplex.755a8b52.js", "_app/immutable/chunks/SEOMetaData.901255a3.js"];
+    stylesheets6 = ["_app/immutable/assets/5.4279f1b4.css", "_app/immutable/assets/Hero.0d25076f.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css", "_app/immutable/assets/Carousel.f76ac12e.css", "_app/immutable/assets/IconBase.6bf551a2.css", "_app/immutable/assets/DynamicDuplex.b9baba17.css", "_app/immutable/assets/Faq.7ac5e4bc.css", "_app/immutable/assets/Duplex.dbce9a88.css"];
     fonts6 = [];
   }
 });
@@ -51290,7 +51746,7 @@ function getComponentData3(item) {
       return {};
   }
 }
-var css$34, Button2, css$27, Image, css$19, Youtube, FaPlayCircle, css14, playOverlay, YoutubeWrapper, Page5;
+var css$34, Button2, css$27, Image, css$110, Youtube, FaPlayCircle, css14, playOverlay, YoutubeWrapper, Page5;
 var init_page_svelte5 = __esm({
   ".svelte-kit/output/server/entries/pages/how-it-works/_page.svelte.js"() {
     init_index3();
@@ -51330,7 +51786,7 @@ var init_page_svelte5 = __esm({
       $$result.css.add(css$27);
       return `<img src="${"https://i.ytimg.com/vi/" + escape(id, true) + "/" + escape(altThumb ? "hqdefault" : "maxresdefault", true) + ".jpg"}"${add_attribute("title", title, 0)} alt="${"Youtube video: " + escape(title, true)}" referrerpolicy="no-referrer" class="svelte-hw9fhp">`;
     });
-    css$19 = {
+    css$110 = {
       code: '.you__tube.svelte-w0t24e.svelte-w0t24e{position:relative;aspect-ratio:1.76991;overflow:hidden}.v__title.svelte-w0t24e.svelte-w0t24e{position:absolute;top:0;width:100%;background:linear-gradient(to bottom, hsla(0, 0%, 0%, 0.1), transparent);pointer-events:none}.v__title.svelte-w0t24e h3.svelte-w0t24e{font-family:var(\n      --title-font-family,\n      "Segoe UI",\n      Geneva,\n      Verdana,\n      sans-serif\n    );color:var(--title-color, #ffffff);padding:0 2ch;font-weight:400;text-shadow:0px 1px 3px var(--title-shadow-color, rgb(0, 0, 0, 0.2))}.b__overlay.svelte-w0t24e.svelte-w0t24e{position:absolute;top:0;left:0;width:100%;aspect-ratio:var(--aspect-ratio);cursor:pointer;transition:var(--overlay-transition, all 250ms ease-in-out)}.you__tube.svelte-w0t24e:hover .b__overlay.svelte-w0t24e{background:var(--overlay-bg-color, #00000030)}',
       map: null
     };
@@ -51349,7 +51805,7 @@ var init_page_svelte5 = __esm({
         $$bindings.altThumb(altThumb);
       if ($$props.animations === void 0 && $$bindings.animations && animations !== void 0)
         $$bindings.animations(animations);
-      $$result.css.add(css$19);
+      $$result.css.add(css$110);
       return `<div class="you__tube svelte-w0t24e" style="${"--aspect-ratio:" + escape("16/9", true)}"${add_attribute("title", title, 0)}>${`${isCustomThumbnail ? `${slots.thumbnail ? slots.thumbnail({}) : ``}` : `${validate_component(Image, "Image").$$render($$result, { id, title, altThumb, play }, {}, {})}`}
     <div class="b__overlay svelte-w0t24e"></div>
     <div class="v__title svelte-w0t24e"><h3 class="svelte-w0t24e">${escape(title)}</h3></div>`}
@@ -51428,8 +51884,8 @@ var init__7 = __esm({
     index7 = 6;
     component7 = async () => component_cache7 ??= (await Promise.resolve().then(() => (init_page_svelte5(), page_svelte_exports5))).default;
     server_id5 = "src/routes/how-it-works/+page.server.js";
-    imports7 = ["_app/immutable/nodes/6.d92051ea.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/Hero.b515af06.js", "_app/immutable/chunks/ButtonLink.212aa9c5.js", "_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js", "_app/immutable/chunks/Faq.fad7f3c9.js", "_app/immutable/chunks/stores.9e0b2c81.js", "_app/immutable/chunks/singletons.71120f5f.js", "_app/immutable/chunks/paths.01dbe2f7.js", "_app/immutable/chunks/Row.7408adfd.js", "_app/immutable/chunks/Duplex.8d7b3d1f.js", "_app/immutable/chunks/SEOMetaData.901255a3.js", "_app/immutable/chunks/IconBase.aa9b8a72.js"];
-    stylesheets7 = ["_app/immutable/assets/6.c8895396.css", "_app/immutable/assets/Hero.4a3cbd69.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css", "_app/immutable/assets/Faq.7ac5e4bc.css", "_app/immutable/assets/Duplex.dbce9a88.css", "_app/immutable/assets/IconBase.6bf551a2.css"];
+    imports7 = ["_app/immutable/nodes/6.a40f8743.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/Hero.e9f4fbf4.js", "_app/immutable/chunks/ButtonLink.5274dc1a.js", "_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js", "_app/immutable/chunks/Faq.7e4f104f.js", "_app/immutable/chunks/stores.d5090ce3.js", "_app/immutable/chunks/singletons.94de24d0.js", "_app/immutable/chunks/paths.bdc3fcd1.js", "_app/immutable/chunks/Row.7408adfd.js", "_app/immutable/chunks/Duplex.755a8b52.js", "_app/immutable/chunks/SEOMetaData.901255a3.js", "_app/immutable/chunks/IconBase.aa9b8a72.js"];
+    stylesheets7 = ["_app/immutable/assets/6.c8895396.css", "_app/immutable/assets/Hero.0d25076f.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css", "_app/immutable/assets/Faq.7ac5e4bc.css", "_app/immutable/assets/Duplex.dbce9a88.css", "_app/immutable/assets/IconBase.6bf551a2.css"];
     fonts7 = [];
   }
 });
@@ -51732,8 +52188,8 @@ var init__8 = __esm({
     index8 = 7;
     component8 = async () => component_cache8 ??= (await Promise.resolve().then(() => (init_page_svelte6(), page_svelte_exports6))).default;
     server_id6 = "src/routes/legal/+page.server.js";
-    imports8 = ["_app/immutable/nodes/7.a4b48cd5.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/Hero.b515af06.js", "_app/immutable/chunks/ButtonLink.212aa9c5.js", "_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js", "_app/immutable/chunks/Faq.fad7f3c9.js", "_app/immutable/chunks/stores.9e0b2c81.js", "_app/immutable/chunks/singletons.71120f5f.js", "_app/immutable/chunks/paths.01dbe2f7.js", "_app/immutable/chunks/Row.7408adfd.js", "_app/immutable/chunks/Duplex.8d7b3d1f.js"];
-    stylesheets8 = ["_app/immutable/assets/7.84da6503.css", "_app/immutable/assets/Hero.4a3cbd69.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css", "_app/immutable/assets/Faq.7ac5e4bc.css", "_app/immutable/assets/Duplex.dbce9a88.css"];
+    imports8 = ["_app/immutable/nodes/7.3f5e2c2d.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/Hero.e9f4fbf4.js", "_app/immutable/chunks/ButtonLink.5274dc1a.js", "_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js", "_app/immutable/chunks/Faq.7e4f104f.js", "_app/immutable/chunks/stores.d5090ce3.js", "_app/immutable/chunks/singletons.94de24d0.js", "_app/immutable/chunks/paths.bdc3fcd1.js", "_app/immutable/chunks/Row.7408adfd.js", "_app/immutable/chunks/Duplex.755a8b52.js"];
+    stylesheets8 = ["_app/immutable/assets/7.84da6503.css", "_app/immutable/assets/Hero.0d25076f.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css", "_app/immutable/assets/Faq.7ac5e4bc.css", "_app/immutable/assets/Duplex.dbce9a88.css"];
     fonts8 = [];
   }
 });
@@ -52030,7 +52486,7 @@ var init__9 = __esm({
     index9 = 8;
     component9 = async () => component_cache9 ??= (await Promise.resolve().then(() => (init_page_svelte7(), page_svelte_exports7))).default;
     server_id7 = "src/routes/news/+page.server.js";
-    imports9 = ["_app/immutable/nodes/8.3034de59.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/Row.7408adfd.js", "_app/immutable/chunks/Col.a2f13094.js", "_app/immutable/chunks/Duplex.8d7b3d1f.js", "_app/immutable/chunks/ButtonLink.212aa9c5.js", "_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js"];
+    imports9 = ["_app/immutable/nodes/8.451a2861.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/Row.7408adfd.js", "_app/immutable/chunks/Col.a2f13094.js", "_app/immutable/chunks/Duplex.755a8b52.js", "_app/immutable/chunks/ButtonLink.5274dc1a.js", "_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js"];
     stylesheets9 = ["_app/immutable/assets/8.591aebbd.css", "_app/immutable/assets/Duplex.dbce9a88.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css"];
     fonts9 = [];
   }
@@ -52652,7 +53108,7 @@ var init__10 = __esm({
     index10 = 9;
     component10 = async () => component_cache10 ??= (await Promise.resolve().then(() => (init_page_svelte8(), page_svelte_exports8))).default;
     server_id8 = "src/routes/news/[slug]/+page.server.js";
-    imports10 = ["_app/immutable/nodes/9.9ed3e13b.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/Duplex.8d7b3d1f.js", "_app/immutable/chunks/ButtonLink.212aa9c5.js", "_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js", "_app/immutable/chunks/SEOMetaData.901255a3.js"];
+    imports10 = ["_app/immutable/nodes/9.750e891f.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/Duplex.755a8b52.js", "_app/immutable/chunks/ButtonLink.5274dc1a.js", "_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js", "_app/immutable/chunks/SEOMetaData.901255a3.js"];
     stylesheets10 = ["_app/immutable/assets/9.c0575dbc.css", "_app/immutable/assets/Duplex.dbce9a88.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css"];
     fonts10 = [];
   }
@@ -52896,7 +53352,7 @@ var init__11 = __esm({
     index11 = 10;
     component11 = async () => component_cache11 ??= (await Promise.resolve().then(() => (init_page_svelte9(), page_svelte_exports9))).default;
     server_id9 = "src/routes/news/all/+page.server.js";
-    imports11 = ["_app/immutable/nodes/10.0fdd4726.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/Row.7408adfd.js", "_app/immutable/chunks/Col.a2f13094.js", "_app/immutable/chunks/ButtonLink.212aa9c5.js"];
+    imports11 = ["_app/immutable/nodes/10.16050079.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/Row.7408adfd.js", "_app/immutable/chunks/Col.a2f13094.js", "_app/immutable/chunks/ButtonLink.5274dc1a.js"];
     stylesheets11 = ["_app/immutable/assets/10.a1c4feeb.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css"];
     fonts11 = [];
   }
@@ -53238,8 +53694,8 @@ var init__12 = __esm({
     index12 = 11;
     component12 = async () => component_cache12 ??= (await Promise.resolve().then(() => (init_page_svelte10(), page_svelte_exports10))).default;
     server_id10 = "src/routes/services/[slug]/+page.server.js";
-    imports12 = ["_app/immutable/nodes/11.71dfa9e9.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/Duplex.8d7b3d1f.js", "_app/immutable/chunks/ButtonLink.212aa9c5.js", "_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js", "_app/immutable/chunks/Faq.fad7f3c9.js", "_app/immutable/chunks/stores.9e0b2c81.js", "_app/immutable/chunks/singletons.71120f5f.js", "_app/immutable/chunks/paths.01dbe2f7.js", "_app/immutable/chunks/Row.7408adfd.js", "_app/immutable/chunks/Hero.b515af06.js", "_app/immutable/chunks/SEOMetaData.901255a3.js"];
-    stylesheets12 = ["_app/immutable/assets/Duplex.dbce9a88.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css", "_app/immutable/assets/Faq.7ac5e4bc.css", "_app/immutable/assets/Hero.4a3cbd69.css"];
+    imports12 = ["_app/immutable/nodes/11.205a7426.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/Duplex.755a8b52.js", "_app/immutable/chunks/ButtonLink.5274dc1a.js", "_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js", "_app/immutable/chunks/Faq.7e4f104f.js", "_app/immutable/chunks/stores.d5090ce3.js", "_app/immutable/chunks/singletons.94de24d0.js", "_app/immutable/chunks/paths.bdc3fcd1.js", "_app/immutable/chunks/Row.7408adfd.js", "_app/immutable/chunks/Hero.e9f4fbf4.js", "_app/immutable/chunks/SEOMetaData.901255a3.js"];
+    stylesheets12 = ["_app/immutable/assets/Duplex.dbce9a88.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css", "_app/immutable/assets/Faq.7ac5e4bc.css", "_app/immutable/assets/Hero.0d25076f.css"];
     fonts12 = [];
   }
 });
@@ -64494,12 +64950,12 @@ var require_axios = __commonJS({
     };
     var toObjectSet = (arrayOrString, delimiter) => {
       const obj = {};
-      const define = (arr) => {
+      const define2 = (arr) => {
         arr.forEach((value) => {
           obj[value] = true;
         });
       };
-      isArray(arrayOrString) ? define(arrayOrString) : define(String(arrayOrString).split(delimiter));
+      isArray(arrayOrString) ? define2(arrayOrString) : define2(String(arrayOrString).split(delimiter));
       return obj;
     };
     var noop2 = () => {
@@ -70117,7 +70573,7 @@ var manifest = (() => {
     assets: /* @__PURE__ */ new Set(["astronaut.svg", "earth.svg", "favicon.png", "moon.svg", "overlay_stars.svg", "paul_logo.svg", "paul_logoDark.svg", "playIconBackground.png", "rocket.svg"]),
     mimeTypes: { ".svg": "image/svg+xml", ".png": "image/png" },
     _: {
-      client: { "start": "_app/immutable/entry/start.bb1b6817.js", "app": "_app/immutable/entry/app.35c8fca5.js", "imports": ["_app/immutable/entry/start.bb1b6817.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/singletons.71120f5f.js", "_app/immutable/chunks/paths.01dbe2f7.js", "_app/immutable/entry/app.35c8fca5.js", "_app/immutable/chunks/index.3e776b27.js"], "stylesheets": [], "fonts": [] },
+      client: { "start": "_app/immutable/entry/start.44878414.js", "app": "_app/immutable/entry/app.d86e025d.js", "imports": ["_app/immutable/entry/start.44878414.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/singletons.94de24d0.js", "_app/immutable/chunks/paths.bdc3fcd1.js", "_app/immutable/entry/app.d86e025d.js", "_app/immutable/chunks/index.3e776b27.js"], "stylesheets": [], "fonts": [] },
       nodes: [
         __memo(() => Promise.resolve().then(() => (init__(), __exports))),
         __memo(() => Promise.resolve().then(() => (init__2(), __exports2))),
@@ -70609,7 +71065,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "146ydpv"
+  version_hash: "192yxtn"
 };
 function get_hooks() {
   return {};

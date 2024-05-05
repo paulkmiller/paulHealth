@@ -24,8 +24,8 @@ const Duplex = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   if ($$props.data === void 0 && $$bindings.data && data !== void 0)
     $$bindings.data(data);
   $$result.css.add(css);
-  return `${data.containerSize === "Small" ? `<div class="small-container container svelte-16mh5ps"><div class="${"duplex-container small-image " + escape(data.containerLayout ? "" : "row-reverse", true) + " svelte-16mh5ps"}"><div class="left-container svelte-16mh5ps"><img src="${escape(data.image?.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", data.image?.description, 0)} class="svelte-16mh5ps"></div>
-        <div class="right-container svelte-16mh5ps">${data.tagline ? `<p class="tagline svelte-16mh5ps">${escape(data.tagline)}</p>` : ``}
+  return `${data.containerSize === "Small" ? `<div class="small-container container svelte-16mh5ps"><div class="${"duplex-container small-image " + escape(data.containerLayout ? "" : "row-reverse", true) + " svelte-16mh5ps"}"><div class="left-container svelte-16mh5ps" data-aos="fade-right" data-aos-delay="100"><img src="${escape(data.image?.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", data.image?.description, 0)} class="svelte-16mh5ps"></div>
+        <div class="right-container svelte-16mh5ps" data-aos="fade-left" data-aos-delay="400">${data.tagline ? `<p class="tagline svelte-16mh5ps">${escape(data.tagline)}</p>` : ``}
           ${data.headline ? `<h3 class="small svelte-16mh5ps">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: data.headline }, {}, {})}</h3>` : ``}
           ${data.bodyText ? `<p class="svelte-16mh5ps"><!-- HTML_TAG_START -->${data.bodyText}<!-- HTML_TAG_END --></p>` : ``}
           ${data.newsletterInput ? `${validate_component(NewsletterInput, "NewsletterInput").$$render($$result, {}, {}, {})}` : ``}
@@ -41,8 +41,8 @@ const Duplex = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     },
     {},
     {}
-  )}` : ``}</div></div></div>` : `${data.containerSize === "Normal" ? `<div class="normal-container container svelte-16mh5ps"><div class="${"duplex-container normal-image " + escape(data.containerLayout ? "" : "row-reverse", true) + " svelte-16mh5ps"}"><div class="left-container svelte-16mh5ps"><img src="${escape(data.image?.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", data.image?.description, 0)} class="svelte-16mh5ps"></div>
-        <div class="right-container svelte-16mh5ps">${data.tagline ? `<p class="tagline svelte-16mh5ps">${escape(data.tagline)}</p>` : ``}
+  )}` : ``}</div></div></div>` : `${data.containerSize === "Normal" ? `<div class="normal-container container svelte-16mh5ps"><div class="${"duplex-container normal-image " + escape(data.containerLayout ? "" : "row-reverse", true) + " svelte-16mh5ps"}"><div class="left-container svelte-16mh5ps" data-aos="fade-right" data-aos-delay="100"><img src="${escape(data.image?.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", data.image?.description, 0)} class="svelte-16mh5ps"></div>
+        <div class="right-container svelte-16mh5ps" data-aos="fade-left" data-aos-delay="400">${data.tagline ? `<p class="tagline svelte-16mh5ps">${escape(data.tagline)}</p>` : ``}
           ${data.headline ? `<h3 class="svelte-16mh5ps">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: data.headline }, {}, {})}</h3>` : ``}
           ${data.bodyText ? `<p class="svelte-16mh5ps"><!-- HTML_TAG_START -->${data.bodyText}<!-- HTML_TAG_END --></p>` : ``}
           ${data.newsletterInput ? `${validate_component(NewsletterInput, "NewsletterInput").$$render($$result, {}, {}, {})}` : ``}
@@ -58,8 +58,8 @@ const Duplex = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     },
     {},
     {}
-  )}` : ``}</div></div></div>` : `${data.containerSize == "Large" ? `<div class="${"duplex-container large-image " + escape(data.containerLayout ? "" : "row-reverse", true) + " svelte-16mh5ps"}"><div class="left-container svelte-16mh5ps"><img src="${escape(data.image?.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", data.image?.description, 0)} class="svelte-16mh5ps"></div>
-    <div class="right-container svelte-16mh5ps">${data.tagline ? `<p class="tagline svelte-16mh5ps">${escape(data.tagline)}</p>` : ``}
+  )}` : ``}</div></div></div>` : `${data.containerSize == "Large" ? `<div class="${"duplex-container large-image " + escape(data.containerLayout ? "" : "row-reverse", true) + " svelte-16mh5ps"}"><div class="left-container svelte-16mh5ps" data-aos="fade-right" data-aos-delay="100"><img src="${escape(data.image?.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", data.image?.description, 0)} class="svelte-16mh5ps"></div>
+    <div class="right-container svelte-16mh5ps" data-aos="fade-right" data-aos-delay="400">${data.tagline ? `<p class="tagline svelte-16mh5ps">${escape(data.tagline)}</p>` : ``}
       ${data.headline && !data.bodyText ? `<h3 class="big svelte-16mh5ps">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: data.headline }, {}, {})}</h3>` : `${data.headline ? `<h3 class="svelte-16mh5ps">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: data.headline }, {}, {})}</h3>` : ``}`}
       ${data.bodyText ? `<p class="svelte-16mh5ps"><!-- HTML_TAG_START -->${data.bodyText}<!-- HTML_TAG_END --></p>` : ``}
       ${data.newsletterInput ? `${validate_component(NewsletterInput, "NewsletterInput").$$render($$result, {}, {}, {})}` : ``}

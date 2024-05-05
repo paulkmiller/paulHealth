@@ -65,10 +65,10 @@ const InfoBlockItem = create_ssr_component(($$result, $$props, $$bindings, slots
   ].join(" ").trim()}" style="${"background-color: " + escape(background_color, true) + ";"}"><div class="${[
     "content svelte-h8evwa",
     (isLegalPage ? "legal" : "") + " " + (alignment ? "container" : "")
-  ].join(" ").trim()}" style="${"color: " + escape(color, true)}"><div class="item svelte-h8evwa">${data.tagline ? `<p class="tagline svelte-h8evwa" style="${"color: " + escape(taglineColor, true)}">${escape(data.tagline)}</p>` : ``}
-          ${data.headline ? `<h3 class="headline svelte-h8evwa">${escape(data.headline)}</h3>` : ``}
-          ${data.subline ? `<h4 class="subline svelte-h8evwa">${escape(data.subline)}</h4>` : ``}
-          ${data.content1 ? `<div class="content1 svelte-h8evwa"><!-- HTML_TAG_START -->${data.content1}<!-- HTML_TAG_END --></div>` : ``}
+  ].join(" ").trim()}" style="${"color: " + escape(color, true)}"><div class="item svelte-h8evwa">${data.tagline ? `<p class="tagline svelte-h8evwa" style="${"color: " + escape(taglineColor, true)}" data-aos="fade-in-up">${escape(data.tagline)}</p>` : ``}
+          ${data.headline ? `<h3 class="headline svelte-h8evwa" data-aos="fade-in-up" data-aos-delay="100">${escape(data.headline)}</h3>` : ``}
+          ${data.subline ? `<h4 class="subline svelte-h8evwa" data-aos="fade-in-up" data-aos-delay="200">${escape(data.subline)}</h4>` : ``}
+          ${data.content1 ? `<div class="content1 svelte-h8evwa" data-aos="fade-in-up" data-aos-delay="300"><!-- HTML_TAG_START -->${data.content1}<!-- HTML_TAG_END --></div>` : ``}
           ${data.ctaLink ? `${validate_component(ButtonLink, "ButtonLink").$$render(
     $$result,
     {
@@ -80,8 +80,8 @@ const InfoBlockItem = create_ssr_component(($$result, $$props, $$bindings, slots
     },
     {},
     {}
-  )}` : ``}</div></div></div>` : `${data.infoBlockConfig === "Ordered List" ? `<div class="ol-container svelte-h8evwa"><div class="list-wrapper svelte-h8evwa" style="${"background-image: url(" + escape(data.block1Image.url, true) + ")"}">${data.headline ? `<h3 class="headline svelte-h8evwa">${escape(data.headline)}</h3>` : ``}
-        <div class="list svelte-h8evwa"><!-- HTML_TAG_START -->${data.content1}<!-- HTML_TAG_END --></div></div></div>` : `${data.infoBlockConfig === "Letter" ? `<div class="letter_container svelte-h8evwa"><!-- HTML_TAG_START -->${data.content1}<!-- HTML_TAG_END -->
+  )}` : ``}</div></div></div>` : `${data.infoBlockConfig === "Ordered List" ? `<div class="ol-container svelte-h8evwa"><div class="list-wrapper svelte-h8evwa" style="${"background-image: url(" + escape(data.block1Image.url, true) + ")"}">${data.headline ? `<h3 class="headline svelte-h8evwa" data-aos="fade-in-up" data-aos-delay="0">${escape(data.headline)}</h3>` : ``}
+        <div class="list svelte-h8evwa" data-aos="fade-in-up" data-aos-delay="200"><!-- HTML_TAG_START -->${data.content1}<!-- HTML_TAG_END --></div></div></div>` : `${data.infoBlockConfig === "Letter" ? `<div class="letter_container svelte-h8evwa"><!-- HTML_TAG_START -->${data.content1}<!-- HTML_TAG_END -->
       <div class="svelte-h8evwa"><span class="letter-avatar svelte-h8evwa" style="${"background-image: url(" + escape(data.block1Image.url, true) + ")"}"${add_attribute("alt", data.block1Image.description, 0)}></span>
         <span class="letter-avatar svelte-h8evwa" style="${"background-image: url(" + escape(data.block2Image.url, true) + ")"}"${add_attribute("alt", data.block2Image.description, 0)}></span></div>
       <div class="letter-name svelte-h8evwa"><!-- HTML_TAG_START -->${data.content2}<!-- HTML_TAG_END --></div></div>` : ``}`}`}`;
@@ -151,9 +151,9 @@ const LogoRackItem = create_ssr_component(($$result, $$props, $$bindings, slots)
   if ($$props.color === void 0 && $$bindings.color && color !== void 0)
     $$bindings.color(color);
   $$result.css.add(css$3);
-  return `<div class="${"text-center small-logo blocks-" + escape(data.logosPerRow, true) + " svelte-8xhu7z"}">${logos[0].header ? `<h2 style="${"color: " + escape(color, true)}" class="svelte-8xhu7z">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: logos[0].header }, {}, {})}</h2>` : ``}
+  return `<div class="${"text-center small-logo blocks-" + escape(data.logosPerRow, true) + " svelte-8xhu7z"}">${logos[0].header ? `<h2 style="${"color: " + escape(color, true)}" data-aos="fade-up" data-aos-delay="100" class="svelte-8xhu7z">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: logos[0].header }, {}, {})}</h2>` : ``}
   ${each(logos, (logo, index) => {
-    return `<div class="logo-wrapper svelte-8xhu7z"><img src="${escape(logo.image, true) + "?fm=webp&q=80"}"${add_attribute("alt", logo.alt, 0)} class="svelte-8xhu7z">
+    return `<div class="logo-wrapper svelte-8xhu7z" data-aos="fade-left"${add_attribute("data-aos-delay", index * 400, 0)}><img src="${escape(logo.image, true) + "?fm=webp&q=80"}"${add_attribute("alt", logo.alt, 0)} class="svelte-8xhu7z">
       ${logo.headline ? `<h4 style="${"color: " + escape(color, true)}" class="headline svelte-8xhu7z">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: logo.headline }, {}, {})}</h4>` : ``}
       ${logo.body ? `<p style="${"color: " + escape(color, true)}" class="logo-body svelte-8xhu7z"><!-- HTML_TAG_START -->${logo.body}<!-- HTML_TAG_END --></p>` : ``}
     </div>`;
@@ -215,8 +215,8 @@ const LogoRack = create_ssr_component(($$result, $$props, $$bindings, slots) => 
         {},
         {
           default: () => {
-            return `${data.tagline ? `<p class="tagline svelte-172r10c" style="${"color: " + escape(taglineColor, true)}">${escape(data.tagline)}</p>` : ``}
-      ${data.headline ? `<h3 class="headline">${escape(data.headline)}</h3>` : ``}
+            return `${data.tagline ? `<p class="tagline svelte-172r10c" style="${"color: " + escape(taglineColor, true)}" data-aos="fade-up" data-aos-delay="0">${escape(data.tagline)}</p>` : ``}
+      ${data.headline ? `<h3 class="headline" data-aos="fade-up" data-aos-delay="100">${escape(data.headline)}</h3>` : ``}
       ${data.logoSize ? `${validate_component(LogoRackItem, "LogoRackItem").$$render($$result, { data, color }, {}, {})}` : ``}`;
           }
         }

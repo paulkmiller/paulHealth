@@ -11,6 +11,9 @@ const ButtonLink = create_ssr_component(($$result, $$props, $$bindings, slots) =
   let { color = "" } = $$props;
   let { ariaText } = $$props;
   let { ariaLink } = $$props;
+  let { delay = 0 } = $$props;
+  let { aos_delay = 200 } = $$props;
+  let { aos_anim } = $$props;
   if (background_color === "") {
     background_color = "#fff";
   }
@@ -31,8 +34,14 @@ const ButtonLink = create_ssr_component(($$result, $$props, $$bindings, slots) =
     $$bindings.ariaText(ariaText);
   if ($$props.ariaLink === void 0 && $$bindings.ariaLink && ariaLink !== void 0)
     $$bindings.ariaLink(ariaLink);
+  if ($$props.delay === void 0 && $$bindings.delay && delay !== void 0)
+    $$bindings.delay(delay);
+  if ($$props.aos_delay === void 0 && $$bindings.aos_delay && aos_delay !== void 0)
+    $$bindings.aos_delay(aos_delay);
+  if ($$props.aos_anim === void 0 && $$bindings.aos_anim && aos_anim !== void 0)
+    $$bindings.aos_anim(aos_anim);
   $$result.css.add(css);
-  return `<a${add_attribute("href", path, 0)} style="${"--link-color: " + escape(color, true) + "; --background-color: " + escape(background_color, true) + ";"}" aria-label="${"A call to action button inviting the user to " + escape(ariaText, true) + " by visiting the " + escape(ariaLink, true) + " page."}" class="svelte-5r4rcn">${escape(text)}
+  return `<a${add_attribute("href", path, 0)} style="${"--link-color: " + escape(color, true) + "; --background-color: " + escape(background_color, true) + ";"}" aria-label="${"A call to action button inviting the user to " + escape(ariaText, true) + " by visiting the " + escape(ariaLink, true) + " page."}"${add_attribute("data-aos", aos_anim, 0)} data-aos-easing="ease-in-back"${add_attribute("data-aos-delay", delay + aos_delay, 0)} data-aos-offset="0" class="svelte-5r4rcn">${escape(text)}
   </a>`;
 });
 export {

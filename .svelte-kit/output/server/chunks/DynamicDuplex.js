@@ -79,7 +79,7 @@ const DynamicDuplex = create_ssr_component(($$result, $$props, $$bindings, slots
   let $$rendered;
   do {
     $$settled = true;
-    $$rendered = `<div class="dynamic-duplex container svelte-1l3i357"><div class="accordion-container svelte-1l3i357"><div class="left-container svelte-1l3i357">${validate_component(Accordion, "Accordion").$$render(
+    $$rendered = `<div class="dynamic-duplex container svelte-1l3i357" data-aos="fade-up" data-aos-delay="600" data-aos-duration="700"><div class="accordion-container svelte-1l3i357"><div class="left-container svelte-1l3i357">${validate_component(Accordion, "Accordion").$$render(
       $$result,
       { key },
       {

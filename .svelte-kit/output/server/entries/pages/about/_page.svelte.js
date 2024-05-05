@@ -72,7 +72,8 @@ const BioCards = create_ssr_component(($$result, $$props, $$bindings, slots) => 
   })}</div>` : ``}
 
   <div class="employees svelte-1m5gwyp">${each(employees, (person, index2) => {
-    return `${validate_component(BioCardsItem, "BioCardsItem").$$render($$result, { entry: person, index: index2 }, {}, {})}`;
+    return `<span data-aos="fade-up"${add_attribute("data-aos-delay", index2 * 200, 0)}>${validate_component(BioCardsItem, "BioCardsItem").$$render($$result, { entry: person, index: index2 }, {}, {})}
+    </span>`;
   })}</div>
 
 </div>`;
