@@ -10,10 +10,13 @@
 
 ### Todo
 
-- Add animations
+- ~~Add animations~~
+  - Add animation options in Contentful (nice-to-have)
+- Live Preview in Contentful
 - Improve accessibility
 - Performance optimization
-- Add testing
+- Add Linting
+- Add Testing
 
 # Getting Started
 
