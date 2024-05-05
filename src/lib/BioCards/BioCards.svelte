@@ -43,7 +43,7 @@
   {#if leadership}
     <div class="leadership">
       {#each leadership as person, index (person.name)}
-          <BioCardsItem entry={person} index={index} />
+          <BioCardsItem entry={person} />
       {/each}
     </div>
   {/if}
@@ -51,7 +51,7 @@
   <div class="employees">
     {#each employees as person, index (person.name)}
     <span data-aos="fade-up" data-aos-delay="{index * 200}">
-      <BioCardsItem entry={person} index={index} />
+      <BioCardsItem entry={person} />
     </span>
 
     {/each}

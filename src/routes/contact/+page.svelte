@@ -1,7 +1,5 @@
 <script>
   import { onMount, afterUpdate } from 'svelte'; 
-  import { enhance } from '$app/forms'
-  import { fade } from 'svelte/transition';
   import Hero from '$lib/Hero.svelte'
   import Button from '$lib/Button/Button.svelte'
   import Container from '$lib/Bootstrap/Container.svelte'
@@ -19,24 +17,6 @@
   let message = ''
   let formMessage = ''
   let isError = false
-
-  // onMount(() => {
-  //   var forms = document.getElementsByClassName('needs-validation')
-  //   // Loop over them and prevent submission
-  //   var validation = Array.prototype.filter.call(forms, function (form) {
-  //     form.addEventListener(
-  //       'submit',
-  //       function (event) {
-  //         if (form.checkValidity() === false) {
-  //           event.preventDefault()
-  //           event.stopPropagation()
-  //         }
-  //         form.classList.add('was-validated')
-  //       },
-  //       false
-  //     )
-  //   })
-  // })
 
   let images = [];
 
@@ -130,15 +110,20 @@
   export let data
 </script>
 
-<SEOMetaData {data} />
+<!-- <SEOMetaData {data} /> -->
 
 <Hero data={data.heroBanners[0]} />
 
 <Container>
   <Row class="justify-content-center align-items-center justify-items-center pt-5 pb-5">
     <Col csm={12} md={6}>
-      <p>Greetings!</p>
-      <h1>Feel free to say hi.</h1>
+      <h1 style="width: fit-content; display: inline-block;">Feel free to say hi.</h1>
+      <p 
+        style="position: absolute; width: fit-content; display: inline-block; color: red; transform: rotate(15deg);"
+        data-aos="fade-in"
+        data-aos-delay="500">
+        Hi! <span class="wave">👋</span>
+      </p>
     </Col>
     <Col csm={12} md={6}>
       <!-- {#if formMessage}
@@ -237,7 +222,8 @@
     class="duplex-container normal-image {data.duplexes[0].containerLayout ? '' : 'row-reverse'}"
   >
     <div class="left-container">
-      <CarouselDefault />
+      <img src="https://images.ctfassets.net/edlwcd8ay884/2BvKT5oEH7IXor9AofvNSs/1f76cba456f15d61751dc779b10d71ea/IMG_20230309_194249_818.jpg" alt="">
+      <!-- <CarouselDefault /> -->
     </div>
     <div class="right-container">
       {#if data.duplexes[0].tagline}
@@ -264,6 +250,25 @@
 </div>
 
 <style>
+  .wave {
+    animation-name: wave-animation; 
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+  }
+
+  @keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+    10% { transform: rotate(14.0deg) }
+    20% { transform: rotate(-8.0deg) }
+    30% { transform: rotate(14.0deg) }
+    40% { transform: rotate(-4.0deg) }
+    50% { transform: rotate(10.0deg) }
+    60% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
+  }
+
   h1 {
     font-weight: 400;
     text-align: left;

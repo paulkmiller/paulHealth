@@ -11,6 +11,7 @@
 
 <script>
   import { onMount } from 'svelte';
+  import { fetch } from '$app/environment';
   import { goto } from '$app/navigation';
 
   export let isAuthenticated;

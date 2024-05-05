@@ -72,6 +72,7 @@
               background_color={'#ADEBEF'} 
               ariaText="learn more"
               ariaLink="{data.ctaLink.slug}"
+              aos_anim="fade-in"
             />
           {/if}
         </div>

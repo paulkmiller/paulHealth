@@ -75,7 +75,7 @@
     <div class="left-container" data-aos="fade-right" data-aos-delay="100">
       <img src="{data.image?.url}?fm=webp&q=80" alt={data.image?.description} />
     </div>
-    <div class="right-container" data-aos="fade-right" data-aos-delay="400">
+    <div class="right-container" data-aos="fade-left" data-aos-delay="100">
       {#if data.tagline}
         <p class="tagline">{data.tagline}</p>
       {/if}

@@ -16,17 +16,17 @@
     <div class={data.contentStyle ? 'content-left' : 'content-right'}>
       {#if data.subline}
       <span class="subline">
-        <TextReveal delay={300} aos_delay={100} text={data.headline}>
+        <TextReveal delay={300} aos_delay={100}>
           {data.subline}
         </TextReveal>
       </span>
         {/if}
       <h1 class="headline">
-        <TextReveal delay={600} aos_delay={200} text={data.headline}>
+        <TextReveal delay={600} aos_delay={200}>
           <TextWithLineBreaks inputText={data.headline} />
         </TextReveal>
       </h1>
-        <TextReveal delay={900} aos_delay={300} text={data.headline}>
+        <TextReveal delay={900} aos_delay={300}>
           <div class="content">{@html data.bodyText}</div>
         </TextReveal>
       {#if data.targetPage}

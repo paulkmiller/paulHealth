@@ -2,27 +2,27 @@
 
 @font-face {
   font-family: "PolySans Neutral";
-  src: url("https://cdn.assets.pluto-service.com/css/fonts/PolySans/PolySans-Neutral.woff") format("woff"), url("https://cdn.assets.pluto-service.com/css/fonts/PolySans/PolySans-Neutral.ttf")  format("truetype");
+  src: url("/Fonts/PolySans-Neutral.woff") format("woff"), url("/Fonts/PolySans-Neutral.ttf")  format("truetype");
   font-display: swap;
 }
 
 @font-face {
   font-family: "PolySans Bulky";
-  src: url("https://cdn.assets.pluto-service.com/css/fonts/PolySans/PolySans-Bulky.woff") format("woff"), url("https://cdn.assets.pluto-service.com/css/fonts/PolySans/PolySans-Bulky.ttf")  format("truetype");
+  src: url("/Fonts/PolySans-Bulky.woff") format("woff"), url("/Fonts/PolySans-Bulky.ttf")  format("truetype");
   font-weight: bold;
   font-display: swap;
 }
 
 @font-face {
   font-family: "PolySans Median";
-  src: url("https://cdn.assets.pluto-service.com/css/fonts/PolySans/PolySans-Median.woff") format("woff"), url("https://cdn.assets.pluto-service.com/css/fonts/PolySans/PolySans-Median.ttf")  format("truetype");
+  src: url("/Fonts/PolySans-Median.woff") format("woff"), url("/Fonts/PolySans-Median.ttf")  format("truetype");
   font-weight: 600;
   font-display: swap;
 }
 
 @font-face {
   font-family: "PolySans Slim";
-  src: url("https://cdn.assets.pluto-service.com/css/fonts/PolySans/PolySans-Slim.woff") format("woff"), url("https://cdn.assets.pluto-service.com/css/fonts/PolySans/PolySans-Slim.ttf")  format("truetype");
+  src: url("/Fonts/PolySans-Slim.woff") format("woff"), url("/Fonts/PolySans-Slim.ttf")  format("truetype");
   font-weight: lighter;
   font-display: swap;
 }

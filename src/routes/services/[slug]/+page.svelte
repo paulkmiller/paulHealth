@@ -38,4 +38,4 @@
     <svelte:component this={components[item.type]} {...getComponentData(item)} />
   {/each}
 
-  <SEOMetaData {data} />
+  <!-- <SEOMetaData {data} /> -->

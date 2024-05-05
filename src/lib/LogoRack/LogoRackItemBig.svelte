@@ -1,6 +1,22 @@
 <script>
-  import TextWithLineBreaks from './../TextWithLineBreaks.svelte'
-    /* TODO: convert this to a logo marquee */
+  import { onMount } from 'svelte';
+  import { browser } from '$app/environment';
+
+  let isMobile = false;
+
+  onMount(() => {
+    if (browser) {
+      const checkMobile = () => window.innerWidth < 768; // Example breakpoint for mobile
+      isMobile = checkMobile();
+      window.addEventListener('resize', () => {
+        isMobile = checkMobile();
+      });
+
+      return () => {
+        window.removeEventListener('resize', checkMobile);
+      };
+    }
+  });
 
   export let logo_rack_data
   export let color
@@ -45,7 +61,10 @@
 
 <div class="text-center divider big-logo blocks-{numOfBlocks}">
   {#each logos as logo, index (index)}
-    <div class="logo-wrapper" data-aos="fade-right" data-aos-delay="{index * 400}">
+    <div class="logo-wrapper" 
+        data-aos="fade-left" 
+        data-aos-delay="{isMobile ? '150' : index * 150}"
+      >
       {#if numOfBlocks == 1}
         <img src="{logo.image}?fm=webp&q=80" alt={logo.alt} />
         {#if logo.headline}

@@ -30,7 +30,7 @@
 </script>
 
 {#if data.seoData.title}
-  <SEOMetaData {data} />
+  <!-- <SEOMetaData {data} /> -->
 {/if}
 
 <article>

@@ -1,5 +1,23 @@
 <script>
   import TextWithLineBreaks from './../TextWithLineBreaks.svelte'
+  import { onMount } from 'svelte';
+  import { browser } from '$app/environment';
+
+  let isMobile = false;
+
+  onMount(() => {
+    if (browser) {
+      const checkMobile = () => window.innerWidth < 768; // Example breakpoint for mobile
+      isMobile = checkMobile();
+      window.addEventListener('resize', () => {
+        isMobile = checkMobile();
+      });
+
+      return () => {
+        window.removeEventListener('resize', checkMobile);
+      };
+    }
+  });
 
   export let data
   export let color
@@ -48,10 +66,13 @@
 
 <div class="text-center small-logo blocks-{data.logosPerRow}">
   {#if logos[0].header}
-    <h2 style="color: {color}" data-aos="fade-up" data-aos-delay="100"><TextWithLineBreaks inputText={logos[0].header} /></h2>
+    <h2 style="color: {color}" data-aos="fade-up"><TextWithLineBreaks inputText={logos[0].header} /></h2>
   {/if}
   {#each logos as logo, index (index)}
-    <div class="logo-wrapper" data-aos="fade-right" data-aos-delay="{index * 400}">
+    <div class="logo-wrapper" 
+        data-aos="fade-left" 
+        data-aos-delay="{isMobile ? '150' : index * 150}"
+      >
       <img src="{logo.image}?fm=webp&q=80" alt={logo.alt} />
       {#if logo.headline} 
         <h4 style="color: {color}" class="headline"><TextWithLineBreaks inputText={logo.headline} /></h4>

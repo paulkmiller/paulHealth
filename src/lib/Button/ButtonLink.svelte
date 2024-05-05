@@ -7,7 +7,7 @@
     export let ariaLink
     export let delay = 0
     export let aos_delay = 200
-    export let aos_anim
+    export let aos_anim = ""
 
     if ( background_color === "" ){
       background_color = "#fff"
