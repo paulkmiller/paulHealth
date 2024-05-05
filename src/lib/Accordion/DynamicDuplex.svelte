@@ -2,7 +2,6 @@
 	import { onMount } from 'svelte';
 	import { Accordion, AccordionItem } from 'svelte-collapsible'
   import ButtonLink from '$lib/Button/ButtonLink.svelte'
-
   
   export let data
 	
@@ -27,7 +26,11 @@
   });
 </script>
 
-<div class="dynamic-duplex container">
+<div class="dynamic-duplex container" 
+    data-aos="fade-up" 
+    data-aos-delay="600" 
+    data-aos-duration="700"
+  >
   <div class="accordion-container">
     <div class="left-container">
       <Accordion bind:key={key}>

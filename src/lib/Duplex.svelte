@@ -9,10 +9,10 @@
 {#if data.containerSize === "Small"}
   <div class="small-container container">
       <div class="duplex-container small-image {data.containerLayout ? '' : 'row-reverse'}">
-        <div class="left-container">
+        <div class="left-container" data-aos="fade-right" data-aos-delay="100">
           <img src="{data.image?.url}?fm=webp&q=80" alt={data.image?.description} />
         </div>
-        <div class="right-container">
+        <div class="right-container" data-aos="fade-left" data-aos-delay="400">
           {#if data.tagline}
             <p class="tagline">{data.tagline}</p>
           {/if}
@@ -41,10 +41,10 @@
 {:else if data.containerSize === "Normal"}
   <div class="normal-container container">
       <div class="duplex-container normal-image {data.containerLayout ? '' : 'row-reverse'}">
-        <div class="left-container">
+        <div class="left-container" data-aos="fade-right" data-aos-delay="100">
           <img src="{data.image?.url}?fm=webp&q=80" alt={data.image?.description} />
         </div>
-        <div class="right-container">
+        <div class="right-container" data-aos="fade-left" data-aos-delay="400">
           {#if data.tagline}
             <p class="tagline">{data.tagline}</p>
           {/if}
@@ -72,10 +72,10 @@
   </div>
 {:else if data.containerSize == "Large"}
   <div class="duplex-container large-image {data.containerLayout ? '' : 'row-reverse'}">
-    <div class="left-container">
+    <div class="left-container" data-aos="fade-right" data-aos-delay="100">
       <img src="{data.image?.url}?fm=webp&q=80" alt={data.image?.description} />
     </div>
-    <div class="right-container">
+    <div class="right-container" data-aos="fade-right" data-aos-delay="400">
       {#if data.tagline}
         <p class="tagline">{data.tagline}</p>
       {/if}

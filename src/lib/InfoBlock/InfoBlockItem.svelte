@@ -54,16 +54,16 @@
       <div class="content" class:legal={isLegalPage} class:container={alignment} style="color: {color}">
         <div class="item">
           {#if data.tagline}
-            <p class="tagline" style="color: {taglineColor}">{data.tagline}</p>
+            <p class="tagline" style="color: {taglineColor}" data-aos="fade-in-up">{data.tagline}</p>
           {/if}
           {#if data.headline}
-            <h3 class="headline">{data.headline}</h3>
+            <h3 class="headline" data-aos="fade-in-up" data-aos-delay="100">{data.headline}</h3>
           {/if}
           {#if data.subline}
-            <h4 class="subline">{data.subline}</h4>
+            <h4 class="subline" data-aos="fade-in-up" data-aos-delay="200">{data.subline}</h4>
           {/if}
           {#if data.content1}
-            <div class="content1">{@html data.content1}</div>
+            <div class="content1" data-aos="fade-in-up" data-aos-delay="300">{@html data.content1}</div>
           {/if}
           {#if data.ctaLink}
             <ButtonLink 
@@ -81,9 +81,9 @@
     <div class="ol-container">
       <div class="list-wrapper" style="background-image: url({data.block1Image.url})">
         {#if data.headline}
-          <h3 class="headline">{data.headline}</h3>
+          <h3 class="headline" data-aos="fade-in-up" data-aos-delay="0">{data.headline}</h3>
         {/if}
-        <div class="list">
+        <div class="list" data-aos="fade-in-up" data-aos-delay="200">
           {@html data.content1}
         </div>
       </div>

@@ -1,6 +1,7 @@
 <script>
   import ButtonLink from '$lib/Button/ButtonLink.svelte'
-  import TextWithLineBreaks from './TextWithLineBreaks.svelte';
+  import TextWithLineBreaks from '$lib/TextWithLineBreaks.svelte';
+  import TextReveal from '$lib/TextReveal.svelte';
 
   export let data
 </script>
@@ -13,11 +14,21 @@
       alt={data.image.description}
     />
     <div class={data.contentStyle ? 'content-left' : 'content-right'}>
-      {#if data.tagline}
-        <span class="subline">{data.tagline}</span>
-      {/if}
-      <h1 class="headline"><TextWithLineBreaks inputText={data.headline} /></h1>
-      <div class="content">{@html data.bodyText}</div>
+      {#if data.subline}
+      <span class="subline">
+        <TextReveal delay={300} aos_delay={100} text={data.headline}>
+          {data.subline}
+        </TextReveal>
+      </span>
+        {/if}
+      <h1 class="headline">
+        <TextReveal delay={600} aos_delay={200} text={data.headline}>
+          <TextWithLineBreaks inputText={data.headline} />
+        </TextReveal>
+      </h1>
+        <TextReveal delay={900} aos_delay={300} text={data.headline}>
+          <div class="content">{@html data.bodyText}</div>
+        </TextReveal>
       {#if data.targetPage}
         <ButtonLink
           path={data.targetPage}
@@ -25,6 +36,8 @@
           background_color={'#fff'}
           ariaText="{data.ctaText}"
           ariaLink="{data.targetPage}"
+          aos_delay={1300}
+          aos_anim="fade-in"
         />
       {/if}
     </div>
@@ -79,7 +92,7 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
-    backdrop-filter: brightness(80%);
+    /* backdrop-filter: brightness(80%); */
   }
 
   .content-left {

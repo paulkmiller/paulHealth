@@ -47,10 +47,10 @@
   <Container>
     <Row class="justify-content-center align-items-center">
       {#if data.tagline}
-        <p class="tagline" style="color: {taglineColor}">{data.tagline}</p>
+        <p class="tagline" style="color: {taglineColor}" data-aos="fade-up" data-aos-delay="0">{data.tagline}</p>
       {/if}
       {#if data.headline}
-        <h3 class="headline">{data.headline}</h3>
+        <h3 class="headline" data-aos="fade-up" data-aos-delay="100">{data.headline}</h3>
       {/if}
       {#if data.logoSize}
         <LogoRackItem {data} {color} />

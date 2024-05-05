@@ -1,6 +1,5 @@
 <script>
   import FaqItem from './FaqItem.svelte'
-  import ButtonLink from '$lib/Button/ButtonLink.svelte'
 
   export let data
 </script>

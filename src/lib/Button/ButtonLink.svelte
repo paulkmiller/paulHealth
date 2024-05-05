@@ -1,10 +1,13 @@
 <script>
-    export let path;
-    export let text;
-    export let background_color;
-    export let color = "";
-    export let ariaText;
+    export let path
+    export let text
+    export let background_color
+    export let color = ""
+    export let ariaText
     export let ariaLink
+    export let delay = 0
+    export let aos_delay = 200
+    export let aos_anim
 
     if ( background_color === "" ){
       background_color = "#fff"
@@ -20,7 +23,15 @@
     ariaLink = ariaLink.replace(/\//g, ' ').replace(/-/g, ' ').trim();
 </script>
 
-  <a href={path} style="--link-color: {color}; --background-color: {background_color};" aria-label="A call to action button inviting the user to {ariaText} by visiting the {ariaLink} page.">
+  <a 
+    href={path} 
+    style="--link-color: {color}; --background-color: {background_color};"
+    aria-label="A call to action button inviting the user to {ariaText} by visiting the {ariaLink} page."
+    data-aos="{aos_anim}"
+    data-aos-easing="ease-in-back"
+    data-aos-delay="{delay + aos_delay}"
+    data-aos-offset="0"
+    >
       {text}
   </a>
 

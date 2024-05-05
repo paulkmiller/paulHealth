@@ -1,6 +1,9 @@
 <script context="module">
   import { navigating, page } from '$app/stores'
   import { onMount } from 'svelte';
+  import AOS from 'aos';
+  import 'aos/dist/aos.css';
+
 
   import { getHeroBanner } from '$lib/getters/getHeroBanner'
   import { getPersonCollection } from '$lib/getters/getPersonCollection'
@@ -64,7 +67,10 @@
 
   onMount(async () => {
     isLoading = false;
+    AOS.init();
   });
+
+  $: $page.url, AOS.refresh();
 </script>
 
 <svelte:window on:click={onWindowClick} />
