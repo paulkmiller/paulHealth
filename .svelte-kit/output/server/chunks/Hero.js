@@ -36,48 +36,21 @@ const Hero = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.data(data);
   $$result.css.add(css);
   return `${data ? `<section class="heroBanner svelte-1tclrzj"><img class="heroImage svelte-1tclrzj" src="${escape(data.image.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", data.image.description, 0)}>
-    <div class="${escape(null_to_empty(data.contentStyle ? "content-left" : "content-right"), true) + " svelte-1tclrzj"}">${data.subline ? `<span class="subline svelte-1tclrzj">${validate_component(TextReveal, "TextReveal").$$render(
-    $$result,
-    {
-      delay: 300,
-      aos_delay: 100,
-      text: data.headline
-    },
-    {},
-    {
-      default: () => {
-        return `${escape(data.subline)}`;
-      }
+    <div class="${escape(null_to_empty(data.contentStyle ? "content-left" : "content-right"), true) + " svelte-1tclrzj"}">${data.subline ? `<span class="subline svelte-1tclrzj">${validate_component(TextReveal, "TextReveal").$$render($$result, { delay: 300, aos_delay: 100 }, {}, {
+    default: () => {
+      return `${escape(data.subline)}`;
     }
-  )}</span>` : ``}
-      <h1 class="headline svelte-1tclrzj">${validate_component(TextReveal, "TextReveal").$$render(
-    $$result,
-    {
-      delay: 600,
-      aos_delay: 200,
-      text: data.headline
-    },
-    {},
-    {
-      default: () => {
-        return `${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: data.headline }, {}, {})}`;
-      }
+  })}</span>` : ``}
+      <h1 class="headline svelte-1tclrzj">${validate_component(TextReveal, "TextReveal").$$render($$result, { delay: 600, aos_delay: 200 }, {}, {
+    default: () => {
+      return `${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: data.headline }, {}, {})}`;
     }
-  )}</h1>
-        ${validate_component(TextReveal, "TextReveal").$$render(
-    $$result,
-    {
-      delay: 900,
-      aos_delay: 300,
-      text: data.headline
-    },
-    {},
-    {
-      default: () => {
-        return `<div class="content svelte-1tclrzj"><!-- HTML_TAG_START -->${data.bodyText}<!-- HTML_TAG_END --></div>`;
-      }
+  })}</h1>
+        ${validate_component(TextReveal, "TextReveal").$$render($$result, { delay: 900, aos_delay: 300 }, {}, {
+    default: () => {
+      return `<div class="content svelte-1tclrzj"><!-- HTML_TAG_START -->${data.bodyText}<!-- HTML_TAG_END --></div>`;
     }
-  )}
+  })}
       ${data.targetPage ? `${validate_component(ButtonLink, "ButtonLink").$$render(
     $$result,
     {

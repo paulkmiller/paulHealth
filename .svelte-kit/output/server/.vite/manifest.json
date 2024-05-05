@@ -44,15 +44,6 @@
       "_index3.js"
     ]
   },
-  "_Carousel.js": {
-    "css": [
-      "_app/immutable/assets/Carousel.f76ac12e.css"
-    ],
-    "file": "chunks/Carousel.js",
-    "imports": [
-      "_index3.js"
-    ]
-  },
   "_Col.js": {
     "file": "chunks/Col.js",
     "imports": [
@@ -117,12 +108,6 @@
   },
   "_Row.js": {
     "file": "chunks/Row.js",
-    "imports": [
-      "_index3.js"
-    ]
-  },
-  "_SEOMetaData.js": {
-    "file": "chunks/SEOMetaData.js",
     "imports": [
       "_index3.js"
     ]
@@ -193,7 +178,7 @@
     "src": "src/routes/+error.svelte"
   },
   "src/routes/+layout.css": {
-    "file": "_app/immutable/assets/_layout.61ece40f.css",
+    "file": "_app/immutable/assets/_layout.58db709b.css",
     "src": "src/routes/+layout.css"
   },
   "src/routes/+layout.server.js": {
@@ -207,7 +192,7 @@
   },
   "src/routes/+layout.svelte": {
     "css": [
-      "_app/immutable/assets/_layout.61ece40f.css"
+      "_app/immutable/assets/_layout.58db709b.css"
     ],
     "file": "entries/pages/_layout.svelte.js",
     "imports": [
@@ -256,8 +241,7 @@
       "_Hero.js",
       "_Faq.js",
       "_DynamicDuplex.js",
-      "_Duplex.js",
-      "_SEOMetaData.js"
+      "_Duplex.js"
     ],
     "isEntry": true,
     "src": "src/routes/about/+page.svelte"
@@ -271,7 +255,7 @@
     "src": "src/routes/api/subscribe/+server.js"
   },
   "src/routes/contact/+page.css": {
-    "file": "_app/immutable/assets/_page.55187fa0.css",
+    "file": "_app/immutable/assets/_page.66d2c1f6.css",
     "src": "src/routes/contact/+page.css"
   },
   "src/routes/contact/+page.server.js": {
@@ -285,7 +269,8 @@
   },
   "src/routes/contact/+page.svelte": {
     "css": [
-      "_app/immutable/assets/_page.55187fa0.css"
+      "_app/immutable/assets/_page.66d2c1f6.css",
+      "_app/immutable/assets/Carousel.f76ac12e.css"
     ],
     "file": "entries/pages/contact/_page.svelte.js",
     "imports": [
@@ -293,10 +278,8 @@
       "_Hero.js",
       "_Row.js",
       "_Col.js",
-      "_SEOMetaData.js",
       "_ButtonLink.js",
-      "_TextWithLineBreaks.js",
-      "_Carousel.js"
+      "_TextWithLineBreaks.js"
     ],
     "isEntry": true,
     "src": "src/routes/contact/+page.svelte"
@@ -324,19 +307,18 @@
   },
   "src/routes/home/+page.svelte": {
     "css": [
-      "_app/immutable/assets/_page.4279f1b4.css"
+      "_app/immutable/assets/_page.4279f1b4.css",
+      "_app/immutable/assets/Carousel.f76ac12e.css"
     ],
     "file": "entries/pages/home/_page.svelte.js",
     "imports": [
       "_index3.js",
       "_Hero.js",
-      "_Carousel.js",
       "_IconBase.js",
       "_ButtonLink.js",
       "_DynamicDuplex.js",
       "_Faq.js",
-      "_Duplex.js",
-      "_SEOMetaData.js"
+      "_Duplex.js"
     ],
     "isEntry": true,
     "src": "src/routes/home/+page.svelte"
@@ -364,7 +346,6 @@
       "_Hero.js",
       "_Faq.js",
       "_Duplex.js",
-      "_SEOMetaData.js",
       "_IconBase.js"
     ],
     "isEntry": true,
@@ -446,8 +427,7 @@
     "imports": [
       "_index3.js",
       "_Duplex.js",
-      "_ButtonLink.js",
-      "_SEOMetaData.js"
+      "_ButtonLink.js"
     ],
     "isEntry": true,
     "src": "src/routes/news/[slug]/+page.svelte"
@@ -494,8 +474,7 @@
       "_index3.js",
       "_Duplex.js",
       "_Faq.js",
-      "_Hero.js",
-      "_SEOMetaData.js"
+      "_Hero.js"
     ],
     "isEntry": true,
     "src": "src/routes/services/[slug]/+page.svelte"

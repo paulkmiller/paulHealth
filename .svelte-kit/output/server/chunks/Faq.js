@@ -76,7 +76,8 @@ const InfoBlockItem = create_ssr_component(($$result, $$props, $$bindings, slots
       text: "Learn More",
       background_color: "#ADEBEF",
       ariaText: "learn more",
-      ariaLink: data.ctaLink.slug
+      ariaLink: data.ctaLink.slug,
+      aos_anim: "fade-in"
     },
     {},
     {}
@@ -151,9 +152,9 @@ const LogoRackItem = create_ssr_component(($$result, $$props, $$bindings, slots)
   if ($$props.color === void 0 && $$bindings.color && color !== void 0)
     $$bindings.color(color);
   $$result.css.add(css$3);
-  return `<div class="${"text-center small-logo blocks-" + escape(data.logosPerRow, true) + " svelte-8xhu7z"}">${logos[0].header ? `<h2 style="${"color: " + escape(color, true)}" data-aos="fade-up" data-aos-delay="100" class="svelte-8xhu7z">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: logos[0].header }, {}, {})}</h2>` : ``}
+  return `<div class="${"text-center small-logo blocks-" + escape(data.logosPerRow, true) + " svelte-8xhu7z"}">${logos[0].header ? `<h2 style="${"color: " + escape(color, true)}" data-aos="fade-up" class="svelte-8xhu7z">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: logos[0].header }, {}, {})}</h2>` : ``}
   ${each(logos, (logo, index) => {
-    return `<div class="logo-wrapper svelte-8xhu7z" data-aos="fade-left"${add_attribute("data-aos-delay", index * 400, 0)}><img src="${escape(logo.image, true) + "?fm=webp&q=80"}"${add_attribute("alt", logo.alt, 0)} class="svelte-8xhu7z">
+    return `<div class="logo-wrapper svelte-8xhu7z" data-aos="fade-left"${add_attribute("data-aos-delay", index * 150, 0)}><img src="${escape(logo.image, true) + "?fm=webp&q=80"}"${add_attribute("alt", logo.alt, 0)} class="svelte-8xhu7z">
       ${logo.headline ? `<h4 style="${"color: " + escape(color, true)}" class="headline svelte-8xhu7z">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: logo.headline }, {}, {})}</h4>` : ``}
       ${logo.body ? `<p style="${"color: " + escape(color, true)}" class="logo-body svelte-8xhu7z"><!-- HTML_TAG_START -->${logo.body}<!-- HTML_TAG_END --></p>` : ``}
     </div>`;

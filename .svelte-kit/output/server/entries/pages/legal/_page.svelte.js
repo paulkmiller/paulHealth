@@ -39,7 +39,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     return `${validate_component(components[item.type] || missing_component, "svelte:component").$$render($$result, Object.assign({}, getComponentData(item)), {}, {})}`;
   })}
 
-  `;
+`;
 });
 export {
   Page as default

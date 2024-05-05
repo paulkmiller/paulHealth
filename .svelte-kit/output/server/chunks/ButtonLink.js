@@ -13,7 +13,7 @@ const ButtonLink = create_ssr_component(($$result, $$props, $$bindings, slots) =
   let { ariaLink } = $$props;
   let { delay = 0 } = $$props;
   let { aos_delay = 200 } = $$props;
-  let { aos_anim } = $$props;
+  let { aos_anim = "" } = $$props;
   if (background_color === "") {
     background_color = "#fff";
   }

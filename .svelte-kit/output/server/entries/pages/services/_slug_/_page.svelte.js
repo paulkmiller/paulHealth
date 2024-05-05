@@ -2,7 +2,6 @@ import { c as create_ssr_component, d as each, v as validate_component, m as mis
 import { D as Duplex } from "../../../../chunks/Duplex.js";
 import { I as InfoBlock, L as LogoRack, F as Faq } from "../../../../chunks/Faq.js";
 import { H as Hero } from "../../../../chunks/Hero.js";
-import { S as SEOMetaData } from "../../../../chunks/SEOMetaData.js";
 function getComponentData(item) {
   switch (item.type) {
     case "ComponentHeroBanner":
@@ -34,7 +33,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     return `${validate_component(components[item.type] || missing_component, "svelte:component").$$render($$result, Object.assign({}, getComponentData(item)), {}, {})}`;
   })}
 
-  ${validate_component(SEOMetaData, "SEOMetaData").$$render($$result, { data }, {}, {})}`;
+  `;
 });
 export {
   Page as default

@@ -2,6 +2,38 @@ runtime: nodejs20
 entrypoint: node index.js
 default_expiration: 0h
 handlers:
+  - url: /Fonts/PolySans-Bulky.ttf
+    static_files: storage/Fonts/PolySans-Bulky.ttf
+    upload: storage/Fonts/PolySans-Bulky.ttf
+    secure: always
+  - url: /Fonts/PolySans-Bulky.woff
+    static_files: storage/Fonts/PolySans-Bulky.woff
+    upload: storage/Fonts/PolySans-Bulky.woff
+    secure: always
+  - url: /Fonts/PolySans-Median.ttf
+    static_files: storage/Fonts/PolySans-Median.ttf
+    upload: storage/Fonts/PolySans-Median.ttf
+    secure: always
+  - url: /Fonts/PolySans-Median.woff
+    static_files: storage/Fonts/PolySans-Median.woff
+    upload: storage/Fonts/PolySans-Median.woff
+    secure: always
+  - url: /Fonts/PolySans-Neutral.ttf
+    static_files: storage/Fonts/PolySans-Neutral.ttf
+    upload: storage/Fonts/PolySans-Neutral.ttf
+    secure: always
+  - url: /Fonts/PolySans-Neutral.woff
+    static_files: storage/Fonts/PolySans-Neutral.woff
+    upload: storage/Fonts/PolySans-Neutral.woff
+    secure: always
+  - url: /Fonts/PolySans-Slim.ttf
+    static_files: storage/Fonts/PolySans-Slim.ttf
+    upload: storage/Fonts/PolySans-Slim.ttf
+    secure: always
+  - url: /Fonts/PolySans-Slim.woff
+    static_files: storage/Fonts/PolySans-Slim.woff
+    upload: storage/Fonts/PolySans-Slim.woff
+    secure: always
   - url: /astronaut.svg
     static_files: storage/astronaut.svg
     upload: storage/astronaut.svg

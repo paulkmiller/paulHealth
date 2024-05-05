@@ -3,7 +3,6 @@ import { H as Hero } from "../../../chunks/Hero.js";
 import { I as InfoBlock, L as LogoRack, F as Faq } from "../../../chunks/Faq.js";
 import { D as DynamicDuplex } from "../../../chunks/DynamicDuplex.js";
 import { D as Duplex } from "../../../chunks/Duplex.js";
-import { S as SEOMetaData } from "../../../chunks/SEOMetaData.js";
 const BioCardsItem_svelte_svelte_type_style_lang = "";
 const css$1 = {
   code: "figure.svelte-1kkd1wl.svelte-1kkd1wl{padding:2rem 1.5rem;border-radius:0.6rem;text-align:center;border-radius:0.6rem;max-width:22rem;height:100%}figure.svelte-1kkd1wl .avatar.svelte-1kkd1wl{height:5.825rem;width:5.825rem;margin:0 auto;border-radius:100%;background-position:center;background-repeat:no-repeat;background-size:contain;position:relative;z-index:2}figure.svelte-1kkd1wl .circle.svelte-1kkd1wl{height:2.5rem;width:5rem;border-radius:10rem 10rem 0 0;z-index:1}figcaption.svelte-1kkd1wl.svelte-1kkd1wl{margin-top:-2.5rem}h4.svelte-1kkd1wl.svelte-1kkd1wl{margin:1rem auto}h6.svelte-1kkd1wl.svelte-1kkd1wl{font-family:'PolySans Median';font-size:.95rem;color:#adebef;margin:-0.8rem auto 0 auto}figure.employee.svelte-1kkd1wl.svelte-1kkd1wl{max-width:20rem}.employee.svelte-1kkd1wl h6.svelte-1kkd1wl{color:#D93561}.bio-text.svelte-1kkd1wl.svelte-1kkd1wl{margin:0.5rem auto 0 auto}.bio-text.svelte-1kkd1wl p{font-family:'PolySans Neutral', Arial, Helvetica, sans-serif;font-size:0.95rem;line-height:1.125rem}.bio-text.svelte-1kkd1wl b{font-family:'PolySans Median', Arial, Helvetica, sans-serif;color:#FF80A8}.bio-text.svelte-1kkd1wl p:first-of-type{min-height:105px}.bio-cards-section.bioCard-0 .bio-cards-wrapper.leadership{margin-bottom:4rem}.bio-cards-wrapper.leadership figure:nth-child(1){margin-left:auto;margin-right:0}.bio-cards-wrapper.leadership figure:nth-child(2){margin-left:0;margin-right:auto}@media screen and (max-width: 720px){figure.svelte-1kkd1wl.svelte-1kkd1wl{max-width:27rem}}@media screen and (max-width: 768px){.bio-cards-wrapper.leadership figure.leadership{margin:auto}.bio-text.svelte-1kkd1wl p{font-size:0.9rem;margin:0 auto}}",
@@ -68,11 +67,11 @@ const BioCards = create_ssr_component(($$result, $$props, $$bindings, slots) => 
     ${subline ? `<h5 class="subline svelte-1m5gwyp">${escape(subline)}</h5>` : ``}</div>
 
   ${leadership ? `<div class="leadership svelte-1m5gwyp">${each(leadership, (person, index2) => {
-    return `${validate_component(BioCardsItem, "BioCardsItem").$$render($$result, { entry: person, index: index2 }, {}, {})}`;
+    return `${validate_component(BioCardsItem, "BioCardsItem").$$render($$result, { entry: person }, {}, {})}`;
   })}</div>` : ``}
 
   <div class="employees svelte-1m5gwyp">${each(employees, (person, index2) => {
-    return `<span data-aos="fade-up"${add_attribute("data-aos-delay", index2 * 200, 0)}>${validate_component(BioCardsItem, "BioCardsItem").$$render($$result, { entry: person, index: index2 }, {}, {})}
+    return `<span data-aos="fade-up"${add_attribute("data-aos-delay", index2 * 200, 0)}>${validate_component(BioCardsItem, "BioCardsItem").$$render($$result, { entry: person }, {}, {})}
     </span>`;
   })}</div>
 
@@ -117,7 +116,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     return `${validate_component(components[item.type] || missing_component, "svelte:component").$$render($$result, Object.assign({}, getComponentData(item)), {}, {})}`;
   })}
 
-${validate_component(SEOMetaData, "SEOMetaData").$$render($$result, { data }, {}, {})}`;
+`;
 });
 export {
   Page as default

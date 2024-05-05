@@ -44469,7 +44469,7 @@ function create_ssr_component(fn) {
       return {
         html,
         css: {
-          code: Array.from(result.css).map((css19) => css19.code).join("\n"),
+          code: Array.from(result.css).map((css18) => css18.code).join("\n"),
           map: null
           // TODO
         },
@@ -45340,8 +45340,8 @@ var init__ = __esm({
     index = 0;
     component = async () => component_cache ??= (await Promise.resolve().then(() => (init_layout_svelte(), layout_svelte_exports))).default;
     server_id = "src/routes/+layout.server.js";
-    imports = ["_app/immutable/nodes/0.2c67a248.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/IconBase.aa9b8a72.js", "_app/immutable/chunks/stores.d5090ce3.js", "_app/immutable/chunks/singletons.94de24d0.js", "_app/immutable/chunks/paths.bdc3fcd1.js", "_app/immutable/chunks/_commonjsHelpers.725317a4.js"];
-    stylesheets = ["_app/immutable/assets/0.fa23c092.css", "_app/immutable/assets/IconBase.6bf551a2.css"];
+    imports = ["_app/immutable/nodes/0.93640d15.js", "_app/immutable/chunks/index.5d5a95b7.js", "_app/immutable/chunks/IconBase.50afd150.js", "_app/immutable/chunks/stores.9e4501ed.js", "_app/immutable/chunks/singletons.58f5f409.js", "_app/immutable/chunks/_commonjsHelpers.725317a4.js"];
+    stylesheets = ["_app/immutable/assets/0.001e2292.css", "_app/immutable/assets/IconBase.6bf551a2.css"];
     fonts = [];
   }
 });
@@ -45364,7 +45364,7 @@ var init_ButtonLink = __esm({
       let { ariaLink } = $$props;
       let { delay = 0 } = $$props;
       let { aos_delay = 200 } = $$props;
-      let { aos_anim } = $$props;
+      let { aos_anim = "" } = $$props;
       if (background_color === "") {
         background_color = "#fff";
       }
@@ -45459,7 +45459,7 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => component_cache2 ??= (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default;
-    imports2 = ["_app/immutable/nodes/1.378b5bef.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/ButtonLink.5274dc1a.js"];
+    imports2 = ["_app/immutable/nodes/1.adc53f8f.js", "_app/immutable/chunks/index.5d5a95b7.js", "_app/immutable/chunks/ButtonLink.0f14ce15.js"];
     stylesheets2 = ["_app/immutable/assets/1.6b9275b8.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css"];
     fonts2 = [];
   }
@@ -45517,7 +45517,7 @@ var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     index3 = 2;
     component3 = async () => component_cache3 ??= (await Promise.resolve().then(() => (init_page_svelte(), page_svelte_exports))).default;
-    imports3 = ["_app/immutable/nodes/2.bd4995d5.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/singletons.94de24d0.js", "_app/immutable/chunks/paths.bdc3fcd1.js"];
+    imports3 = ["_app/immutable/nodes/2.1b626253.js", "_app/immutable/chunks/index.5d5a95b7.js", "_app/immutable/chunks/singletons.58f5f409.js"];
     stylesheets3 = ["_app/immutable/assets/2.239c46b0.css"];
     fonts3 = [];
   }
@@ -46368,48 +46368,21 @@ var init_Hero = __esm({
         $$bindings.data(data);
       $$result.css.add(css6);
       return `${data ? `<section class="heroBanner svelte-1tclrzj"><img class="heroImage svelte-1tclrzj" src="${escape(data.image.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", data.image.description, 0)}>
-    <div class="${escape(null_to_empty(data.contentStyle ? "content-left" : "content-right"), true) + " svelte-1tclrzj"}">${data.subline ? `<span class="subline svelte-1tclrzj">${validate_component(TextReveal, "TextReveal").$$render(
-        $$result,
-        {
-          delay: 300,
-          aos_delay: 100,
-          text: data.headline
-        },
-        {},
-        {
-          default: () => {
-            return `${escape(data.subline)}`;
-          }
+    <div class="${escape(null_to_empty(data.contentStyle ? "content-left" : "content-right"), true) + " svelte-1tclrzj"}">${data.subline ? `<span class="subline svelte-1tclrzj">${validate_component(TextReveal, "TextReveal").$$render($$result, { delay: 300, aos_delay: 100 }, {}, {
+        default: () => {
+          return `${escape(data.subline)}`;
         }
-      )}</span>` : ``}
-      <h1 class="headline svelte-1tclrzj">${validate_component(TextReveal, "TextReveal").$$render(
-        $$result,
-        {
-          delay: 600,
-          aos_delay: 200,
-          text: data.headline
-        },
-        {},
-        {
-          default: () => {
-            return `${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: data.headline }, {}, {})}`;
-          }
+      })}</span>` : ``}
+      <h1 class="headline svelte-1tclrzj">${validate_component(TextReveal, "TextReveal").$$render($$result, { delay: 600, aos_delay: 200 }, {}, {
+        default: () => {
+          return `${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: data.headline }, {}, {})}`;
         }
-      )}</h1>
-        ${validate_component(TextReveal, "TextReveal").$$render(
-        $$result,
-        {
-          delay: 900,
-          aos_delay: 300,
-          text: data.headline
-        },
-        {},
-        {
-          default: () => {
-            return `<div class="content svelte-1tclrzj"><!-- HTML_TAG_START -->${data.bodyText}<!-- HTML_TAG_END --></div>`;
-          }
+      })}</h1>
+        ${validate_component(TextReveal, "TextReveal").$$render($$result, { delay: 900, aos_delay: 300 }, {}, {
+        default: () => {
+          return `<div class="content svelte-1tclrzj"><!-- HTML_TAG_START -->${data.bodyText}<!-- HTML_TAG_END --></div>`;
         }
-      )}
+      })}
       ${data.targetPage ? `${validate_component(ButtonLink, "ButtonLink").$$render(
         $$result,
         {
@@ -46626,7 +46599,8 @@ var init_Faq = __esm({
           text: "Learn More",
           background_color: "#ADEBEF",
           ariaText: "learn more",
-          ariaLink: data.ctaLink.slug
+          ariaLink: data.ctaLink.slug,
+          aos_anim: "fade-in"
         },
         {},
         {}
@@ -46700,9 +46674,9 @@ var init_Faq = __esm({
       if ($$props.color === void 0 && $$bindings.color && color !== void 0)
         $$bindings.color(color);
       $$result.css.add(css$32);
-      return `<div class="${"text-center small-logo blocks-" + escape(data.logosPerRow, true) + " svelte-8xhu7z"}">${logos[0].header ? `<h2 style="${"color: " + escape(color, true)}" data-aos="fade-up" data-aos-delay="100" class="svelte-8xhu7z">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: logos[0].header }, {}, {})}</h2>` : ``}
+      return `<div class="${"text-center small-logo blocks-" + escape(data.logosPerRow, true) + " svelte-8xhu7z"}">${logos[0].header ? `<h2 style="${"color: " + escape(color, true)}" data-aos="fade-up" class="svelte-8xhu7z">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: logos[0].header }, {}, {})}</h2>` : ``}
   ${each(logos, (logo, index13) => {
-        return `<div class="logo-wrapper svelte-8xhu7z" data-aos="fade-left"${add_attribute("data-aos-delay", index13 * 400, 0)}><img src="${escape(logo.image, true) + "?fm=webp&q=80"}"${add_attribute("alt", logo.alt, 0)} class="svelte-8xhu7z">
+        return `<div class="logo-wrapper svelte-8xhu7z" data-aos="fade-left"${add_attribute("data-aos-delay", index13 * 150, 0)}><img src="${escape(logo.image, true) + "?fm=webp&q=80"}"${add_attribute("alt", logo.alt, 0)} class="svelte-8xhu7z">
       ${logo.headline ? `<h4 style="${"color: " + escape(color, true)}" class="headline svelte-8xhu7z">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: logo.headline }, {}, {})}</h4>` : ``}
       ${logo.body ? `<p style="${"color: " + escape(color, true)}" class="logo-body svelte-8xhu7z"><!-- HTML_TAG_START -->${logo.body}<!-- HTML_TAG_END --></p>` : ``}
     </div>`;
@@ -47123,7 +47097,7 @@ var init_Duplex = __esm({
         {},
         {}
       )}` : ``}</div></div></div>` : `${data.containerSize == "Large" ? `<div class="${"duplex-container large-image " + escape(data.containerLayout ? "" : "row-reverse", true) + " svelte-16mh5ps"}"><div class="left-container svelte-16mh5ps" data-aos="fade-right" data-aos-delay="100"><img src="${escape((_e = data.image) == null ? void 0 : _e.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", (_f = data.image) == null ? void 0 : _f.description, 0)} class="svelte-16mh5ps"></div>
-    <div class="right-container svelte-16mh5ps" data-aos="fade-right" data-aos-delay="400">${data.tagline ? `<p class="tagline svelte-16mh5ps">${escape(data.tagline)}</p>` : ``}
+    <div class="right-container svelte-16mh5ps" data-aos="fade-left" data-aos-delay="100">${data.tagline ? `<p class="tagline svelte-16mh5ps">${escape(data.tagline)}</p>` : ``}
       ${data.headline && !data.bodyText ? `<h3 class="big svelte-16mh5ps">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: data.headline }, {}, {})}</h3>` : `${data.headline ? `<h3 class="svelte-16mh5ps">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: data.headline }, {}, {})}</h3>` : ``}`}
       ${data.bodyText ? `<p class="svelte-16mh5ps"><!-- HTML_TAG_START -->${data.bodyText}<!-- HTML_TAG_END --></p>` : ``}
       ${data.newsletterInput ? `${validate_component(NewsletterInput, "NewsletterInput").$$render($$result, {}, {}, {})}` : ``}
@@ -47140,17 +47114,6 @@ var init_Duplex = __esm({
         {},
         {}
       )}` : ``}</div></div>` : ``}`}`}`;
-    });
-  }
-});
-
-// .svelte-kit/output/server/chunks/SEOMetaData.js
-var SEOMetaData;
-var init_SEOMetaData = __esm({
-  ".svelte-kit/output/server/chunks/SEOMetaData.js"() {
-    init_index3();
-    SEOMetaData = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      return ``;
     });
   }
 });
@@ -47190,7 +47153,6 @@ var init_page_svelte2 = __esm({
     init_Faq();
     init_DynamicDuplex();
     init_Duplex();
-    init_SEOMetaData();
     css$16 = {
       code: "figure.svelte-1kkd1wl.svelte-1kkd1wl{padding:2rem 1.5rem;border-radius:0.6rem;text-align:center;border-radius:0.6rem;max-width:22rem;height:100%}figure.svelte-1kkd1wl .avatar.svelte-1kkd1wl{height:5.825rem;width:5.825rem;margin:0 auto;border-radius:100%;background-position:center;background-repeat:no-repeat;background-size:contain;position:relative;z-index:2}figure.svelte-1kkd1wl .circle.svelte-1kkd1wl{height:2.5rem;width:5rem;border-radius:10rem 10rem 0 0;z-index:1}figcaption.svelte-1kkd1wl.svelte-1kkd1wl{margin-top:-2.5rem}h4.svelte-1kkd1wl.svelte-1kkd1wl{margin:1rem auto}h6.svelte-1kkd1wl.svelte-1kkd1wl{font-family:'PolySans Median';font-size:.95rem;color:#adebef;margin:-0.8rem auto 0 auto}figure.employee.svelte-1kkd1wl.svelte-1kkd1wl{max-width:20rem}.employee.svelte-1kkd1wl h6.svelte-1kkd1wl{color:#D93561}.bio-text.svelte-1kkd1wl.svelte-1kkd1wl{margin:0.5rem auto 0 auto}.bio-text.svelte-1kkd1wl p{font-family:'PolySans Neutral', Arial, Helvetica, sans-serif;font-size:0.95rem;line-height:1.125rem}.bio-text.svelte-1kkd1wl b{font-family:'PolySans Median', Arial, Helvetica, sans-serif;color:#FF80A8}.bio-text.svelte-1kkd1wl p:first-of-type{min-height:105px}.bio-cards-section.bioCard-0 .bio-cards-wrapper.leadership{margin-bottom:4rem}.bio-cards-wrapper.leadership figure:nth-child(1){margin-left:auto;margin-right:0}.bio-cards-wrapper.leadership figure:nth-child(2){margin-left:0;margin-right:auto}@media screen and (max-width: 720px){figure.svelte-1kkd1wl.svelte-1kkd1wl{max-width:27rem}}@media screen and (max-width: 768px){.bio-cards-wrapper.leadership figure.leadership{margin:auto}.bio-text.svelte-1kkd1wl p{font-size:0.9rem;margin:0 auto}}",
       map: null
@@ -47255,11 +47217,11 @@ var init_page_svelte2 = __esm({
     ${subline ? `<h5 class="subline svelte-1m5gwyp">${escape(subline)}</h5>` : ``}</div>
 
   ${leadership ? `<div class="leadership svelte-1m5gwyp">${each(leadership, (person, index22) => {
-        return `${validate_component(BioCardsItem, "BioCardsItem").$$render($$result, { entry: person, index: index22 }, {}, {})}`;
+        return `${validate_component(BioCardsItem, "BioCardsItem").$$render($$result, { entry: person }, {}, {})}`;
       })}</div>` : ``}
 
   <div class="employees svelte-1m5gwyp">${each(employees, (person, index22) => {
-        return `<span data-aos="fade-up"${add_attribute("data-aos-delay", index22 * 200, 0)}>${validate_component(BioCardsItem, "BioCardsItem").$$render($$result, { entry: person, index: index22 }, {}, {})}
+        return `<span data-aos="fade-up"${add_attribute("data-aos-delay", index22 * 200, 0)}>${validate_component(BioCardsItem, "BioCardsItem").$$render($$result, { entry: person }, {}, {})}
     </span>`;
       })}</div>
 
@@ -47282,7 +47244,7 @@ var init_page_svelte2 = __esm({
         return `${validate_component(components[item.type] || missing_component, "svelte:component").$$render($$result, Object.assign({}, getComponentData(item)), {}, {})}`;
       })}
 
-${validate_component(SEOMetaData, "SEOMetaData").$$render($$result, { data }, {}, {})}`;
+`;
     });
   }
 });
@@ -47305,7 +47267,7 @@ var init__4 = __esm({
     index4 = 3;
     component4 = async () => component_cache4 ??= (await Promise.resolve().then(() => (init_page_svelte2(), page_svelte_exports2))).default;
     server_id2 = "src/routes/about/+page.server.js";
-    imports4 = ["_app/immutable/nodes/3.1f82bcd5.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/Hero.e9f4fbf4.js", "_app/immutable/chunks/ButtonLink.5274dc1a.js", "_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js", "_app/immutable/chunks/Faq.7e4f104f.js", "_app/immutable/chunks/stores.d5090ce3.js", "_app/immutable/chunks/singletons.94de24d0.js", "_app/immutable/chunks/paths.bdc3fcd1.js", "_app/immutable/chunks/Row.7408adfd.js", "_app/immutable/chunks/DynamicDuplex.0e2611bb.js", "_app/immutable/chunks/Duplex.755a8b52.js", "_app/immutable/chunks/SEOMetaData.901255a3.js"];
+    imports4 = ["_app/immutable/nodes/3.741557e2.js", "_app/immutable/chunks/index.5d5a95b7.js", "_app/immutable/chunks/Hero.c23f8ed9.js", "_app/immutable/chunks/ButtonLink.0f14ce15.js", "_app/immutable/chunks/TextWithLineBreaks.8eb785f4.js", "_app/immutable/chunks/Faq.d0034bac.js", "_app/immutable/chunks/stores.9e4501ed.js", "_app/immutable/chunks/singletons.58f5f409.js", "_app/immutable/chunks/Row.f1baf3b3.js", "_app/immutable/chunks/DynamicDuplex.e86978d8.js", "_app/immutable/chunks/Duplex.f4e36a32.js"];
     stylesheets4 = ["_app/immutable/assets/3.16a4ee6a.css", "_app/immutable/assets/Hero.0d25076f.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css", "_app/immutable/assets/Faq.7ac5e4bc.css", "_app/immutable/assets/DynamicDuplex.b9baba17.css", "_app/immutable/assets/Duplex.dbce9a88.css"];
     fonts4 = [];
   }
@@ -47448,501 +47410,6 @@ var init_page_server2 = __esm({
       "ComponentHeroBanner": processHeroBanner2,
       "ComponentDuplex": processDuplex2
     };
-  }
-});
-
-// node_modules/devalue/src/utils.js
-function is_primitive(thing) {
-  return Object(thing) !== thing;
-}
-function is_plain_object(thing) {
-  const proto = Object.getPrototypeOf(thing);
-  return proto === Object.prototype || proto === null || Object.getOwnPropertyNames(proto).sort().join("\0") === object_proto_names;
-}
-function get_type(thing) {
-  return Object.prototype.toString.call(thing).slice(8, -1);
-}
-function get_escaped_char(char) {
-  switch (char) {
-    case '"':
-      return '\\"';
-    case "<":
-      return "\\u003C";
-    case "\\":
-      return "\\\\";
-    case "\n":
-      return "\\n";
-    case "\r":
-      return "\\r";
-    case "	":
-      return "\\t";
-    case "\b":
-      return "\\b";
-    case "\f":
-      return "\\f";
-    case "\u2028":
-      return "\\u2028";
-    case "\u2029":
-      return "\\u2029";
-    default:
-      return char < " " ? `\\u${char.charCodeAt(0).toString(16).padStart(4, "0")}` : "";
-  }
-}
-function stringify_string(str) {
-  let result = "";
-  let last_pos = 0;
-  const len = str.length;
-  for (let i = 0; i < len; i += 1) {
-    const char = str[i];
-    const replacement = get_escaped_char(char);
-    if (replacement) {
-      result += str.slice(last_pos, i) + replacement;
-      last_pos = i + 1;
-    }
-  }
-  return `"${last_pos === 0 ? str : result + str.slice(last_pos)}"`;
-}
-var escaped, DevalueError, object_proto_names;
-var init_utils = __esm({
-  "node_modules/devalue/src/utils.js"() {
-    escaped = {
-      "<": "\\u003C",
-      "\\": "\\\\",
-      "\b": "\\b",
-      "\f": "\\f",
-      "\n": "\\n",
-      "\r": "\\r",
-      "	": "\\t",
-      "\u2028": "\\u2028",
-      "\u2029": "\\u2029"
-    };
-    DevalueError = class extends Error {
-      /**
-       * @param {string} message
-       * @param {string[]} keys
-       */
-      constructor(message, keys) {
-        super(message);
-        this.name = "DevalueError";
-        this.path = keys.join("");
-      }
-    };
-    object_proto_names = /* @__PURE__ */ Object.getOwnPropertyNames(
-      Object.prototype
-    ).sort().join("\0");
-  }
-});
-
-// node_modules/devalue/src/uneval.js
-function uneval(value, replacer) {
-  const counts = /* @__PURE__ */ new Map();
-  const keys = [];
-  const custom = /* @__PURE__ */ new Map();
-  function walk(thing) {
-    if (typeof thing === "function") {
-      throw new DevalueError(`Cannot stringify a function`, keys);
-    }
-    if (!is_primitive(thing)) {
-      if (counts.has(thing)) {
-        counts.set(thing, counts.get(thing) + 1);
-        return;
-      }
-      counts.set(thing, 1);
-      if (replacer) {
-        const str2 = replacer(thing);
-        if (typeof str2 === "string") {
-          custom.set(thing, str2);
-          return;
-        }
-      }
-      const type = get_type(thing);
-      switch (type) {
-        case "Number":
-        case "BigInt":
-        case "String":
-        case "Boolean":
-        case "Date":
-        case "RegExp":
-          return;
-        case "Array":
-          thing.forEach((value2, i) => {
-            keys.push(`[${i}]`);
-            walk(value2);
-            keys.pop();
-          });
-          break;
-        case "Set":
-          Array.from(thing).forEach(walk);
-          break;
-        case "Map":
-          for (const [key2, value2] of thing) {
-            keys.push(
-              `.get(${is_primitive(key2) ? stringify_primitive(key2) : "..."})`
-            );
-            walk(value2);
-            keys.pop();
-          }
-          break;
-        default:
-          if (!is_plain_object(thing)) {
-            throw new DevalueError(
-              `Cannot stringify arbitrary non-POJOs`,
-              keys
-            );
-          }
-          if (Object.getOwnPropertySymbols(thing).length > 0) {
-            throw new DevalueError(
-              `Cannot stringify POJOs with symbolic keys`,
-              keys
-            );
-          }
-          for (const key2 in thing) {
-            keys.push(`.${key2}`);
-            walk(thing[key2]);
-            keys.pop();
-          }
-      }
-    }
-  }
-  walk(value);
-  const names = /* @__PURE__ */ new Map();
-  Array.from(counts).filter((entry) => entry[1] > 1).sort((a, b) => b[1] - a[1]).forEach((entry, i) => {
-    names.set(entry[0], get_name(i));
-  });
-  function stringify2(thing) {
-    if (names.has(thing)) {
-      return names.get(thing);
-    }
-    if (is_primitive(thing)) {
-      return stringify_primitive(thing);
-    }
-    if (custom.has(thing)) {
-      return custom.get(thing);
-    }
-    const type = get_type(thing);
-    switch (type) {
-      case "Number":
-      case "String":
-      case "Boolean":
-        return `Object(${stringify2(thing.valueOf())})`;
-      case "RegExp":
-        return `new RegExp(${stringify_string(thing.source)}, "${thing.flags}")`;
-      case "Date":
-        return `new Date(${thing.getTime()})`;
-      case "Array":
-        const members = (
-          /** @type {any[]} */
-          thing.map(
-            (v, i) => i in thing ? stringify2(v) : ""
-          )
-        );
-        const tail = thing.length === 0 || thing.length - 1 in thing ? "" : ",";
-        return `[${members.join(",")}${tail}]`;
-      case "Set":
-      case "Map":
-        return `new ${type}([${Array.from(thing).map(stringify2).join(",")}])`;
-      default:
-        const obj = `{${Object.keys(thing).map((key2) => `${safe_key(key2)}:${stringify2(thing[key2])}`).join(",")}}`;
-        const proto = Object.getPrototypeOf(thing);
-        if (proto === null) {
-          return Object.keys(thing).length > 0 ? `Object.assign(Object.create(null),${obj})` : `Object.create(null)`;
-        }
-        return obj;
-    }
-  }
-  const str = stringify2(value);
-  if (names.size) {
-    const params = [];
-    const statements = [];
-    const values = [];
-    names.forEach((name, thing) => {
-      params.push(name);
-      if (custom.has(thing)) {
-        values.push(
-          /** @type {string} */
-          custom.get(thing)
-        );
-        return;
-      }
-      if (is_primitive(thing)) {
-        values.push(stringify_primitive(thing));
-        return;
-      }
-      const type = get_type(thing);
-      switch (type) {
-        case "Number":
-        case "String":
-        case "Boolean":
-          values.push(`Object(${stringify2(thing.valueOf())})`);
-          break;
-        case "RegExp":
-          values.push(thing.toString());
-          break;
-        case "Date":
-          values.push(`new Date(${thing.getTime()})`);
-          break;
-        case "Array":
-          values.push(`Array(${thing.length})`);
-          thing.forEach((v, i) => {
-            statements.push(`${name}[${i}]=${stringify2(v)}`);
-          });
-          break;
-        case "Set":
-          values.push(`new Set`);
-          statements.push(
-            `${name}.${Array.from(thing).map((v) => `add(${stringify2(v)})`).join(".")}`
-          );
-          break;
-        case "Map":
-          values.push(`new Map`);
-          statements.push(
-            `${name}.${Array.from(thing).map(([k, v]) => `set(${stringify2(k)}, ${stringify2(v)})`).join(".")}`
-          );
-          break;
-        default:
-          values.push(
-            Object.getPrototypeOf(thing) === null ? "Object.create(null)" : "{}"
-          );
-          Object.keys(thing).forEach((key2) => {
-            statements.push(
-              `${name}${safe_prop(key2)}=${stringify2(thing[key2])}`
-            );
-          });
-      }
-    });
-    statements.push(`return ${str}`);
-    return `(function(${params.join(",")}){${statements.join(
-      ";"
-    )}}(${values.join(",")}))`;
-  } else {
-    return str;
-  }
-}
-function get_name(num) {
-  let name = "";
-  do {
-    name = chars[num % chars.length] + name;
-    num = ~~(num / chars.length) - 1;
-  } while (num >= 0);
-  return reserved.test(name) ? `${name}0` : name;
-}
-function escape_unsafe_char(c) {
-  return escaped[c] || c;
-}
-function escape_unsafe_chars(str) {
-  return str.replace(unsafe_chars, escape_unsafe_char);
-}
-function safe_key(key2) {
-  return /^[_$a-zA-Z][_$a-zA-Z0-9]*$/.test(key2) ? key2 : escape_unsafe_chars(JSON.stringify(key2));
-}
-function safe_prop(key2) {
-  return /^[_$a-zA-Z][_$a-zA-Z0-9]*$/.test(key2) ? `.${key2}` : `[${escape_unsafe_chars(JSON.stringify(key2))}]`;
-}
-function stringify_primitive(thing) {
-  if (typeof thing === "string")
-    return stringify_string(thing);
-  if (thing === void 0)
-    return "void 0";
-  if (thing === 0 && 1 / thing < 0)
-    return "-0";
-  const str = String(thing);
-  if (typeof thing === "number")
-    return str.replace(/^(-)?0\./, "$1.");
-  if (typeof thing === "bigint")
-    return thing + "n";
-  return str;
-}
-var chars, unsafe_chars, reserved;
-var init_uneval = __esm({
-  "node_modules/devalue/src/uneval.js"() {
-    init_utils();
-    chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_$";
-    unsafe_chars = /[<\b\f\n\r\t\0\u2028\u2029]/g;
-    reserved = /^(?:do|if|in|for|int|let|new|try|var|byte|case|char|else|enum|goto|long|this|void|with|await|break|catch|class|const|final|float|short|super|throw|while|yield|delete|double|export|import|native|return|switch|throws|typeof|boolean|default|extends|finally|package|private|abstract|continue|debugger|function|volatile|interface|protected|transient|implements|instanceof|synchronized)$/;
-  }
-});
-
-// node_modules/devalue/src/constants.js
-var UNDEFINED, HOLE, NAN, POSITIVE_INFINITY, NEGATIVE_INFINITY, NEGATIVE_ZERO;
-var init_constants = __esm({
-  "node_modules/devalue/src/constants.js"() {
-    UNDEFINED = -1;
-    HOLE = -2;
-    NAN = -3;
-    POSITIVE_INFINITY = -4;
-    NEGATIVE_INFINITY = -5;
-    NEGATIVE_ZERO = -6;
-  }
-});
-
-// node_modules/devalue/src/parse.js
-var init_parse = __esm({
-  "node_modules/devalue/src/parse.js"() {
-    init_constants();
-  }
-});
-
-// node_modules/devalue/src/stringify.js
-function stringify(value, reducers) {
-  const stringified = [];
-  const indexes = /* @__PURE__ */ new Map();
-  const custom = [];
-  for (const key2 in reducers) {
-    custom.push({ key: key2, fn: reducers[key2] });
-  }
-  const keys = [];
-  let p = 0;
-  function flatten(thing) {
-    if (typeof thing === "function") {
-      throw new DevalueError(`Cannot stringify a function`, keys);
-    }
-    if (indexes.has(thing))
-      return indexes.get(thing);
-    if (thing === void 0)
-      return UNDEFINED;
-    if (Number.isNaN(thing))
-      return NAN;
-    if (thing === Infinity)
-      return POSITIVE_INFINITY;
-    if (thing === -Infinity)
-      return NEGATIVE_INFINITY;
-    if (thing === 0 && 1 / thing < 0)
-      return NEGATIVE_ZERO;
-    const index14 = p++;
-    indexes.set(thing, index14);
-    for (const { key: key2, fn } of custom) {
-      const value2 = fn(thing);
-      if (value2) {
-        stringified[index14] = `["${key2}",${flatten(value2)}]`;
-        return index14;
-      }
-    }
-    let str = "";
-    if (is_primitive(thing)) {
-      str = stringify_primitive2(thing);
-    } else {
-      const type = get_type(thing);
-      switch (type) {
-        case "Number":
-        case "String":
-        case "Boolean":
-          str = `["Object",${stringify_primitive2(thing)}]`;
-          break;
-        case "BigInt":
-          str = `["BigInt",${thing}]`;
-          break;
-        case "Date":
-          const valid = !isNaN(thing.getDate());
-          str = `["Date","${valid ? thing.toISOString() : ""}"]`;
-          break;
-        case "RegExp":
-          const { source, flags } = thing;
-          str = flags ? `["RegExp",${stringify_string(source)},"${flags}"]` : `["RegExp",${stringify_string(source)}]`;
-          break;
-        case "Array":
-          str = "[";
-          for (let i = 0; i < thing.length; i += 1) {
-            if (i > 0)
-              str += ",";
-            if (i in thing) {
-              keys.push(`[${i}]`);
-              str += flatten(thing[i]);
-              keys.pop();
-            } else {
-              str += HOLE;
-            }
-          }
-          str += "]";
-          break;
-        case "Set":
-          str = '["Set"';
-          for (const value2 of thing) {
-            str += `,${flatten(value2)}`;
-          }
-          str += "]";
-          break;
-        case "Map":
-          str = '["Map"';
-          for (const [key2, value2] of thing) {
-            keys.push(
-              `.get(${is_primitive(key2) ? stringify_primitive2(key2) : "..."})`
-            );
-            str += `,${flatten(key2)},${flatten(value2)}`;
-            keys.pop();
-          }
-          str += "]";
-          break;
-        default:
-          if (!is_plain_object(thing)) {
-            throw new DevalueError(
-              `Cannot stringify arbitrary non-POJOs`,
-              keys
-            );
-          }
-          if (Object.getOwnPropertySymbols(thing).length > 0) {
-            throw new DevalueError(
-              `Cannot stringify POJOs with symbolic keys`,
-              keys
-            );
-          }
-          if (Object.getPrototypeOf(thing) === null) {
-            str = '["null"';
-            for (const key2 in thing) {
-              keys.push(`.${key2}`);
-              str += `,${stringify_string(key2)},${flatten(thing[key2])}`;
-              keys.pop();
-            }
-            str += "]";
-          } else {
-            str = "{";
-            let started = false;
-            for (const key2 in thing) {
-              if (started)
-                str += ",";
-              started = true;
-              keys.push(`.${key2}`);
-              str += `${stringify_string(key2)}:${flatten(thing[key2])}`;
-              keys.pop();
-            }
-            str += "}";
-          }
-      }
-    }
-    stringified[index14] = str;
-    return index14;
-  }
-  const index13 = flatten(value);
-  if (index13 < 0)
-    return `${index13}`;
-  return `[${stringified.join(",")}]`;
-}
-function stringify_primitive2(thing) {
-  const type = typeof thing;
-  if (type === "string")
-    return stringify_string(thing);
-  if (thing instanceof String)
-    return stringify_string(thing.toString());
-  if (thing === void 0)
-    return UNDEFINED.toString();
-  if (thing === 0 && 1 / thing < 0)
-    return NEGATIVE_ZERO.toString();
-  if (type === "bigint")
-    return `["BigInt","${thing}"]`;
-  return String(thing);
-}
-var init_stringify = __esm({
-  "node_modules/devalue/src/stringify.js"() {
-    init_utils();
-    init_constants();
-  }
-});
-
-// node_modules/devalue/index.js
-var init_devalue = __esm({
-  "node_modules/devalue/index.js"() {
-    init_uneval();
-    init_parse();
-    init_stringify();
   }
 });
 
@@ -49815,7 +49282,586 @@ var init_main = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/Carousel.js
+// .svelte-kit/output/server/entries/pages/contact/_page.svelte.js
+var page_svelte_exports3 = {};
+__export(page_svelte_exports3, {
+  default: () => Page3
+});
+async function GET() {
+  return new Response(null, { status: 200 });
+}
+var css$17, Button, css11, Page3;
+var init_page_svelte3 = __esm({
+  ".svelte-kit/output/server/entries/pages/contact/_page.svelte.js"() {
+    init_index3();
+    init_Hero();
+    init_Row();
+    init_Col();
+    init_ButtonLink();
+    init_TextWithLineBreaks();
+    init_main();
+    css$17 = {
+      code: 'button.svelte-zc8ai1{position:relative;display:inline-block;width:100%;margin:1rem auto;padding:1rem 3rem;background:var(--background-color);border:none;border-radius:30px;color:var(--link-color);line-height:18px;font-size:18px;text-align:center;text-decoration:none;transition:all 0.25s ease-out;z-index:1}button.svelte-zc8ai1:hover{cursor:pointer;box-shadow:#444444 0.2rem 0.3rem 0.3rem;color:#fff}button.svelte-zc8ai1::before{position:absolute;content:"";top:0;right:0;bottom:0;left:0;background:linear-gradient(90deg,rgba(173,235,239,1) 0%, rgba(41,57,122,1) 30%, rgba(218,47,92,1) 70%, rgba(255,193,38,1) 100%);z-index:-1;transition:opacity 0.5s linear;opacity:0;border-radius:30px}button.svelte-zc8ai1:hover::before{opacity:1}',
+      map: null
+    };
+    Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { type } = $$props;
+      let { text: text2 } = $$props;
+      let { background_color } = $$props;
+      let { color = "" } = $$props;
+      if (background_color === "") {
+        background_color = "#fff";
+      }
+      if (color === "") {
+        color = "#29397a";
+      }
+      if ($$props.type === void 0 && $$bindings.type && type !== void 0)
+        $$bindings.type(type);
+      if ($$props.text === void 0 && $$bindings.text && text2 !== void 0)
+        $$bindings.text(text2);
+      if ($$props.background_color === void 0 && $$bindings.background_color && background_color !== void 0)
+        $$bindings.background_color(background_color);
+      if ($$props.color === void 0 && $$bindings.color && color !== void 0)
+        $$bindings.color(color);
+      $$result.css.add(css$17);
+      return `<button${add_attribute("type", type, 0)} style="${"--link-color: " + escape(color, true) + "; --background-color: " + escape(background_color, true) + ";"}" class="svelte-zc8ai1">${escape(text2)}
+  </button>`;
+    });
+    css11 = {
+      code: ".wave.svelte-1oataez.svelte-1oataez{animation-name:svelte-1oataez-wave-animation;animation-duration:2.5s;animation-iteration-count:infinite;transform-origin:70% 70%;display:inline-block}@keyframes svelte-1oataez-wave-animation{0%{transform:rotate( 0.0deg) }10%{transform:rotate(14.0deg) }20%{transform:rotate(-8.0deg) }30%{transform:rotate(14.0deg) }40%{transform:rotate(-4.0deg) }50%{transform:rotate(10.0deg) }60%{transform:rotate( 0.0deg) }100%{transform:rotate( 0.0deg) }}h1.svelte-1oataez.svelte-1oataez{font-weight:400;text-align:left;margin-bottom:0.5rem}p.svelte-1oataez.svelte-1oataez{font-weight:900;color:#29387a}.form-group.svelte-1oataez label.svelte-1oataez{font-weight:800}.form-control.svelte-1oataez.svelte-1oataez{border:none;border-radius:0;border-bottom:1px solid #000;margin-bottom:1rem}.tagline.svelte-1oataez.svelte-1oataez{font-family:'PolySans Median', Arial, Helvetica, sans-serif;color:#d93561;text-transform:uppercase}.duplex-container.svelte-1oataez.svelte-1oataez{display:grid;grid-template-columns:1fr 2fr}.right-container.svelte-1oataez.svelte-1oataez{display:grid;margin:0 auto 0 6rem;padding:4rem 0}.left-container.svelte-1oataez.svelte-1oataez{padding:0}.row-reverse.svelte-1oataez.svelte-1oataez,.row-reverse.svelte-1oataez .right-container.svelte-1oataez{transform:scaleX(-1)}.row-reverse.svelte-1oataez .right-container.svelte-1oataez{grid-template-rows:1fr auto;padding:4rem;align-self:center}.row-reverse.small-image .right-container.svelte-1oataez .svelte-1oataez{text-align:right;align-self:self-end;margin-left:auto}.duplex-container.svelte-1oataez h3.big{font-size:4.5rem;color:#29397a;margin-bottom:2rem}.duplex-container.svelte-1oataez h3{font-family:'PolySans Neutral', Arial, Helvetica, sans-serif;font-weight:500;font-size:4rem;margin-bottom:0.25rem;align-self:self-end}.duplex-container.svelte-1oataez h3.small{font-family:'PolySans Neutral', Arial, Helvetica, sans-serif;font-weight:500;font-size:3rem;margin-bottom:0.25rem;align-self:self-end}.duplex-container.svelte-1oataez p{font-family:'PolySans Slim', Arial, Helvetica, sans-serif;font-size:1.125rem;font-weight:500;line-height:1.5rem;letter-spacing:0.25px;margin:1rem 0;text-align:left;align-self:center}.duplex-container.svelte-1oataez ol:first-of-type > li > p:not(ol li ol li p){font-family:'PolySans Slim', Arial, Helvetica, sans-serif;font-size:4.5rem}.duplex-container.svelte-1oataez p b{font-family:'PolySans Median', Arial, Helvetica, sans-serif}.duplex-container.svelte-1oataez ul li p{margin:0.5rem 0}.duplex-container.svelte-1oataez h5 b{color:#d93561}.normal-image.svelte-1oataez.svelte-1oataez{padding:3rem 0}.normal-image.svelte-1oataez .left-container.svelte-1oataez{max-width:420px;margin:0 auto}.duplex-container.svelte-1oataez ol{list-style:none;counter-reset:numList}.duplex-container.svelte-1oataez ol li{position:relative}.duplex-container.svelte-1oataez ol:first-child > li::before{counter-increment:numList;content:counter(numList);float:left;position:absolute;left:-50px;top:0.5rem;font:bold 1rem sans-serif;text-align:center;color:#fff;line-height:2rem;width:2rem;height:2rem;background:#29397a;-moz-border-radius:100%;border-radius:100%}.duplex.svelte-1oataez .sc-carousel__arrow-container {display:none}.duplex.svelte-1oataez .sc-carousel__pages-container img{width:100%;height:100%}.duplex.svelte-1oataez .sc-carousel-dots__container{display:none !important}@media only screen and (max-width: 768px){.duplex-container.svelte-1oataez p{text-align:center;align-self:normal}.row-reverse.small-image .right-container.svelte-1oataez .svelte-1oataez{text-align:center;align-self:auto;margin:1rem auto}.row-reverse.svelte-1oataez .right-container.svelte-1oataez,.right-container.svelte-1oataez.svelte-1oataez{width:100%;padding:3rem}.right-container.svelte-1oataez.svelte-1oataez{margin:4rem auto;text-align:center}.right-container.svelte-1oataez h3{font-size:3.5rem;margin:1rem auto}.right-container.svelte-1oataez p{max-width:97.5%;margin:0.5rem auto}.right-container.svelte-1oataez a{margin:2rem auto}}@media only screen and (max-width: 991px){.duplex-container.svelte-1oataez.svelte-1oataez{grid-template-columns:1fr}}@media only screen and (max-width: 1250px){.right-container.svelte-1oataez.svelte-1oataez{padding:2rem 1rem}}@media only screen and (max-width: 1680px){.right-container.svelte-1oataez.svelte-1oataez{margin:0 auto;padding:2rem}}",
+      map: null
+    };
+    Page3 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let name = "";
+      let email = "";
+      let company = "";
+      let { data } = $$props;
+      if ($$props.GET === void 0 && $$bindings.GET && GET !== void 0)
+        $$bindings.GET(GET);
+      if ($$props.data === void 0 && $$bindings.data && data !== void 0)
+        $$bindings.data(data);
+      $$result.css.add(css11);
+      return `
+
+${validate_component(Hero, "Hero").$$render($$result, { data: data.heroBanners[0] }, {}, {})}
+
+${validate_component(Container, "Container").$$render($$result, {}, {}, {
+        default: () => {
+          return `${validate_component(Row, "Row").$$render(
+            $$result,
+            {
+              class: "justify-content-center align-items-center justify-items-center pt-5 pb-5"
+            },
+            {},
+            {
+              default: () => {
+                return `${validate_component(Col, "Col").$$render($$result, { csm: 12, md: 6 }, {}, {
+                  default: () => {
+                    return `<h1 style="width: fit-content; display: inline-block;" class="svelte-1oataez">Feel free to say hi.</h1>
+      <p style="position: absolute; width: fit-content; display: inline-block; color: red; transform: rotate(15deg);" data-aos="fade-in" data-aos-delay="500" class="svelte-1oataez">Hi! <span class="wave svelte-1oataez">\u{1F44B}</span></p>`;
+                  }
+                })}
+    ${validate_component(Col, "Col").$$render($$result, { csm: 12, md: 6 }, {}, {
+                  default: () => {
+                    return `
+      <form action="/contact" method="POST" id="contactForm"><div class="form-group svelte-1oataez"><label for="paulInputPassword1" class="svelte-1oataez">Name</label>
+          <input type="text" class="form-control svelte-1oataez" id="paulInputPassword1" placeholder="Enter your name..." name="name" required${add_attribute("value", name, 0)}></div>
+        <div class="form-group svelte-1oataez"><label for="paulInputEmail1" class="svelte-1oataez">Email address</label>
+          <input type="email" class="form-control svelte-1oataez" id="paulInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address..." name="email" required${add_attribute("value", email, 0)}></div>
+        <div class="form-group svelte-1oataez"><label for="paulFormControlSelect1" class="svelte-1oataez">Who are you?</label>
+          <select class="form-control svelte-1oataez" id="paulFormControlSelect1" name="who" required><option disabled="" selected="" data-component-field="field" value="">Select...</option><option data-component-field="option" value="Clinician">Clinician</option><option data-component-field="option" value="Patient in need of 
+            
+            ">Patient in need of help</option><option data-component-field="option" value="Research Stakeholder">Research Stakeholder</option><option data-component-field="option" value="Health Innovator">Health Innovator</option><option data-component-field="option" value="I need Access to Patient App">I need Access to Patient App</option></select></div>
+        <div class="form-group svelte-1oataez"><label for="paulInputPassword1" class="svelte-1oataez">Your Company</label>
+          <input type="text" class="form-control svelte-1oataez" id="paulInputPassword1" placeholder="Enter your company name..." name="company"${add_attribute("value", company, 0)}></div>
+        <div class="form-group svelte-1oataez"><label for="paulFormControlTextarea1" class="svelte-1oataez">How can we help?</label>
+          <textarea class="form-control svelte-1oataez" id="paulFormControlTextarea1" rows="3" placeholder="Enter your message..." name="message" required>${escape("")}</textarea></div>
+        <div class="form-check"><input type="checkbox" class="form-check-input" id="paulCheck1" required>
+          <label class="form-check-label" for="paulCheck1">I ALLOW THIS WEBSITE TO STORE MY SUBMISSION SO THEY CAN RESPOND TO MY INQUIRY.</label>
+          <div class="invalid-feedback">You must agree before submitting.</div></div>
+        ${validate_component(Button, "Button").$$render(
+                      $$result,
+                      {
+                        type: "submit",
+                        text: "Submit",
+                        color: "#FFF",
+                        background_color: "#29397a"
+                      },
+                      {},
+                      {}
+                    )}</form>`;
+                  }
+                })}`;
+              }
+            }
+          )}`;
+        }
+      })}
+
+<div class="duplex normal-container container svelte-1oataez"><div class="${"duplex-container normal-image " + escape(data.duplexes[0].containerLayout ? "" : "row-reverse", true) + " svelte-1oataez"}"><div class="left-container svelte-1oataez"><img src="https://images.ctfassets.net/edlwcd8ay884/2BvKT5oEH7IXor9AofvNSs/1f76cba456f15d61751dc779b10d71ea/IMG_20230309_194249_818.jpg" alt="">
+      </div>
+    <div class="right-container svelte-1oataez">${data.duplexes[0].tagline ? `<p class="tagline svelte-1oataez">${escape(data.duplexes[0].tagline)}</p>` : ``}
+      ${data.duplexes[0].headline ? `<h3 class="svelte-1oataez">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: data.duplexes[0].headline }, {}, {})}</h3>` : ``}
+      ${data.duplexes[0].bodyText ? `<p class="svelte-1oataez"><!-- HTML_TAG_START -->${data.duplexes[0].bodyText}<!-- HTML_TAG_END --></p>` : ``}
+      ${data.duplexes[0].ctaText != null ? `${validate_component(ButtonLink, "ButtonLink").$$render(
+        $$result,
+        {
+          text: data.duplexes[0].ctaText || "Learn More",
+          path: data.duplexes[0].targetPage ? `${data.duplexes[0].targetPage}` : "/contact",
+          color: "#FFF",
+          background_color: "#D93561",
+          ariaText: data.duplexes[0].ctaText,
+          ariaLink: data.duplexes[0].targetPage
+        },
+        {},
+        {}
+      )}` : ``}</div></div>
+</div>`;
+    });
+  }
+});
+
+// .svelte-kit/output/server/nodes/4.js
+var __exports5 = {};
+__export(__exports5, {
+  component: () => component5,
+  fonts: () => fonts5,
+  imports: () => imports5,
+  index: () => index5,
+  server: () => page_server_exports2,
+  server_id: () => server_id3,
+  stylesheets: () => stylesheets5
+});
+var index5, component_cache5, component5, server_id3, imports5, stylesheets5, fonts5;
+var init__5 = __esm({
+  ".svelte-kit/output/server/nodes/4.js"() {
+    init_page_server2();
+    index5 = 4;
+    component5 = async () => component_cache5 ??= (await Promise.resolve().then(() => (init_page_svelte3(), page_svelte_exports3))).default;
+    server_id3 = "src/routes/contact/+page.server.js";
+    imports5 = ["_app/immutable/nodes/4.a93f8a8d.js", "_app/immutable/chunks/index.5d5a95b7.js", "_app/immutable/chunks/Hero.c23f8ed9.js", "_app/immutable/chunks/ButtonLink.0f14ce15.js", "_app/immutable/chunks/TextWithLineBreaks.8eb785f4.js", "_app/immutable/chunks/Row.f1baf3b3.js", "_app/immutable/chunks/Col.5130ac02.js", "_app/immutable/chunks/Carousel.svelte_svelte_type_style_lang.4ce1efe3.js", "_app/immutable/chunks/_commonjsHelpers.725317a4.js"];
+    stylesheets5 = ["_app/immutable/assets/4.2934940c.css", "_app/immutable/assets/Hero.0d25076f.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css", "_app/immutable/assets/Carousel.f76ac12e.css"];
+    fonts5 = [];
+  }
+});
+
+// .svelte-kit/output/server/entries/pages/home/_page.server.js
+var page_server_exports3 = {};
+__export(page_server_exports3, {
+  load: () => load6
+});
+async function load6() {
+  const response = await contentfulFetch(query3);
+  if (!response.ok) {
+    throw error2(404, {
+      message: `Mistakes were made: Error ${response.status} - ${response.statusText} 
+      ${response.url}`
+    });
+  }
+  const { data } = await response.json();
+  const { items: pageContentItems } = data.pageCollection.items[0].pageContentCollection;
+  const processedItems = pageContentItems.map((item) => {
+    if (item) {
+      const processingFunction = processingFunctions3[item.__typename];
+      return processingFunction ? { ...processingFunction(item), componentType: item.__typename } : item;
+    } else {
+      return {};
+    }
+  });
+  const pageContent = processedItems.map((item) => {
+    return {
+      type: item.componentType,
+      data: {
+        heroBanners: item.componentType === "ComponentHeroBanner" ? [item] : [],
+        dynamicDuplexes: item.componentType === "ComponentDynamicDuplex" ? [item] : [],
+        duplexes: item.componentType === "ComponentDuplex" ? [item] : [],
+        infoBlocks: item.componentType === "ComponentInfoBlock" && item.infoBlockConfig ? [item] : [],
+        logoRacks: item.componentType === "ComponentLogoRack" ? [item] : [],
+        carousels: item.componentType === "ComponentCarousel" ? [item] : [],
+        faqs: item.componentType === "ComponentFaq" ? [item] : []
+      }
+    };
+  });
+  const seoData = processSEOTags3(data.pageCollection.items[0].seoMetadata);
+  return {
+    pageContent,
+    seoData
+  };
+}
+var import_rich_text_html_renderer3, query3, processHeroBanner3, processSEOTags3, processCarousel, processDuplex3, processDynamicDuplex, processInfoBlock2, processLogoRack2, processFaq2, processingFunctions3;
+var init_page_server3 = __esm({
+  ".svelte-kit/output/server/entries/pages/home/_page.server.js"() {
+    init_chunks();
+    import_rich_text_html_renderer3 = __toESM(require_rich_text_html_renderer_es5(), 1);
+    init_contentful_fetch();
+    query3 = `
+{
+  pageCollection(limit: 1) {
+    items {
+      pageContentCollection {
+        items {
+          __typename
+          ... on ComponentCarousel {
+						quote1 {
+              json
+            }
+            quote2 {
+              json
+            }
+            quote3 {
+              json
+            }
+            quoteSource1 {
+              name
+              avatar {
+                url
+                description
+              }
+            }
+            quoteSource2 {
+              name
+              avatar {
+                url
+                description
+              }
+            }
+            quoteSource3 {
+              name
+              avatar {
+                url
+                description
+              }
+            }
+            image1 {
+              url
+              description
+            }
+            image2 {
+              url
+              description
+            }
+            image3 {
+              url
+              description
+            }
+            configuration
+            ctaText
+            targetPage{
+              ... on Page {
+                slug
+              }
+              ... on HowItWorks {
+                slug
+              }
+              ... on AboutPage {
+                slug
+              }
+              ... on NewsPage {
+                slug
+              }
+              ... on ContactPage {
+                slug
+              }
+              ... on ServicesPage {
+                slug
+              }
+            }
+          }
+          ... on ComponentHeroBanner {
+            page
+            headline
+            subline
+            ctaText
+            contentStyle
+            bodyText {
+              json
+            }
+            image {
+              url
+              description
+            }
+            targetPage {
+              path
+            }
+          }
+          ... on ComponentFaq {
+            question0
+            question1
+            question2
+            question3
+            question4
+            question5
+            question6
+            question7
+            question8
+            question9
+            answer0 { json }
+            answer1 { json }
+            answer2 { json }
+            answer3 { json }
+            answer4 { json }
+            answer5 { json }
+            answer6 { json }
+            answer7 { json }
+            answer8 { json }
+            answer9 { json }
+          }
+          ... on ComponentLogoRack {
+            logoHeadline1
+            logoHeadline2
+            logoHeadline3
+            logoHeadline4
+            logoHeadline5
+            logoHeadline6
+            logoText1 { json }
+            logoText2 { json }
+            logoText3 { json }
+            logoText4 { json }
+            logoText5 { json }
+            logoText6 { json }
+            logoImage1 { url, description }
+            logoImage2 { url, description }
+            logoImage3 { url, description }
+            logoImage4 { url, description }
+            logoImage5 { url, description }
+            logoImage6 { url, description }
+            tagline
+            header
+            divider
+            logoSize
+            logosPerRow
+            paddingOptions
+            backgroundColor
+          }
+          ... on ComponentDynamicDuplex {
+            headline
+            bodyText {json}
+            image{
+              url
+              description
+            }
+            headline2
+            bodyText2 {json}
+            image2{
+              url
+              description
+            }
+            headline3
+            bodyText3 {json}
+            image3{
+              url
+              description
+            }
+            ctaText
+            targetPage{
+              ... on Page {
+                slug
+              }
+              ... on HowItWorks {
+                slug
+              }
+              ... on AboutPage {
+                slug
+              }
+              ... on NewsPage {
+                slug
+              }
+              ... on ContactPage {
+                slug
+              }
+              ... on ServicesPage {
+                slug
+              }
+            }
+          }
+          ... on ComponentDuplex {
+            tagline
+            headline
+            ctaText
+            containerLayout
+            containerSize
+            bodyText {
+              json
+            }
+            image{
+              url
+              description
+            }
+            targetPage{
+              __typename
+              ... on Page {
+                slug
+              }
+              ... on HowItWorks {
+                slug
+              }
+              ... on AboutPage {
+                slug
+              }
+              ... on NewsPage {
+                slug
+              }
+              ... on ContactPage {
+                slug
+              }
+              ... on ServicesPage {
+                slug
+              }
+            }
+          }
+          ... on ComponentInfoBlock {
+            tagline
+            headline
+            subline
+            ctaText
+            infoBlockConfig
+            copyAlignment
+            copyBackground
+            paddingOptions
+            divider
+            block1Body {
+              json
+            }
+            block2Body {
+              json
+            }
+            block1Image {
+              url
+              description
+            }
+            block2Image {
+              url
+              description
+            }
+            ctaLink {
+              ... on Page {
+                slug
+              }
+              ... on HowItWorks {
+                slug
+              }
+              ... on AboutPage {
+                slug
+              }
+              ... on NewsPage {
+                slug
+              }
+              ... on ContactPage {
+                slug
+              }
+              ... on ServicesPage {
+                slug
+              }
+            }
+          }
+        }
+      }
+      seo{
+        title
+        metaDescription
+        ogTitle
+        ogDescription	
+        ogImage {
+          url
+        }
+      }
+    }
+  }
+}
+`;
+    processHeroBanner3 = (item) => {
+      var _a, _b;
+      return {
+        ...item,
+        bodyText: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_a = item.bodyText) == null ? void 0 : _a.json) ?? ""),
+        targetPage: ((_b = item.targetPage) == null ? void 0 : _b.path) ?? ""
+      };
+    };
+    processSEOTags3 = (item) => {
+      return { ...item };
+    };
+    processCarousel = (item) => {
+      var _a, _b, _c, _d, _e;
+      let targetPageSlug = ((_a = item.targetPage) == null ? void 0 : _a.slug) ?? "";
+      if (((_b = item.targetPage) == null ? void 0 : _b.__typename) === "ServicesPage") {
+        targetPageSlug = "/services/" + targetPageSlug;
+      }
+      return {
+        ...item,
+        quote1: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_c = item.quote1) == null ? void 0 : _c.json) ?? ""),
+        quote2: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_d = item.quote2) == null ? void 0 : _d.json) ?? ""),
+        quote3: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_e = item.quote3) == null ? void 0 : _e.json) ?? ""),
+        targetPage: targetPageSlug
+      };
+    };
+    processDuplex3 = (item) => {
+      var _a, _b, _c;
+      let targetPageSlug = ((_a = item.targetPage) == null ? void 0 : _a.slug) ?? "";
+      if (((_b = item.targetPage) == null ? void 0 : _b.__typename) === "ServicesPage") {
+        targetPageSlug = "/services/" + targetPageSlug;
+      }
+      return {
+        ...item,
+        bodyText: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_c = item.bodyText) == null ? void 0 : _c.json) ?? ""),
+        targetPage: targetPageSlug,
+        containerSize: item.containerSize ?? ""
+      };
+    };
+    processDynamicDuplex = (item) => {
+      var _a, _b, _c, _d, _e;
+      let targetPageSlug = ((_a = item.targetPage) == null ? void 0 : _a.slug) ?? "";
+      if (((_b = item.targetPage) == null ? void 0 : _b.__typename) === "ServicesPage") {
+        targetPageSlug = "/services/" + targetPageSlug;
+      }
+      return {
+        ...item,
+        bodyText: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_c = item.bodyText) == null ? void 0 : _c.json) ?? ""),
+        bodyText2: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_d = item.bodyText2) == null ? void 0 : _d.json) ?? ""),
+        bodyText3: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_e = item.bodyText3) == null ? void 0 : _e.json) ?? ""),
+        targetPage: targetPageSlug,
+        containerSize: item.containerSize ?? ""
+      };
+    };
+    processInfoBlock2 = (item) => {
+      var _a, _b;
+      return {
+        ...item,
+        content1: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_a = item.block1Body) == null ? void 0 : _a.json) ?? ""),
+        content2: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_b = item.block2Body) == null ? void 0 : _b.json) ?? "")
+      };
+    };
+    processLogoRack2 = (item) => {
+      var _a, _b, _c, _d, _e, _f;
+      return {
+        ...item,
+        logoText1: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_a = item.logoText1) == null ? void 0 : _a.json) ?? ""),
+        logoText2: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_b = item.logoText2) == null ? void 0 : _b.json) ?? ""),
+        logoText3: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_c = item.logoText3) == null ? void 0 : _c.json) ?? ""),
+        logoText4: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_d = item.logoText4) == null ? void 0 : _d.json) ?? ""),
+        logoText5: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_e = item.logoText5) == null ? void 0 : _e.json) ?? ""),
+        logoText6: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_f = item.logoText6) == null ? void 0 : _f.json) ?? "")
+      };
+    };
+    processFaq2 = (item) => {
+      return { ...item };
+    };
+    processingFunctions3 = {
+      "ComponentHeroBanner": processHeroBanner3,
+      "ComponentDuplex": processDuplex3,
+      "ComponentDynamicDuplex": processDynamicDuplex,
+      "ComponentInfoBlock": processInfoBlock2,
+      "ComponentLogoRack": processLogoRack2,
+      "ComponentFaq": processFaq2,
+      "ComponentCarousel": processCarousel
+    };
+  }
+});
+
+// .svelte-kit/output/server/entries/pages/home/_page.svelte.js
+var page_svelte_exports4 = {};
+__export(page_svelte_exports4, {
+  default: () => Page4
+});
 function getValueInRange(min, value, max) {
   return Math.max(min, Math.min(value, max));
 }
@@ -50287,12 +50333,38 @@ function createCarousel(onChange) {
   const [data, methods] = reactive;
   return [{ data, progressManager }, methods, reactive._internal];
 }
-var css$43, Dot, css$33, Dots, PREV, NEXT, css$24, Arrow, css$17, MAX_PERCENT, Progress, get2, switcher, setIntervalImmediate, STEP_MS, MAX_VALUE, ProgressManager, css11, Carousel;
-var init_Carousel = __esm({
-  ".svelte-kit/output/server/chunks/Carousel.js"() {
+function getComponentData2(item) {
+  switch (item.type) {
+    case "ComponentHeroBanner":
+      return { data: item.data.heroBanners[0] };
+    case "ComponentDuplex":
+      return { data: item.data.duplexes[0] };
+    case "ComponentDynamicDuplex":
+      return { data: item.data.dynamicDuplexes[0] };
+    case "ComponentCarousel":
+      return { data: item.data.carousels[0] };
+    case "ComponentInfoBlock":
+      return { data: item.data.infoBlocks[0] };
+    case "ComponentLogoRack":
+      return { data: item.data.logoRacks[0] };
+    case "ComponentFaq":
+      return { data: item.data.faqs };
+    default:
+      return {};
+  }
+}
+var css$72, Dot, css$62, Dots, PREV, NEXT, css$53, Arrow, css$43, MAX_PERCENT, Progress, get2, switcher, setIntervalImmediate, STEP_MS, MAX_VALUE, ProgressManager, css$33, Carousel, css$24, CarouselItem, css$18, CustomCarouselItem, FaArrowCircleRight, FaArrowCircleLeft, css12, CarouselWrapper, Page4;
+var init_page_svelte4 = __esm({
+  ".svelte-kit/output/server/entries/pages/home/_page.svelte.js"() {
     init_index3();
+    init_Hero();
     init_main();
-    css$43 = {
+    init_IconBase();
+    init_ButtonLink();
+    init_DynamicDuplex();
+    init_Faq();
+    init_Duplex();
+    css$72 = {
       code: ":root{--sc-dot-size:6px;--sc-active-dot-size:8px;--sc-dot-size-animation-time:250ms}.sc-carousel-dot__dot.svelte-yu7247{background-color:var(--sc-color-rgb-light);border-radius:50%;display:inline-block;opacity:0.5;transition:opacity 100ms ease,\r\n      height var(--sc-dot-size-animation-time) ease,\r\n      width var(--sc-dot-size-animation-time) ease;cursor:pointer;-webkit-tap-highlight-color:transparent;height:var(--sc-dot-size);width:var(--sc-dot-size)}.sc-carousel-dot__dot.svelte-yu7247:hover{opacity:0.9}.sc-carousel-dot__dot_active.svelte-yu7247{opacity:0.7;height:var(--sc-active-dot-size);width:var(--sc-active-dot-size)}",
       map: null
     };
@@ -50300,13 +50372,13 @@ var init_Carousel = __esm({
       let { active = false } = $$props;
       if ($$props.active === void 0 && $$bindings.active && active !== void 0)
         $$bindings.active(active);
-      $$result.css.add(css$43);
+      $$result.css.add(css$72);
       return `<button class="${[
         "sc-carousel-button sc-carousel-dot__dot svelte-yu7247",
         active ? "sc-carousel-dot__dot_active" : ""
       ].join(" ").trim()}"></button>`;
     });
-    css$33 = {
+    css$62 = {
       code: ".sc-carousel-dots__container.svelte-1oj5bge{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;padding:0 30px}.sc-carousel-dots__dot-container.svelte-1oj5bge{height:calc(var(--sc-dot-size) + 14px);width:calc(var(--sc-dot-size) + 10px);display:flex;align-items:center;justify-content:center}",
       map: null
     };
@@ -50318,7 +50390,7 @@ var init_Carousel = __esm({
         $$bindings.pagesCount(pagesCount);
       if ($$props.currentPageIndex === void 0 && $$bindings.currentPageIndex && currentPageIndex !== void 0)
         $$bindings.currentPageIndex(currentPageIndex);
-      $$result.css.add(css$33);
+      $$result.css.add(css$62);
       return `<div class="sc-carousel-dots__container svelte-1oj5bge">${each(Array(pagesCount), (_, pageIndex) => {
         return `<div class="sc-carousel-dots__dot-container svelte-1oj5bge">${validate_component(Dot, "Dot").$$render($$result, { active: currentPageIndex === pageIndex }, {}, {})}
     </div>`;
@@ -50327,7 +50399,7 @@ var init_Carousel = __esm({
     });
     PREV = "prev";
     NEXT = "next";
-    css$24 = {
+    css$53 = {
       code: ":root{--sc-arrow-size:2px}.sc-carousel-arrow__circle.svelte-9ztt4p{width:20px;height:20px;border-radius:50%;background-color:var(--sc-color-rgb-light-50p);display:flex;align-items:center;justify-content:center;transition:opacity 100ms ease;cursor:pointer;-webkit-tap-highlight-color:transparent}.sc-carousel-arrow__circle.svelte-9ztt4p:hover{opacity:0.9}.sc-carousel-arrow__arrow.svelte-9ztt4p{border:solid var(--sc-color-hex-dark);border-width:0 var(--sc-arrow-size) var(--sc-arrow-size) 0;padding:var(--sc-arrow-size);position:relative}.sc-carousel-arrow__arrow-next.svelte-9ztt4p{transform:rotate(-45deg);left:calc(var(--sc-arrow-size) / -2)}.sc-carousel-arrow__arrow-prev.svelte-9ztt4p{transform:rotate(135deg);right:calc(var(--sc-arrow-size) / -2)}.sc-carousel-arrow__circle_disabled.svelte-9ztt4p,.sc-carousel-arrow__circle_disabled.svelte-9ztt4p:hover{opacity:0.5}",
       map: null
     };
@@ -50338,7 +50410,7 @@ var init_Carousel = __esm({
         $$bindings.direction(direction);
       if ($$props.disabled === void 0 && $$bindings.disabled && disabled !== void 0)
         $$bindings.disabled(disabled);
-      $$result.css.add(css$24);
+      $$result.css.add(css$53);
       return `<button class="${[
         "sc-carousel-button sc-carousel-arrow__circle svelte-9ztt4p",
         disabled ? "sc-carousel-arrow__circle_disabled" : ""
@@ -50348,7 +50420,7 @@ var init_Carousel = __esm({
       ].join(" ").trim()}"></i>
 </button>`;
     });
-    css$17 = {
+    css$43 = {
       code: ".sc-carousel-progress__indicator.svelte-nuyenl{height:100%;background-color:var(--sc-color-hex-dark-50p)}",
       map: null
     };
@@ -50358,7 +50430,7 @@ var init_Carousel = __esm({
       let { value = 0 } = $$props;
       if ($$props.value === void 0 && $$bindings.value && value !== void 0)
         $$bindings.value(value);
-      $$result.css.add(css$17);
+      $$result.css.add(css$43);
       width = Math.min(Math.max(value * MAX_PERCENT, 0), MAX_PERCENT);
       return `<div class="sc-carousel-progress__indicator svelte-nuyenl" style="${"width: " + escape(width, true) + "%;"}"></div>`;
     });
@@ -50422,7 +50494,7 @@ var init_Carousel = __esm({
         this._onProgressValueChange(MAX_VALUE);
       }
     };
-    css11 = {
+    css$33 = {
       code: ":root{--sc-color-rgb-light-50p:rgba(93, 93, 93, 0.5);--sc-color-rgb-light:#5d5d5d;--sc-color-hex-dark-50p:rgba(30, 30, 30, 0.5);--sc-color-hex-dark:#1e1e1e}.sc-carousel__carousel-container.svelte-uwo0yk{display:flex;width:100%;flex-direction:column;align-items:center}.sc-carousel__content-container.svelte-uwo0yk{position:relative;display:flex;width:100%}.sc-carousel__pages-window.svelte-uwo0yk{flex:1;display:flex;overflow:hidden;box-sizing:border-box;position:relative}.sc-carousel__pages-container.svelte-uwo0yk{width:100%;display:flex;transition-property:transform}.sc-carousel__arrow-container.svelte-uwo0yk{padding:5px;box-sizing:border-box;display:flex;align-items:center;justify-content:center}.sc-carousel-progress__container.svelte-uwo0yk{width:100%;height:5px;background-color:var(--sc-color-rgb-light-50p);position:absolute;bottom:0}.sc-carousel-button{all:unset;cursor:pointer}.sc-carousel-button:focus{outline:5px auto}",
       map: null
     };
@@ -50526,7 +50598,7 @@ var init_Carousel = __esm({
         $$bindings.goToPrev(goToPrev);
       if ($$props.goToNext === void 0 && $$bindings.goToNext && goToNext !== void 0)
         $$bindings.goToNext(goToNext);
-      $$result.css.add(css11);
+      $$result.css.add(css$33);
       {
         {
           dispatch("pageChange", currentPageIndex);
@@ -50614,639 +50686,7 @@ var init_Carousel = __esm({
     `}` : ``}
 </div>`;
     });
-  }
-});
-
-// .svelte-kit/output/server/entries/pages/contact/_page.svelte.js
-var page_svelte_exports3 = {};
-__export(page_svelte_exports3, {
-  default: () => Page3
-});
-async function GET() {
-  return new Response(null, { status: 200 });
-}
-var css$25, Button, css$18, CarouselDefault, css12, Page3;
-var init_page_svelte3 = __esm({
-  ".svelte-kit/output/server/entries/pages/contact/_page.svelte.js"() {
-    init_index3();
-    init_devalue();
-    init_Hero();
-    init_Row();
-    init_Col();
-    init_SEOMetaData();
-    init_ButtonLink();
-    init_TextWithLineBreaks();
-    init_Carousel();
-    css$25 = {
-      code: 'button.svelte-zc8ai1{position:relative;display:inline-block;width:100%;margin:1rem auto;padding:1rem 3rem;background:var(--background-color);border:none;border-radius:30px;color:var(--link-color);line-height:18px;font-size:18px;text-align:center;text-decoration:none;transition:all 0.25s ease-out;z-index:1}button.svelte-zc8ai1:hover{cursor:pointer;box-shadow:#444444 0.2rem 0.3rem 0.3rem;color:#fff}button.svelte-zc8ai1::before{position:absolute;content:"";top:0;right:0;bottom:0;left:0;background:linear-gradient(90deg,rgba(173,235,239,1) 0%, rgba(41,57,122,1) 30%, rgba(218,47,92,1) 70%, rgba(255,193,38,1) 100%);z-index:-1;transition:opacity 0.5s linear;opacity:0;border-radius:30px}button.svelte-zc8ai1:hover::before{opacity:1}',
-      map: null
-    };
-    Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let { type } = $$props;
-      let { text: text2 } = $$props;
-      let { background_color } = $$props;
-      let { color = "" } = $$props;
-      if (background_color === "") {
-        background_color = "#fff";
-      }
-      if (color === "") {
-        color = "#29397a";
-      }
-      if ($$props.type === void 0 && $$bindings.type && type !== void 0)
-        $$bindings.type(type);
-      if ($$props.text === void 0 && $$bindings.text && text2 !== void 0)
-        $$bindings.text(text2);
-      if ($$props.background_color === void 0 && $$bindings.background_color && background_color !== void 0)
-        $$bindings.background_color(background_color);
-      if ($$props.color === void 0 && $$bindings.color && color !== void 0)
-        $$bindings.color(color);
-      $$result.css.add(css$25);
-      return `<button${add_attribute("type", type, 0)} style="${"--link-color: " + escape(color, true) + "; --background-color: " + escape(background_color, true) + ";"}" class="svelte-zc8ai1">${escape(text2)}
-  </button>`;
-    });
-    css$18 = {
-      code: "img.svelte-wayqns{height:100%;object-fit:contain;object-position:center}@media only screen and (max-width: 768px){img.svelte-wayqns{margin:0 auto}}",
-      map: null
-    };
-    CarouselDefault = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let images = [];
-      $$result.css.add(css$18);
-      return `${validate_component(Carousel, "Carousel").$$render($$result, { autoplay: true }, {}, {
-        default: () => {
-          return `${each(images, (image) => {
-            return `<div><img${add_attribute("src", image.url, 0)}${add_attribute("alt", image.description, 0)} class="svelte-wayqns">
-    </div>`;
-          })}`;
-        }
-      })}`;
-    });
-    css12 = {
-      code: "h1.svelte-1r6ek7i.svelte-1r6ek7i{font-weight:400;text-align:left;margin-bottom:0.5rem}p.svelte-1r6ek7i.svelte-1r6ek7i{font-weight:900;color:#29387a}.form-group.svelte-1r6ek7i label.svelte-1r6ek7i{font-weight:800}.form-control.svelte-1r6ek7i.svelte-1r6ek7i{border:none;border-radius:0;border-bottom:1px solid #000;margin-bottom:1rem}.tagline.svelte-1r6ek7i.svelte-1r6ek7i{font-family:'PolySans Median', Arial, Helvetica, sans-serif;color:#d93561;text-transform:uppercase}.duplex-container.svelte-1r6ek7i.svelte-1r6ek7i{display:grid;grid-template-columns:1fr 2fr}.right-container.svelte-1r6ek7i.svelte-1r6ek7i{display:grid;margin:0 auto 0 6rem;padding:4rem 0}.left-container.svelte-1r6ek7i.svelte-1r6ek7i{padding:0}.row-reverse.svelte-1r6ek7i.svelte-1r6ek7i,.row-reverse.svelte-1r6ek7i .right-container.svelte-1r6ek7i{transform:scaleX(-1)}.row-reverse.svelte-1r6ek7i .right-container.svelte-1r6ek7i{grid-template-rows:1fr auto;padding:4rem;align-self:center}.row-reverse.small-image .right-container.svelte-1r6ek7i .svelte-1r6ek7i{text-align:right;align-self:self-end;margin-left:auto}.duplex-container.svelte-1r6ek7i h3.big{font-size:4.5rem;color:#29397a;margin-bottom:2rem}.duplex-container.svelte-1r6ek7i h3{font-family:'PolySans Neutral', Arial, Helvetica, sans-serif;font-weight:500;font-size:4rem;margin-bottom:0.25rem;align-self:self-end}.duplex-container.svelte-1r6ek7i h3.small{font-family:'PolySans Neutral', Arial, Helvetica, sans-serif;font-weight:500;font-size:3rem;margin-bottom:0.25rem;align-self:self-end}.duplex-container.svelte-1r6ek7i p{font-family:'PolySans Slim', Arial, Helvetica, sans-serif;font-size:1.125rem;font-weight:500;line-height:1.5rem;letter-spacing:0.25px;margin:1rem 0;text-align:left;align-self:center}.duplex-container.svelte-1r6ek7i ol:first-of-type > li > p:not(ol li ol li p){font-family:'PolySans Slim', Arial, Helvetica, sans-serif;font-size:4.5rem}.duplex-container.svelte-1r6ek7i p b{font-family:'PolySans Median', Arial, Helvetica, sans-serif}.duplex-container.svelte-1r6ek7i ul li p{margin:0.5rem 0}.duplex-container.svelte-1r6ek7i h5 b{color:#d93561}.normal-image.svelte-1r6ek7i.svelte-1r6ek7i{padding:3rem 0}.normal-image.svelte-1r6ek7i .left-container.svelte-1r6ek7i{max-width:420px;margin:0 auto}.duplex-container.svelte-1r6ek7i ol{list-style:none;counter-reset:numList}.duplex-container.svelte-1r6ek7i ol li{position:relative}.duplex-container.svelte-1r6ek7i ol:first-child > li::before{counter-increment:numList;content:counter(numList);float:left;position:absolute;left:-50px;top:0.5rem;font:bold 1rem sans-serif;text-align:center;color:#fff;line-height:2rem;width:2rem;height:2rem;background:#29397a;-moz-border-radius:100%;border-radius:100%}.duplex.svelte-1r6ek7i .sc-carousel__arrow-container {display:none}.duplex.svelte-1r6ek7i .sc-carousel__pages-container img{width:100%;height:100%}.duplex.svelte-1r6ek7i .sc-carousel-dots__container{display:none !important}@media only screen and (max-width: 768px){.duplex-container.svelte-1r6ek7i p{text-align:center;align-self:normal}.row-reverse.small-image .right-container.svelte-1r6ek7i .svelte-1r6ek7i{text-align:center;align-self:auto;margin:1rem auto}.row-reverse.svelte-1r6ek7i .right-container.svelte-1r6ek7i,.right-container.svelte-1r6ek7i.svelte-1r6ek7i{width:100%;padding:3rem}.right-container.svelte-1r6ek7i.svelte-1r6ek7i{margin:4rem auto;text-align:center}.right-container.svelte-1r6ek7i h3{font-size:3.5rem;margin:1rem auto}.right-container.svelte-1r6ek7i p{max-width:97.5%;margin:0.5rem auto}.right-container.svelte-1r6ek7i a{margin:2rem auto}}@media only screen and (max-width: 991px){.duplex-container.svelte-1r6ek7i.svelte-1r6ek7i{grid-template-columns:1fr}}@media only screen and (max-width: 1250px){.right-container.svelte-1r6ek7i.svelte-1r6ek7i{padding:2rem 1rem}}@media only screen and (max-width: 1680px){.right-container.svelte-1r6ek7i.svelte-1r6ek7i{margin:0 auto;padding:2rem}}",
-      map: null
-    };
-    Page3 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let name = "";
-      let email = "";
-      let company = "";
-      let { data } = $$props;
-      if ($$props.GET === void 0 && $$bindings.GET && GET !== void 0)
-        $$bindings.GET(GET);
-      if ($$props.data === void 0 && $$bindings.data && data !== void 0)
-        $$bindings.data(data);
-      $$result.css.add(css12);
-      return `${validate_component(SEOMetaData, "SEOMetaData").$$render($$result, { data }, {}, {})}
-
-${validate_component(Hero, "Hero").$$render($$result, { data: data.heroBanners[0] }, {}, {})}
-
-${validate_component(Container, "Container").$$render($$result, {}, {}, {
-        default: () => {
-          return `${validate_component(Row, "Row").$$render(
-            $$result,
-            {
-              class: "justify-content-center align-items-center justify-items-center pt-5 pb-5"
-            },
-            {},
-            {
-              default: () => {
-                return `${validate_component(Col, "Col").$$render($$result, { csm: 12, md: 6 }, {}, {
-                  default: () => {
-                    return `<p class="svelte-1r6ek7i">Greetings!</p>
-      <h1 class="svelte-1r6ek7i">Feel free to say hi.</h1>`;
-                  }
-                })}
-    ${validate_component(Col, "Col").$$render($$result, { csm: 12, md: 6 }, {}, {
-                  default: () => {
-                    return `
-      <form action="/contact" method="POST" id="contactForm"><div class="form-group svelte-1r6ek7i"><label for="paulInputPassword1" class="svelte-1r6ek7i">Name</label>
-          <input type="text" class="form-control svelte-1r6ek7i" id="paulInputPassword1" placeholder="Enter your name..." name="name" required${add_attribute("value", name, 0)}></div>
-        <div class="form-group svelte-1r6ek7i"><label for="paulInputEmail1" class="svelte-1r6ek7i">Email address</label>
-          <input type="email" class="form-control svelte-1r6ek7i" id="paulInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address..." name="email" required${add_attribute("value", email, 0)}></div>
-        <div class="form-group svelte-1r6ek7i"><label for="paulFormControlSelect1" class="svelte-1r6ek7i">Who are you?</label>
-          <select class="form-control svelte-1r6ek7i" id="paulFormControlSelect1" name="who" required><option disabled="" selected="" data-component-field="field" value="">Select...</option><option data-component-field="option" value="Clinician">Clinician</option><option data-component-field="option" value="Patient in need of 
-            
-            ">Patient in need of help</option><option data-component-field="option" value="Research Stakeholder">Research Stakeholder</option><option data-component-field="option" value="Health Innovator">Health Innovator</option><option data-component-field="option" value="I need Access to Patient App">I need Access to Patient App</option></select></div>
-        <div class="form-group svelte-1r6ek7i"><label for="paulInputPassword1" class="svelte-1r6ek7i">Your Company</label>
-          <input type="text" class="form-control svelte-1r6ek7i" id="paulInputPassword1" placeholder="Enter your company name..." name="company"${add_attribute("value", company, 0)}></div>
-        <div class="form-group svelte-1r6ek7i"><label for="paulFormControlTextarea1" class="svelte-1r6ek7i">How can we help?</label>
-          <textarea class="form-control svelte-1r6ek7i" id="paulFormControlTextarea1" rows="3" placeholder="Enter your message..." name="message" required>${escape("")}</textarea></div>
-        <div class="form-check"><input type="checkbox" class="form-check-input" id="paulCheck1" required>
-          <label class="form-check-label" for="paulCheck1">I ALLOW THIS WEBSITE TO STORE MY SUBMISSION SO THEY CAN RESPOND TO MY INQUIRY.</label>
-          <div class="invalid-feedback">You must agree before submitting.</div></div>
-        ${validate_component(Button, "Button").$$render(
-                      $$result,
-                      {
-                        type: "submit",
-                        text: "Submit",
-                        color: "#FFF",
-                        background_color: "#29397a"
-                      },
-                      {},
-                      {}
-                    )}</form>`;
-                  }
-                })}`;
-              }
-            }
-          )}`;
-        }
-      })}
-
-<div class="duplex normal-container container svelte-1r6ek7i"><div class="${"duplex-container normal-image " + escape(data.duplexes[0].containerLayout ? "" : "row-reverse", true) + " svelte-1r6ek7i"}"><div class="left-container svelte-1r6ek7i">${validate_component(CarouselDefault, "CarouselDefault").$$render($$result, {}, {}, {})}</div>
-    <div class="right-container svelte-1r6ek7i">${data.duplexes[0].tagline ? `<p class="tagline svelte-1r6ek7i">${escape(data.duplexes[0].tagline)}</p>` : ``}
-      ${data.duplexes[0].headline ? `<h3 class="svelte-1r6ek7i">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: data.duplexes[0].headline }, {}, {})}</h3>` : ``}
-      ${data.duplexes[0].bodyText ? `<p class="svelte-1r6ek7i"><!-- HTML_TAG_START -->${data.duplexes[0].bodyText}<!-- HTML_TAG_END --></p>` : ``}
-      ${data.duplexes[0].ctaText != null ? `${validate_component(ButtonLink, "ButtonLink").$$render(
-        $$result,
-        {
-          text: data.duplexes[0].ctaText || "Learn More",
-          path: data.duplexes[0].targetPage ? `${data.duplexes[0].targetPage}` : "/contact",
-          color: "#FFF",
-          background_color: "#D93561",
-          ariaText: data.duplexes[0].ctaText,
-          ariaLink: data.duplexes[0].targetPage
-        },
-        {},
-        {}
-      )}` : ``}</div></div>
-</div>`;
-    });
-  }
-});
-
-// .svelte-kit/output/server/nodes/4.js
-var __exports5 = {};
-__export(__exports5, {
-  component: () => component5,
-  fonts: () => fonts5,
-  imports: () => imports5,
-  index: () => index5,
-  server: () => page_server_exports2,
-  server_id: () => server_id3,
-  stylesheets: () => stylesheets5
-});
-var index5, component_cache5, component5, server_id3, imports5, stylesheets5, fonts5;
-var init__5 = __esm({
-  ".svelte-kit/output/server/nodes/4.js"() {
-    init_page_server2();
-    index5 = 4;
-    component5 = async () => component_cache5 ??= (await Promise.resolve().then(() => (init_page_svelte3(), page_svelte_exports3))).default;
-    server_id3 = "src/routes/contact/+page.server.js";
-    imports5 = ["_app/immutable/nodes/4.5781c7dd.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/paths.bdc3fcd1.js", "_app/immutable/chunks/Hero.e9f4fbf4.js", "_app/immutable/chunks/ButtonLink.5274dc1a.js", "_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js", "_app/immutable/chunks/Row.7408adfd.js", "_app/immutable/chunks/Col.a2f13094.js", "_app/immutable/chunks/SEOMetaData.901255a3.js", "_app/immutable/chunks/Carousel.bc75531f.js", "_app/immutable/chunks/_commonjsHelpers.725317a4.js"];
-    stylesheets5 = ["_app/immutable/assets/4.717b8588.css", "_app/immutable/assets/Hero.0d25076f.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css", "_app/immutable/assets/Carousel.f76ac12e.css"];
-    fonts5 = [];
-  }
-});
-
-// .svelte-kit/output/server/entries/pages/home/_page.server.js
-var page_server_exports3 = {};
-__export(page_server_exports3, {
-  load: () => load6
-});
-async function load6() {
-  const response = await contentfulFetch(query3);
-  if (!response.ok) {
-    throw error2(404, {
-      message: `Mistakes were made: Error ${response.status} - ${response.statusText} 
-      ${response.url}`
-    });
-  }
-  const { data } = await response.json();
-  const { items: pageContentItems } = data.pageCollection.items[0].pageContentCollection;
-  const processedItems = pageContentItems.map((item) => {
-    if (item) {
-      const processingFunction = processingFunctions3[item.__typename];
-      return processingFunction ? { ...processingFunction(item), componentType: item.__typename } : item;
-    } else {
-      return {};
-    }
-  });
-  const pageContent = processedItems.map((item) => {
-    return {
-      type: item.componentType,
-      data: {
-        heroBanners: item.componentType === "ComponentHeroBanner" ? [item] : [],
-        dynamicDuplexes: item.componentType === "ComponentDynamicDuplex" ? [item] : [],
-        duplexes: item.componentType === "ComponentDuplex" ? [item] : [],
-        infoBlocks: item.componentType === "ComponentInfoBlock" && item.infoBlockConfig ? [item] : [],
-        logoRacks: item.componentType === "ComponentLogoRack" ? [item] : [],
-        carousels: item.componentType === "ComponentCarousel" ? [item] : [],
-        faqs: item.componentType === "ComponentFaq" ? [item] : []
-      }
-    };
-  });
-  const seoData = processSEOTags3(data.pageCollection.items[0].seoMetadata);
-  return {
-    pageContent,
-    seoData
-  };
-}
-var import_rich_text_html_renderer3, query3, processHeroBanner3, processSEOTags3, processCarousel, processDuplex3, processDynamicDuplex, processInfoBlock2, processLogoRack2, processFaq2, processingFunctions3;
-var init_page_server3 = __esm({
-  ".svelte-kit/output/server/entries/pages/home/_page.server.js"() {
-    init_chunks();
-    import_rich_text_html_renderer3 = __toESM(require_rich_text_html_renderer_es5(), 1);
-    init_contentful_fetch();
-    query3 = `
-{
-  pageCollection(limit: 1) {
-    items {
-      pageContentCollection {
-        items {
-          __typename
-          ... on ComponentCarousel {
-						quote1 {
-              json
-            }
-            quote2 {
-              json
-            }
-            quote3 {
-              json
-            }
-            quoteSource1 {
-              name
-              avatar {
-                url
-                description
-              }
-            }
-            quoteSource2 {
-              name
-              avatar {
-                url
-                description
-              }
-            }
-            quoteSource3 {
-              name
-              avatar {
-                url
-                description
-              }
-            }
-            image1 {
-              url
-              description
-            }
-            image2 {
-              url
-              description
-            }
-            image3 {
-              url
-              description
-            }
-            configuration
-            ctaText
-            targetPage{
-              ... on Page {
-                slug
-              }
-              ... on HowItWorks {
-                slug
-              }
-              ... on AboutPage {
-                slug
-              }
-              ... on NewsPage {
-                slug
-              }
-              ... on ContactPage {
-                slug
-              }
-              ... on ServicesPage {
-                slug
-              }
-            }
-          }
-          ... on ComponentHeroBanner {
-            page
-            headline
-            subline
-            ctaText
-            contentStyle
-            bodyText {
-              json
-            }
-            image {
-              url
-              description
-            }
-            targetPage {
-              path
-            }
-          }
-          ... on ComponentFaq {
-            question0
-            question1
-            question2
-            question3
-            question4
-            question5
-            question6
-            question7
-            question8
-            question9
-            answer0 { json }
-            answer1 { json }
-            answer2 { json }
-            answer3 { json }
-            answer4 { json }
-            answer5 { json }
-            answer6 { json }
-            answer7 { json }
-            answer8 { json }
-            answer9 { json }
-          }
-          ... on ComponentLogoRack {
-            logoHeadline1
-            logoHeadline2
-            logoHeadline3
-            logoHeadline4
-            logoHeadline5
-            logoHeadline6
-            logoText1 { json }
-            logoText2 { json }
-            logoText3 { json }
-            logoText4 { json }
-            logoText5 { json }
-            logoText6 { json }
-            logoImage1 { url, description }
-            logoImage2 { url, description }
-            logoImage3 { url, description }
-            logoImage4 { url, description }
-            logoImage5 { url, description }
-            logoImage6 { url, description }
-            tagline
-            header
-            divider
-            logoSize
-            logosPerRow
-            paddingOptions
-            backgroundColor
-          }
-          ... on ComponentDynamicDuplex {
-            headline
-            bodyText {json}
-            image{
-              url
-              description
-            }
-            headline2
-            bodyText2 {json}
-            image2{
-              url
-              description
-            }
-            headline3
-            bodyText3 {json}
-            image3{
-              url
-              description
-            }
-            ctaText
-            targetPage{
-              ... on Page {
-                slug
-              }
-              ... on HowItWorks {
-                slug
-              }
-              ... on AboutPage {
-                slug
-              }
-              ... on NewsPage {
-                slug
-              }
-              ... on ContactPage {
-                slug
-              }
-              ... on ServicesPage {
-                slug
-              }
-            }
-          }
-          ... on ComponentDuplex {
-            tagline
-            headline
-            ctaText
-            containerLayout
-            containerSize
-            bodyText {
-              json
-            }
-            image{
-              url
-              description
-            }
-            targetPage{
-              __typename
-              ... on Page {
-                slug
-              }
-              ... on HowItWorks {
-                slug
-              }
-              ... on AboutPage {
-                slug
-              }
-              ... on NewsPage {
-                slug
-              }
-              ... on ContactPage {
-                slug
-              }
-              ... on ServicesPage {
-                slug
-              }
-            }
-          }
-          ... on ComponentInfoBlock {
-            tagline
-            headline
-            subline
-            ctaText
-            infoBlockConfig
-            copyAlignment
-            copyBackground
-            paddingOptions
-            divider
-            block1Body {
-              json
-            }
-            block2Body {
-              json
-            }
-            block1Image {
-              url
-              description
-            }
-            block2Image {
-              url
-              description
-            }
-            ctaLink {
-              ... on Page {
-                slug
-              }
-              ... on HowItWorks {
-                slug
-              }
-              ... on AboutPage {
-                slug
-              }
-              ... on NewsPage {
-                slug
-              }
-              ... on ContactPage {
-                slug
-              }
-              ... on ServicesPage {
-                slug
-              }
-            }
-          }
-        }
-      }
-      seo{
-        title
-        metaDescription
-        ogTitle
-        ogDescription	
-        ogImage {
-          url
-        }
-      }
-    }
-  }
-}
-`;
-    processHeroBanner3 = (item) => {
-      var _a, _b;
-      return {
-        ...item,
-        bodyText: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_a = item.bodyText) == null ? void 0 : _a.json) ?? ""),
-        targetPage: ((_b = item.targetPage) == null ? void 0 : _b.path) ?? ""
-      };
-    };
-    processSEOTags3 = (item) => {
-      return { ...item };
-    };
-    processCarousel = (item) => {
-      var _a, _b, _c, _d, _e;
-      let targetPageSlug = ((_a = item.targetPage) == null ? void 0 : _a.slug) ?? "";
-      if (((_b = item.targetPage) == null ? void 0 : _b.__typename) === "ServicesPage") {
-        targetPageSlug = "/services/" + targetPageSlug;
-      }
-      return {
-        ...item,
-        quote1: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_c = item.quote1) == null ? void 0 : _c.json) ?? ""),
-        quote2: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_d = item.quote2) == null ? void 0 : _d.json) ?? ""),
-        quote3: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_e = item.quote3) == null ? void 0 : _e.json) ?? ""),
-        targetPage: targetPageSlug
-      };
-    };
-    processDuplex3 = (item) => {
-      var _a, _b, _c;
-      let targetPageSlug = ((_a = item.targetPage) == null ? void 0 : _a.slug) ?? "";
-      if (((_b = item.targetPage) == null ? void 0 : _b.__typename) === "ServicesPage") {
-        targetPageSlug = "/services/" + targetPageSlug;
-      }
-      return {
-        ...item,
-        bodyText: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_c = item.bodyText) == null ? void 0 : _c.json) ?? ""),
-        targetPage: targetPageSlug,
-        containerSize: item.containerSize ?? ""
-      };
-    };
-    processDynamicDuplex = (item) => {
-      var _a, _b, _c, _d, _e;
-      let targetPageSlug = ((_a = item.targetPage) == null ? void 0 : _a.slug) ?? "";
-      if (((_b = item.targetPage) == null ? void 0 : _b.__typename) === "ServicesPage") {
-        targetPageSlug = "/services/" + targetPageSlug;
-      }
-      return {
-        ...item,
-        bodyText: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_c = item.bodyText) == null ? void 0 : _c.json) ?? ""),
-        bodyText2: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_d = item.bodyText2) == null ? void 0 : _d.json) ?? ""),
-        bodyText3: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_e = item.bodyText3) == null ? void 0 : _e.json) ?? ""),
-        targetPage: targetPageSlug,
-        containerSize: item.containerSize ?? ""
-      };
-    };
-    processInfoBlock2 = (item) => {
-      var _a, _b;
-      return {
-        ...item,
-        content1: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_a = item.block1Body) == null ? void 0 : _a.json) ?? ""),
-        content2: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_b = item.block2Body) == null ? void 0 : _b.json) ?? "")
-      };
-    };
-    processLogoRack2 = (item) => {
-      var _a, _b, _c, _d, _e, _f;
-      return {
-        ...item,
-        logoText1: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_a = item.logoText1) == null ? void 0 : _a.json) ?? ""),
-        logoText2: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_b = item.logoText2) == null ? void 0 : _b.json) ?? ""),
-        logoText3: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_c = item.logoText3) == null ? void 0 : _c.json) ?? ""),
-        logoText4: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_d = item.logoText4) == null ? void 0 : _d.json) ?? ""),
-        logoText5: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_e = item.logoText5) == null ? void 0 : _e.json) ?? ""),
-        logoText6: (0, import_rich_text_html_renderer3.documentToHtmlString)(((_f = item.logoText6) == null ? void 0 : _f.json) ?? "")
-      };
-    };
-    processFaq2 = (item) => {
-      return { ...item };
-    };
-    processingFunctions3 = {
-      "ComponentHeroBanner": processHeroBanner3,
-      "ComponentDuplex": processDuplex3,
-      "ComponentDynamicDuplex": processDynamicDuplex,
-      "ComponentInfoBlock": processInfoBlock2,
-      "ComponentLogoRack": processLogoRack2,
-      "ComponentFaq": processFaq2,
-      "ComponentCarousel": processCarousel
-    };
-  }
-});
-
-// .svelte-kit/output/server/entries/pages/home/_page.svelte.js
-var page_svelte_exports4 = {};
-__export(page_svelte_exports4, {
-  default: () => Page4
-});
-function getComponentData2(item) {
-  switch (item.type) {
-    case "ComponentHeroBanner":
-      return { data: item.data.heroBanners[0] };
-    case "ComponentDuplex":
-      return { data: item.data.duplexes[0] };
-    case "ComponentDynamicDuplex":
-      return { data: item.data.dynamicDuplexes[0] };
-    case "ComponentCarousel":
-      return { data: item.data.carousels[0] };
-    case "ComponentInfoBlock":
-      return { data: item.data.infoBlocks[0] };
-    case "ComponentLogoRack":
-      return { data: item.data.logoRacks[0] };
-    case "ComponentFaq":
-      return { data: item.data.faqs };
-    default:
-      return {};
-  }
-}
-var css$26, CarouselItem, css$19, CustomCarouselItem, FaArrowCircleRight, FaArrowCircleLeft, css13, CarouselWrapper, Page4;
-var init_page_svelte4 = __esm({
-  ".svelte-kit/output/server/entries/pages/home/_page.svelte.js"() {
-    init_index3();
-    init_Hero();
-    init_Carousel();
-    init_IconBase();
-    init_ButtonLink();
-    init_DynamicDuplex();
-    init_Faq();
-    init_Duplex();
-    init_SEOMetaData();
-    css$26 = {
+    css$24 = {
       code: ".carousel.svelte-1atzm64 p.svelte-1atzm64{font-family:'PolySans Neutral';font-size:2rem;line-height:2.5rem;padding:0 5rem}.carousel.svelte-1atzm64 span.svelte-1atzm64{font-family:'PolySans Neutral';font-size:1.125rem}.carousel-avatar.svelte-1atzm64.svelte-1atzm64{display:inline-block;height:2.5rem;width:2.5em;margin:0 0.75rem;border-radius:50%;background-position:center;background-repeat:no-repeat;background-size:contain}",
       map: null
     };
@@ -51255,13 +50695,13 @@ var init_page_svelte4 = __esm({
       let { entry } = $$props;
       if ($$props.entry === void 0 && $$bindings.entry && entry !== void 0)
         $$bindings.entry(entry);
-      $$result.css.add(css$26);
+      $$result.css.add(css$24);
       return `<div class="carousel svelte-1atzm64"><p class="svelte-1atzm64">${entry.quote !== null ? `<!-- HTML_TAG_START -->${entry.quote}<!-- HTML_TAG_END -->` : ``}</p>
   <div class="flex-center-center">${entry.image !== null ? `<img class="carousel-avatar svelte-1atzm64" src="${escape((_a = entry.image) == null ? void 0 : _a.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", (_b = entry.image) == null ? void 0 : _b.description, 0)}>` : `<img class="carousel-avatar svelte-1atzm64" src="${escape((_c = entry.quoteSource) == null ? void 0 : _c.avatar.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", (_d = entry.quoteSource) == null ? void 0 : _d.avatar.description, 0)}>`}
     ${entry.quoteSource !== null ? `<span class="svelte-1atzm64">${escape(entry.quoteSource.name)}</span>` : ``}</div>
 </div>`;
     });
-    css$19 = {
+    css$18 = {
       code: ".carousel.svelte-ff5ueg p.svelte-ff5ueg{font-family:'PolySans Neutral';font-size:2rem;line-height:2.5rem}.carousel.svelte-ff5ueg span.svelte-ff5ueg{font-family:'PolySans Neutral';font-size:1.125rem}.half.svelte-ff5ueg.svelte-ff5ueg{background:#fff;color:#000}.custom.svelte-ff5ueg .quote.svelte-ff5ueg{padding:0 2rem;text-align:left}.carousel-avatar.svelte-ff5ueg.svelte-ff5ueg{display:inline-block;height:2.5rem;width:2.5em;margin:0 0.75rem;border-radius:50%;background-position:center;background-repeat:no-repeat;background-size:contain}.flex-center-center.svelte-ff5ueg.svelte-ff5ueg{display:flex;flex-direction:column;height:100%}.carousel-image.svelte-ff5ueg.svelte-ff5ueg,.quote.svelte-ff5ueg.svelte-ff5ueg{flex:0 0 50%;max-height:200px}.carousel-image.svelte-ff5ueg.svelte-ff5ueg{padding:2.5rem;margin-top:2rem}",
       map: null
     };
@@ -51270,7 +50710,7 @@ var init_page_svelte4 = __esm({
       let { entry } = $$props;
       if ($$props.entry === void 0 && $$bindings.entry && entry !== void 0)
         $$bindings.entry(entry);
-      $$result.css.add(css$19);
+      $$result.css.add(css$18);
       return `<div class="custom carousel svelte-ff5ueg">${entry.image !== null ? `<div class="flex-center-center half svelte-ff5ueg"><img class="carousel-image svelte-ff5ueg" src="${escape((_a = entry.image) == null ? void 0 : _a.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", (_b = entry.image) == null ? void 0 : _b.description, 0)}>
       ${entry.quote !== null ? `<p class="quote svelte-ff5ueg"><!-- HTML_TAG_START -->${entry.quote}<!-- HTML_TAG_END --></p>` : ``}</div>` : `<div class="flex quote svelte-ff5ueg">${entry.quote !== null ? `<p class="svelte-ff5ueg"><!-- HTML_TAG_START -->${entry.quote}<!-- HTML_TAG_END --></p>` : ``}
       <img class="carousel-avatar svelte-ff5ueg" src="${escape((_c = entry.quoteSource) == null ? void 0 : _c.avatar.url, true) + "?fm=webp&q=80"}"${add_attribute("alt", (_d = entry.quoteSource) == null ? void 0 : _d.avatar.description, 0)}>
@@ -51292,7 +50732,7 @@ var init_page_svelte4 = __esm({
         }
       })}`;
     });
-    css13 = {
+    css12 = {
       code: '.custom.container.svelte-16s0ie8.svelte-16s0ie8{display:flex;position:relative;background-color:#29397a;color:#fff;padding:6rem 4rem 10rem 4rem;margin:6rem auto}.custom.svelte-16s0ie8 .top.svelte-16s0ie8{display:flex}.custom.svelte-16s0ie8 .top img.svelte-16s0ie8{height:40px;width:40px}.custom.svelte-16s0ie8 .top p.svelte-16s0ie8{max-width:180px;padding:0 20px;margin:0}.custom.svelte-16s0ie8 .bottom.svelte-16s0ie8{display:flex;flex-direction:column;text-align:left;height:calc(100% - 2.5rem);justify-content:center;vertical-align:middle}.custom.svelte-16s0ie8 .bottom p.svelte-16s0ie8{font-size:1.75rem;color:rgba(173, 235, 239, 0.3)}.custom.svelte-16s0ie8 .bottom .active.svelte-16s0ie8{color:#ADEBEF}.custom.svelte-16s0ie8 .left-container.svelte-16s0ie8{flex:1;max-width:300px}.custom.svelte-16s0ie8 .right-container.svelte-16s0ie8{flex:2;width:calc(100% - 300px)}.custom.svelte-16s0ie8 .right-container .ctaLink.svelte-16s0ie8{position:absolute;bottom:3rem;right:4rem}.custom.svelte-16s0ie8 .right-container .ctaLink.svelte-16s0ie8 a:hover{color:#fff}.custom.svelte-16s0ie8 .right-container .ctaLink.svelte-16s0ie8 a{background:#adebef;color:#000}.custom.svelte-16s0ie8 .carousel-wrapper.svelte-16s0ie8{padding:0}.custom.svelte-16s0ie8 button.svelte-16s0ie8{position:absolute;left:0;bottom:-5rem}.custom.svelte-16s0ie8 button.svelte-16s0ie8:last-child{left:3rem}.custom.svelte-16s0ie8 svg{color:#adebef}.carousel-wrapper.svelte-16s0ie8.svelte-16s0ie8{margin:0 auto;padding:6rem 2rem;font-size:1rem;text-align:center}.carousel-wrapper.svelte-16s0ie8 button.svelte-16s0ie8{background:transparent;border:none}.icon.svelte-16s0ie8.svelte-16s0ie8{height:2rem;width:2rem;color:#29397a}.icon.svelte-16s0ie8.svelte-16s0ie8:hover{cursor:pointer}.custom.svelte-16s0ie8 .sc-carousel-dots__container{display:none !important}@media only screen and (max-width: 550px){.custom.container.svelte-16s0ie8.svelte-16s0ie8{padding:0rem 0rem 10rem 0rem}.custom.svelte-16s0ie8 button.flex-center-center[slot="prev"]{left:5rem}.custom.svelte-16s0ie8 button.flex-center-center[slot="next"]{left:9rem}}@media only screen and (max-width: 768px){.custom.svelte-16s0ie8 .left-container.svelte-16s0ie8{display:none}.custom.svelte-16s0ie8 .right-container.svelte-16s0ie8{max-width:100%}}@media only screen and (max-width: 991px){.custom.container.svelte-16s0ie8.svelte-16s0ie8{max-width:100%;margin:0}.custom.svelte-16s0ie8 .carousel p p{font-size:1.25rem;line-height:1.5rem}}@media only screen and (max-width: 1200px){.custom.svelte-16s0ie8 .carousel p p{font-size:1.25rem;line-height:1.25rem;padding:inherit}}',
       map: null
     };
@@ -51318,7 +50758,7 @@ var init_page_svelte4 = __esm({
       ];
       if ($$props.data === void 0 && $$bindings.data && data !== void 0)
         $$bindings.data(data);
-      $$result.css.add(css13);
+      $$result.css.add(css12);
       let $$settled;
       let $$rendered;
       do {
@@ -51414,7 +50854,7 @@ var init_page_svelte4 = __esm({
         return `${validate_component(components[item.type] || missing_component, "svelte:component").$$render($$result, Object.assign({}, getComponentData2(item)), {}, {})}`;
       })}
 
-${validate_component(SEOMetaData, "SEOMetaData").$$render($$result, { data }, {}, {})}`;
+`;
     });
   }
 });
@@ -51437,7 +50877,7 @@ var init__6 = __esm({
     index6 = 5;
     component6 = async () => component_cache6 ??= (await Promise.resolve().then(() => (init_page_svelte4(), page_svelte_exports4))).default;
     server_id4 = "src/routes/home/+page.server.js";
-    imports6 = ["_app/immutable/nodes/5.0d1355b7.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/Hero.e9f4fbf4.js", "_app/immutable/chunks/ButtonLink.5274dc1a.js", "_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js", "_app/immutable/chunks/Carousel.bc75531f.js", "_app/immutable/chunks/_commonjsHelpers.725317a4.js", "_app/immutable/chunks/IconBase.aa9b8a72.js", "_app/immutable/chunks/DynamicDuplex.0e2611bb.js", "_app/immutable/chunks/singletons.94de24d0.js", "_app/immutable/chunks/paths.bdc3fcd1.js", "_app/immutable/chunks/Faq.7e4f104f.js", "_app/immutable/chunks/stores.d5090ce3.js", "_app/immutable/chunks/Row.7408adfd.js", "_app/immutable/chunks/Duplex.755a8b52.js", "_app/immutable/chunks/SEOMetaData.901255a3.js"];
+    imports6 = ["_app/immutable/nodes/5.d63784a5.js", "_app/immutable/chunks/index.5d5a95b7.js", "_app/immutable/chunks/Hero.c23f8ed9.js", "_app/immutable/chunks/ButtonLink.0f14ce15.js", "_app/immutable/chunks/TextWithLineBreaks.8eb785f4.js", "_app/immutable/chunks/Carousel.svelte_svelte_type_style_lang.4ce1efe3.js", "_app/immutable/chunks/_commonjsHelpers.725317a4.js", "_app/immutable/chunks/IconBase.50afd150.js", "_app/immutable/chunks/DynamicDuplex.e86978d8.js", "_app/immutable/chunks/singletons.58f5f409.js", "_app/immutable/chunks/Faq.d0034bac.js", "_app/immutable/chunks/stores.9e4501ed.js", "_app/immutable/chunks/Row.f1baf3b3.js", "_app/immutable/chunks/Duplex.f4e36a32.js"];
     stylesheets6 = ["_app/immutable/assets/5.4279f1b4.css", "_app/immutable/assets/Hero.0d25076f.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css", "_app/immutable/assets/Carousel.f76ac12e.css", "_app/immutable/assets/IconBase.6bf551a2.css", "_app/immutable/assets/DynamicDuplex.b9baba17.css", "_app/immutable/assets/Faq.7ac5e4bc.css", "_app/immutable/assets/Duplex.dbce9a88.css"];
     fonts6 = [];
   }
@@ -51746,14 +51186,13 @@ function getComponentData3(item) {
       return {};
   }
 }
-var css$34, Button2, css$27, Image, css$110, Youtube, FaPlayCircle, css14, playOverlay, YoutubeWrapper, Page5;
+var css$34, Button2, css$25, Image, css$19, Youtube, FaPlayCircle, css13, playOverlay, YoutubeWrapper, Page5;
 var init_page_svelte5 = __esm({
   ".svelte-kit/output/server/entries/pages/how-it-works/_page.svelte.js"() {
     init_index3();
     init_Hero();
     init_Faq();
     init_Duplex();
-    init_SEOMetaData();
     init_IconBase();
     css$34 = {
       code: "button.svelte-qc0w97{all:unset}button.svelte-qc0w97,.play-button.svelte-qc0w97{display:grid;place-items:center;height:80px;width:80px;position:absolute;top:0;right:0;bottom:0;left:0;margin:auto;cursor:pointer}",
@@ -51766,7 +51205,7 @@ var init_page_svelte5 = __esm({
       $$result.css.add(css$34);
       return `${isCustomPlayButton ? `<div class="play-button svelte-qc0w97">${slots.default ? slots.default({}) : ``}</div>` : `<button class="svelte-qc0w97"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="iconify iconify--mdi" viewBox="0 0 24 24"><path fill="#ff4e45" d="m10 15 5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73Z"></path></svg></button>`}`;
     });
-    css$27 = {
+    css$25 = {
       code: "img.svelte-hw9fhp{height:auto;aspect-ratio:var(--aspect-ratio);width:100%}",
       map: null
     };
@@ -51783,10 +51222,10 @@ var init_page_svelte5 = __esm({
         $$bindings.altThumb(altThumb);
       if ($$props.play === void 0 && $$bindings.play && play !== void 0)
         $$bindings.play(play);
-      $$result.css.add(css$27);
+      $$result.css.add(css$25);
       return `<img src="${"https://i.ytimg.com/vi/" + escape(id, true) + "/" + escape(altThumb ? "hqdefault" : "maxresdefault", true) + ".jpg"}"${add_attribute("title", title, 0)} alt="${"Youtube video: " + escape(title, true)}" referrerpolicy="no-referrer" class="svelte-hw9fhp">`;
     });
-    css$110 = {
+    css$19 = {
       code: '.you__tube.svelte-w0t24e.svelte-w0t24e{position:relative;aspect-ratio:1.76991;overflow:hidden}.v__title.svelte-w0t24e.svelte-w0t24e{position:absolute;top:0;width:100%;background:linear-gradient(to bottom, hsla(0, 0%, 0%, 0.1), transparent);pointer-events:none}.v__title.svelte-w0t24e h3.svelte-w0t24e{font-family:var(\n      --title-font-family,\n      "Segoe UI",\n      Geneva,\n      Verdana,\n      sans-serif\n    );color:var(--title-color, #ffffff);padding:0 2ch;font-weight:400;text-shadow:0px 1px 3px var(--title-shadow-color, rgb(0, 0, 0, 0.2))}.b__overlay.svelte-w0t24e.svelte-w0t24e{position:absolute;top:0;left:0;width:100%;aspect-ratio:var(--aspect-ratio);cursor:pointer;transition:var(--overlay-transition, all 250ms ease-in-out)}.you__tube.svelte-w0t24e:hover .b__overlay.svelte-w0t24e{background:var(--overlay-bg-color, #00000030)}',
       map: null
     };
@@ -51805,7 +51244,7 @@ var init_page_svelte5 = __esm({
         $$bindings.altThumb(altThumb);
       if ($$props.animations === void 0 && $$bindings.animations && animations !== void 0)
         $$bindings.animations(animations);
-      $$result.css.add(css$110);
+      $$result.css.add(css$19);
       return `<div class="you__tube svelte-w0t24e" style="${"--aspect-ratio:" + escape("16/9", true)}"${add_attribute("title", title, 0)}>${`${isCustomThumbnail ? `${slots.thumbnail ? slots.thumbnail({}) : ``}` : `${validate_component(Image, "Image").$$render($$result, { id, title, altThumb, play }, {}, {})}`}
     <div class="b__overlay svelte-w0t24e"></div>
     <div class="v__title svelte-w0t24e"><h3 class="svelte-w0t24e">${escape(title)}</h3></div>`}
@@ -51823,7 +51262,7 @@ var init_page_svelte5 = __esm({
         }
       })}`;
     });
-    css14 = {
+    css13 = {
       code: ".youtube-wrapper.svelte-1t4cfuu.svelte-1t4cfuu{align-items:center;display:flex;flex-direction:row;position:relative;z-index:auto;padding:20px}.background.svelte-1t4cfuu.svelte-1t4cfuu{position:absolute;top:0;right:0;bottom:0;left:0;background-position:center;background-size:cover}.container.svelte-1t4cfuu.svelte-1t4cfuu{display:flex;flex:100%;align-items:flex-start;flex-direction:column;justify-content:center;padding:0;position:relative;z-index:200;height:100%}p.svelte-1t4cfuu.svelte-1t4cfuu{font-family:'PolySans Median', Arial, sans-serif;font-size:1.25rem;color:#D93561;margin:1rem 0}h3.svelte-1t4cfuu.svelte-1t4cfuu{font-family:'PolySans Neutral', Arial, sans-serif;font-size:2.5rem;font-weight:500}.content-container.svelte-1t4cfuu.svelte-1t4cfuu{display:flex;flex-direction:row;justify-content:space-between;align-items:center;margin-right:auto;margin-left:0;text-align:left;justify-content:flex-start}.copy.svelte-1t4cfuu.svelte-1t4cfuu{width:100%}.copy.svelte-1t4cfuu>div.svelte-1t4cfuu{max-width:23rem;margin:0 auto}.youtube.svelte-1t4cfuu.svelte-1t4cfuu{position:relative;height:100%;width:100%}.youtube.svelte-1t4cfuu iframe{position:absolute;top:0;left:0;width:100%;height:100%}.youtube-wrapper.svelte-1t4cfuu.svelte-1t4cfuu{width:100%;flex:0 0 50%}.row.svelte-1t4cfuu.svelte-1t4cfuu{align-items:center;margin-left:0;margin-right:0;width:100%;padding:80px 0}.b__overlay, .v__title, .you__tube img{opacity:0}.play-button{height:7em;width:7em}.play_overlay.svelte-1t4cfuu.svelte-1t4cfuu{display:block;position:absolute;background-repeat:no-repeat;background-size:contain;background-position:center;height:100%;width:100%;top:0;right:0;bottom:0;left:0;margin:auto}.play_icon.svelte-1t4cfuu.svelte-1t4cfuu{background-color:transparent;border:none;box-shadow:none;color:rgba(255,255,255,0.8);transition:all .1s ease-in-out;cursor:pointer}.youtube.svelte-1t4cfuu:hover .play_icon.svelte-1t4cfuu{color:#fff}@media(max-width:768px){.content-container.svelte-1t4cfuu.svelte-1t4cfuu{display:block;text-align:center}p.svelte-1t4cfuu.svelte-1t4cfuu{opacity:0}}",
       map: null
     };
@@ -51832,7 +51271,7 @@ var init_page_svelte5 = __esm({
       let { data } = $$props;
       if ($$props.data === void 0 && $$bindings.data && data !== void 0)
         $$bindings.data(data);
-      $$result.css.add(css14);
+      $$result.css.add(css13);
       return `<section class="youtube-wrapper .sb-section svelte-1t4cfuu"><div alt="" style="${"background-image: url(" + escape(data.youTubeImage.url, true) + "?fm=webp&q=80);"}" class="background svelte-1t4cfuu"></div>
   <div class="container svelte-1t4cfuu"><div class="row svelte-1t4cfuu"><div class="content-container svelte-1t4cfuu"><div class="copy svelte-1t4cfuu"><div class="svelte-1t4cfuu"><p class="svelte-1t4cfuu">${escape(data.contentTitle)}</p>
             <h3 class="svelte-1t4cfuu">${escape(data.contentSubtitle)}</h3></div></div>
@@ -51861,7 +51300,7 @@ var init_page_svelte5 = __esm({
         return `${validate_component(components[item.type] || missing_component, "svelte:component").$$render($$result, Object.assign({}, getComponentData3(item)), {}, {})}`;
       })}
 
-  ${validate_component(SEOMetaData, "SEOMetaData").$$render($$result, { data }, {}, {})}`;
+  `;
     });
   }
 });
@@ -51884,7 +51323,7 @@ var init__7 = __esm({
     index7 = 6;
     component7 = async () => component_cache7 ??= (await Promise.resolve().then(() => (init_page_svelte5(), page_svelte_exports5))).default;
     server_id5 = "src/routes/how-it-works/+page.server.js";
-    imports7 = ["_app/immutable/nodes/6.a40f8743.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/Hero.e9f4fbf4.js", "_app/immutable/chunks/ButtonLink.5274dc1a.js", "_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js", "_app/immutable/chunks/Faq.7e4f104f.js", "_app/immutable/chunks/stores.d5090ce3.js", "_app/immutable/chunks/singletons.94de24d0.js", "_app/immutable/chunks/paths.bdc3fcd1.js", "_app/immutable/chunks/Row.7408adfd.js", "_app/immutable/chunks/Duplex.755a8b52.js", "_app/immutable/chunks/SEOMetaData.901255a3.js", "_app/immutable/chunks/IconBase.aa9b8a72.js"];
+    imports7 = ["_app/immutable/nodes/6.17e9d81c.js", "_app/immutable/chunks/index.5d5a95b7.js", "_app/immutable/chunks/Hero.c23f8ed9.js", "_app/immutable/chunks/ButtonLink.0f14ce15.js", "_app/immutable/chunks/TextWithLineBreaks.8eb785f4.js", "_app/immutable/chunks/Faq.d0034bac.js", "_app/immutable/chunks/stores.9e4501ed.js", "_app/immutable/chunks/singletons.58f5f409.js", "_app/immutable/chunks/Row.f1baf3b3.js", "_app/immutable/chunks/Duplex.f4e36a32.js", "_app/immutable/chunks/IconBase.50afd150.js"];
     stylesheets7 = ["_app/immutable/assets/6.c8895396.css", "_app/immutable/assets/Hero.0d25076f.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css", "_app/immutable/assets/Faq.7ac5e4bc.css", "_app/immutable/assets/Duplex.dbce9a88.css", "_app/immutable/assets/IconBase.6bf551a2.css"];
     fonts7 = [];
   }
@@ -52138,14 +51577,14 @@ function getComponentData4(item) {
       return {};
   }
 }
-var css15, Page6;
+var css14, Page6;
 var init_page_svelte6 = __esm({
   ".svelte-kit/output/server/entries/pages/legal/_page.svelte.js"() {
     init_index3();
     init_Hero();
     init_Faq();
     init_Duplex();
-    css15 = {
+    css14 = {
       code: "ol{font-weight:bold;font-family:'PolySans Median'\n  }.infoBlock-wrapper a{color:#adebef}.infoBlock-wrapper a:hover{color:#DA2F5C}.infoBlock-wrapper .copy-container .item{max-width:60rem}.infoBlock-wrapper .copy-container .content.legal{text-align:left}.legal .subline{text-align:center}.legal .content1{width:fit-content;margin:0 auto}.legal .content1 p{margin:inherit}",
       map: null
     };
@@ -52160,12 +51599,12 @@ var init_page_svelte6 = __esm({
       };
       if ($$props.data === void 0 && $$bindings.data && data !== void 0)
         $$bindings.data(data);
-      $$result.css.add(css15);
+      $$result.css.add(css14);
       return `${each(data.pageContent, (item, index13) => {
         return `${validate_component(components[item.type] || missing_component, "svelte:component").$$render($$result, Object.assign({}, getComponentData4(item)), {}, {})}`;
       })}
 
-  `;
+`;
     });
   }
 });
@@ -52188,7 +51627,7 @@ var init__8 = __esm({
     index8 = 7;
     component8 = async () => component_cache8 ??= (await Promise.resolve().then(() => (init_page_svelte6(), page_svelte_exports6))).default;
     server_id6 = "src/routes/legal/+page.server.js";
-    imports8 = ["_app/immutable/nodes/7.3f5e2c2d.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/Hero.e9f4fbf4.js", "_app/immutable/chunks/ButtonLink.5274dc1a.js", "_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js", "_app/immutable/chunks/Faq.7e4f104f.js", "_app/immutable/chunks/stores.d5090ce3.js", "_app/immutable/chunks/singletons.94de24d0.js", "_app/immutable/chunks/paths.bdc3fcd1.js", "_app/immutable/chunks/Row.7408adfd.js", "_app/immutable/chunks/Duplex.755a8b52.js"];
+    imports8 = ["_app/immutable/nodes/7.ab2d5871.js", "_app/immutable/chunks/index.5d5a95b7.js", "_app/immutable/chunks/Hero.c23f8ed9.js", "_app/immutable/chunks/ButtonLink.0f14ce15.js", "_app/immutable/chunks/TextWithLineBreaks.8eb785f4.js", "_app/immutable/chunks/Faq.d0034bac.js", "_app/immutable/chunks/stores.9e4501ed.js", "_app/immutable/chunks/singletons.58f5f409.js", "_app/immutable/chunks/Row.f1baf3b3.js", "_app/immutable/chunks/Duplex.f4e36a32.js"];
     stylesheets8 = ["_app/immutable/assets/7.84da6503.css", "_app/immutable/assets/Hero.0d25076f.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css", "_app/immutable/assets/Faq.7ac5e4bc.css", "_app/immutable/assets/Duplex.dbce9a88.css"];
     fonts8 = [];
   }
@@ -52333,7 +51772,7 @@ function formatDate(dateString) {
   };
   return date.toLocaleDateString("en-US", options2);
 }
-var css16, Page7;
+var css15, Page7;
 var init_page_svelte7 = __esm({
   ".svelte-kit/output/server/entries/pages/news/_page.svelte.js"() {
     init_index3();
@@ -52341,7 +51780,7 @@ var init_page_svelte7 = __esm({
     init_Col();
     init_Duplex();
     init_ButtonLink();
-    css16 = {
+    css15 = {
       code: "a.svelte-1foh2hx.svelte-1foh2hx{display:block;padding:0;margin:0 0 1rem 0;color:#D93561;text-transform:uppercase;text-decoration:none;line-height:1;border-bottom:1px solid #D93561;cursor:pointer;max-width:fit-content;font-family:'PolySans Neutral', Arial, sans-serif}a.svelte-1foh2hx.svelte-1foh2hx:hover{color:#29397a;border-bottom:2px solid #29397a\n  }p.svelte-1foh2hx.svelte-1foh2hx{margin:0 0 0.5rem;position:relative;color:rgba(0,0,0,.85);padding:0}.date.svelte-1foh2hx.svelte-1foh2hx{font-family:'PolySans Neutral', Arial, sans-serif;font-size:0.875rem;color:#636363;margin:1rem 0 0.75rem}h1.svelte-1foh2hx.svelte-1foh2hx{font-size:4.5rem;text-align:left;font-weight:500;color:#29397a;margin-top:-1rem;max-height:60px;line-height:68px}h2.svelte-1foh2hx.svelte-1foh2hx{font-weight:400;text-align:left;margin-bottom:0.5rem;color:#29397a;padding:0}h7.svelte-1foh2hx.svelte-1foh2hx{font-size:1.25rem;line-height:1.75rem;font-family:'PolySans Neutral', Arial, sans-serif;font-weight:500;padding:0}.latestHeader.svelte-1foh2hx.svelte-1foh2hx{padding-top:1rem}.divider.svelte-1foh2hx.svelte-1foh2hx{display:block;height:1px;background-color:gray;width:calc(100% - 2rem);margin:1rem 0}.divider-right.svelte-1foh2hx.svelte-1foh2hx{display:block;height:1px;background-color:gray;width:calc(100% - 2rem);margin:1rem}.divider-full.svelte-1foh2hx.svelte-1foh2hx{display:block;height:1px;background-color:gray;width:100%;margin:1rem auto 2rem}.divider-full-left.svelte-1foh2hx.svelte-1foh2hx{display:block;height:1px;background-color:gray;width:100%;margin:1rem auto 2rem -0.75rem}img.svelte-1foh2hx.svelte-1foh2hx{aspect-ratio:3/2;object-fit:cover}.show.svelte-1foh2hx.svelte-1foh2hx{display:flex}.custom.container{max-width:1440px}.latest,.more-news{padding:0 1.5rem}.more-news{margin-bottom:6rem}@media(max-width: 768px){.divider.svelte-1foh2hx.svelte-1foh2hx{margin-left:0.8rem;width:calc(100% - 1.6rem)}.divider-full.svelte-1foh2hx.svelte-1foh2hx{margin:1rem 0 1rem}img.svelte-1foh2hx.svelte-1foh2hx{width:100%;max-height:340px;margin:0 auto}.more-news{margin-bottom:0rem}.latestHeader.svelte-1foh2hx.svelte-1foh2hx{padding-top:2rem}.latest .row{display:block;padding:0;margin:0}.main-content.svelte-1foh2hx h1.svelte-1foh2hx{max-height:40px}}@media(max-width: 905px){h1.svelte-1foh2hx.svelte-1foh2hx{max-height:fit-content}}@media(max-width: 991px){h1.svelte-1foh2hx.svelte-1foh2hx{font-size:3rem}}",
       map: null
     };
@@ -52370,7 +51809,7 @@ var init_page_svelte7 = __esm({
       });
       if ($$props.data === void 0 && $$bindings.data && data !== void 0)
         $$bindings.data(data);
-      $$result.css.add(css16);
+      $$result.css.add(css15);
       return `${$$result.head += `<!-- HEAD_svelte-pmhhuv_START -->${$$result.title = `<title>Paul Health: News</title>`, ""}<meta name="description" content="Find out what's on our radar here at Paul Health."><meta property="og:title" content="Paul Health: News"><meta property="og:description" content="Find out what's on our radar here- at Paul Health."><meta property="og:image" content="/paul_logo.svg"><meta property="og:type" content="website"><!-- HEAD_svelte-pmhhuv_END -->`, ""}
 
 ${validate_component(Container, "Container").$$render($$result, { class: "custom" }, {}, {
@@ -52486,7 +51925,7 @@ var init__9 = __esm({
     index9 = 8;
     component9 = async () => component_cache9 ??= (await Promise.resolve().then(() => (init_page_svelte7(), page_svelte_exports7))).default;
     server_id7 = "src/routes/news/+page.server.js";
-    imports9 = ["_app/immutable/nodes/8.451a2861.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/Row.7408adfd.js", "_app/immutable/chunks/Col.a2f13094.js", "_app/immutable/chunks/Duplex.755a8b52.js", "_app/immutable/chunks/ButtonLink.5274dc1a.js", "_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js"];
+    imports9 = ["_app/immutable/nodes/8.5e1461ee.js", "_app/immutable/chunks/index.5d5a95b7.js", "_app/immutable/chunks/Row.f1baf3b3.js", "_app/immutable/chunks/Col.5130ac02.js", "_app/immutable/chunks/Duplex.f4e36a32.js", "_app/immutable/chunks/ButtonLink.0f14ce15.js", "_app/immutable/chunks/TextWithLineBreaks.8eb785f4.js"];
     stylesheets9 = ["_app/immutable/assets/8.591aebbd.css", "_app/immutable/assets/Duplex.dbce9a88.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css"];
     fonts9 = [];
   }
@@ -53031,14 +52470,13 @@ function formatDate2(dateString) {
   };
   return date.toLocaleDateString("en-US", options2);
 }
-var css17, Page8;
+var css16, Page8;
 var init_page_svelte8 = __esm({
   ".svelte-kit/output/server/entries/pages/news/_slug_/_page.svelte.js"() {
     init_index3();
     init_Duplex();
     init_ButtonLink();
-    init_SEOMetaData();
-    css17 = {
+    css16 = {
       code: "header.svelte-3xt869.svelte-3xt869{display:grid;grid-template-columns:1fr 1fr}figcaption.svelte-3xt869.svelte-3xt869{font-size:.875rem;font-family:Franklin, arial, sans-serif;line-height:1.25;padding:0.75rem 2rem;color:#666666;text-align:center}header.svelte-3xt869 .author-container.svelte-3xt869{display:flex;justify-content:center;align-items:center;flex-direction:column;max-height:100%}header.svelte-3xt869 .author-wrapper.svelte-3xt869{display:flex;justify-content:center;align-items:center;flex-direction:column}header.svelte-3xt869 div h1.svelte-3xt869{font-family:'PolySans Slim', Arial, sans-serif;width:clamp(80%, 100%, 800px);margin:1rem auto;padding:0 2rem;line-height:1.1em;font-size:4rem}.author.svelte-3xt869 img.svelte-3xt869{width:56px;height:56px;border-radius:50%;object-fit:cover;margin:0 auto}.article-body.svelte-3xt869.svelte-3xt869{width:clamp(60%, 100%, 940px);margin:2rem auto;padding:2rem}.timestamp.svelte-3xt869.svelte-3xt869{text-align:center;grid-template-columns:1fr 1fr}.timestamp.svelte-3xt869 span.svelte-3xt869{font-size:.875rem;font-family:Franklin,arial,sans-serif;line-height:1.25;padding:0;color:#666666}.article-body p{font-size:1.25rem;line-height:1.6em}img.svelte-3xt869.svelte-3xt869{height:100%;width:100%;object-fit:cover;aspect-ratio:3/2}.article-body img{max-height:600px;margin:0 auto}@media(max-width: 768px){header.svelte-3xt869.svelte-3xt869{grid-template-columns:1fr;grid-template-rows:1fr}figure.svelte-3xt869.svelte-3xt869{margin-bottom:4rem}figcaption.svelte-3xt869.svelte-3xt869{height:auto}.article-body.svelte-3xt869.svelte-3xt869{margin:1rem auto}}@media(max-width: 1024px){header.svelte-3xt869 div h1.svelte-3xt869{font-size:3rem}}",
       map: null
     };
@@ -53058,9 +52496,9 @@ var init_page_svelte8 = __esm({
       let duplexData = data.duplexes[0];
       if ($$props.data === void 0 && $$bindings.data && data !== void 0)
         $$bindings.data(data);
-      $$result.css.add(css17);
+      $$result.css.add(css16);
       renderData = newsFeatured && newsFeatured.pageContentCollection && newsFeatured.pageContentCollection.items[0].headline === headline ? newsFeatured : duplexData;
-      return `${data.seoData.title ? `${validate_component(SEOMetaData, "SEOMetaData").$$render($$result, { data }, {}, {})}` : ``}
+      return `${data.seoData.title ? `` : ``}
 
 <article><header class="svelte-3xt869"><figure class="svelte-3xt869"><img${add_attribute("src", image, 0)} alt="" class="svelte-3xt869">
       <figcaption class="svelte-3xt869">${escape(caption)}</figcaption></figure>
@@ -53108,7 +52546,7 @@ var init__10 = __esm({
     index10 = 9;
     component10 = async () => component_cache10 ??= (await Promise.resolve().then(() => (init_page_svelte8(), page_svelte_exports8))).default;
     server_id8 = "src/routes/news/[slug]/+page.server.js";
-    imports10 = ["_app/immutable/nodes/9.750e891f.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/Duplex.755a8b52.js", "_app/immutable/chunks/ButtonLink.5274dc1a.js", "_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js", "_app/immutable/chunks/SEOMetaData.901255a3.js"];
+    imports10 = ["_app/immutable/nodes/9.2d9094bd.js", "_app/immutable/chunks/index.5d5a95b7.js", "_app/immutable/chunks/Duplex.f4e36a32.js", "_app/immutable/chunks/ButtonLink.0f14ce15.js", "_app/immutable/chunks/TextWithLineBreaks.8eb785f4.js"];
     stylesheets10 = ["_app/immutable/assets/9.c0575dbc.css", "_app/immutable/assets/Duplex.dbce9a88.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css"];
     fonts10 = [];
   }
@@ -53253,14 +52691,14 @@ function formatDate3(dateString) {
   };
   return date.toLocaleDateString("en-US", options2);
 }
-var css18, Page9;
+var css17, Page9;
 var init_page_svelte9 = __esm({
   ".svelte-kit/output/server/entries/pages/news/all/_page.svelte.js"() {
     init_index3();
     init_Row();
     init_Col();
     init_ButtonLink();
-    css18 = {
+    css17 = {
       code: "a.svelte-1xjzeq2{display:block;margin:0 0 1rem 0;color:#D93561;text-transform:uppercase;cursor:pointer}a.svelte-1xjzeq2:hover{color:#29397a;text-decoration:underline}p.svelte-1xjzeq2{margin:0 0 0.5rem;position:relative;color:rgba(0,0,0,.85)\n  }img.svelte-1xjzeq2{aspect-ratio:3/2;object-fit:cover}.custom.container{max-width:1440px}.latest,.more-news{padding:0 1.5rem}.more-news{margin-bottom:6rem}@media(max-width: 768px){img.svelte-1xjzeq2{width:100%;max-height:340px;margin:0 auto}.more-news{margin-bottom:0rem}}",
       map: null
     };
@@ -53279,7 +52717,7 @@ var init_page_svelte9 = __esm({
       });
       if ($$props.data === void 0 && $$bindings.data && data !== void 0)
         $$bindings.data(data);
-      $$result.css.add(css18);
+      $$result.css.add(css17);
       return `${$$result.head += `<!-- HEAD_svelte-pmhhuv_START -->${$$result.title = `<title>Paul Health: News</title>`, ""}<meta name="description" content="Find out what's on our radar here at Paul Health."><meta property="og:title" content="Paul Health: News"><meta property="og:description" content="Find out what's on our radar here- at Paul Health."><meta property="og:image" content="/paul_logo.svg"><meta property="og:type" content="website"><!-- HEAD_svelte-pmhhuv_END -->`, ""}
 
 ${validate_component(Container, "Container").$$render($$result, { class: "custom" }, {}, {
@@ -53352,7 +52790,7 @@ var init__11 = __esm({
     index11 = 10;
     component11 = async () => component_cache11 ??= (await Promise.resolve().then(() => (init_page_svelte9(), page_svelte_exports9))).default;
     server_id9 = "src/routes/news/all/+page.server.js";
-    imports11 = ["_app/immutable/nodes/10.16050079.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/Row.7408adfd.js", "_app/immutable/chunks/Col.a2f13094.js", "_app/immutable/chunks/ButtonLink.5274dc1a.js"];
+    imports11 = ["_app/immutable/nodes/10.4f619cba.js", "_app/immutable/chunks/index.5d5a95b7.js", "_app/immutable/chunks/Row.f1baf3b3.js", "_app/immutable/chunks/Col.5130ac02.js", "_app/immutable/chunks/ButtonLink.0f14ce15.js"];
     stylesheets11 = ["_app/immutable/assets/10.a1c4feeb.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css"];
     fonts11 = [];
   }
@@ -53655,7 +53093,6 @@ var init_page_svelte10 = __esm({
     init_Duplex();
     init_Faq();
     init_Hero();
-    init_SEOMetaData();
     Page10 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { data } = $$props;
       const components = {
@@ -53671,7 +53108,7 @@ var init_page_svelte10 = __esm({
         return `${validate_component(components[item.type] || missing_component, "svelte:component").$$render($$result, Object.assign({}, getComponentData5(item)), {}, {})}`;
       })}
 
-  ${validate_component(SEOMetaData, "SEOMetaData").$$render($$result, { data }, {}, {})}`;
+  `;
     });
   }
 });
@@ -53694,7 +53131,7 @@ var init__12 = __esm({
     index12 = 11;
     component12 = async () => component_cache12 ??= (await Promise.resolve().then(() => (init_page_svelte10(), page_svelte_exports10))).default;
     server_id10 = "src/routes/services/[slug]/+page.server.js";
-    imports12 = ["_app/immutable/nodes/11.205a7426.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/Duplex.755a8b52.js", "_app/immutable/chunks/ButtonLink.5274dc1a.js", "_app/immutable/chunks/TextWithLineBreaks.f9a7a950.js", "_app/immutable/chunks/Faq.7e4f104f.js", "_app/immutable/chunks/stores.d5090ce3.js", "_app/immutable/chunks/singletons.94de24d0.js", "_app/immutable/chunks/paths.bdc3fcd1.js", "_app/immutable/chunks/Row.7408adfd.js", "_app/immutable/chunks/Hero.e9f4fbf4.js", "_app/immutable/chunks/SEOMetaData.901255a3.js"];
+    imports12 = ["_app/immutable/nodes/11.7da775c1.js", "_app/immutable/chunks/index.5d5a95b7.js", "_app/immutable/chunks/Duplex.f4e36a32.js", "_app/immutable/chunks/ButtonLink.0f14ce15.js", "_app/immutable/chunks/TextWithLineBreaks.8eb785f4.js", "_app/immutable/chunks/Faq.d0034bac.js", "_app/immutable/chunks/stores.9e4501ed.js", "_app/immutable/chunks/singletons.58f5f409.js", "_app/immutable/chunks/Row.f1baf3b3.js", "_app/immutable/chunks/Hero.c23f8ed9.js"];
     stylesheets12 = ["_app/immutable/assets/Duplex.dbce9a88.css", "_app/immutable/assets/ButtonLink.e5fc3fc9.css", "_app/immutable/assets/Faq.7ac5e4bc.css", "_app/immutable/assets/Hero.0d25076f.css"];
     fonts12 = [];
   }
@@ -70570,10 +70007,10 @@ var manifest = (() => {
   return {
     appDir: "_app",
     appPath: "_app",
-    assets: /* @__PURE__ */ new Set(["astronaut.svg", "earth.svg", "favicon.png", "moon.svg", "overlay_stars.svg", "paul_logo.svg", "paul_logoDark.svg", "playIconBackground.png", "rocket.svg"]),
-    mimeTypes: { ".svg": "image/svg+xml", ".png": "image/png" },
+    assets: /* @__PURE__ */ new Set(["Fonts/PolySans-Bulky.ttf", "Fonts/PolySans-Bulky.woff", "Fonts/PolySans-Median.ttf", "Fonts/PolySans-Median.woff", "Fonts/PolySans-Neutral.ttf", "Fonts/PolySans-Neutral.woff", "Fonts/PolySans-Slim.ttf", "Fonts/PolySans-Slim.woff", "astronaut.svg", "earth.svg", "favicon.png", "moon.svg", "overlay_stars.svg", "paul_logo.svg", "paul_logoDark.svg", "playIconBackground.png", "rocket.svg"]),
+    mimeTypes: { ".ttf": "font/ttf", ".woff": "font/woff", ".svg": "image/svg+xml", ".png": "image/png" },
     _: {
-      client: { "start": "_app/immutable/entry/start.44878414.js", "app": "_app/immutable/entry/app.d86e025d.js", "imports": ["_app/immutable/entry/start.44878414.js", "_app/immutable/chunks/index.3e776b27.js", "_app/immutable/chunks/singletons.94de24d0.js", "_app/immutable/chunks/paths.bdc3fcd1.js", "_app/immutable/entry/app.d86e025d.js", "_app/immutable/chunks/index.3e776b27.js"], "stylesheets": [], "fonts": [] },
+      client: { "start": "_app/immutable/entry/start.66ba7226.js", "app": "_app/immutable/entry/app.7d3b2c70.js", "imports": ["_app/immutable/entry/start.66ba7226.js", "_app/immutable/chunks/index.5d5a95b7.js", "_app/immutable/chunks/singletons.58f5f409.js", "_app/immutable/entry/app.7d3b2c70.js", "_app/immutable/chunks/index.5d5a95b7.js"], "stylesheets": [], "fonts": [] },
       nodes: [
         __memo(() => Promise.resolve().then(() => (init__(), __exports))),
         __memo(() => Promise.resolve().then(() => (init__2(), __exports2))),
@@ -70678,7 +70115,7 @@ var manifest = (() => {
 var import_http = __toESM(require("http"), 1);
 
 // node_modules/regexparam/dist/index.mjs
-function parse2(input, loose) {
+function parse(input, loose) {
   if (input instanceof RegExp)
     return { keys: false, pattern: input };
   var c, o, tmp, ext, keys = [], pattern2 = "", arr = input.split("/");
@@ -70734,12 +70171,12 @@ var Trouter = class {
   }
   use(route, ...fns) {
     let handlers = [].concat.apply([], fns);
-    let { keys, pattern: pattern2 } = parse2(route, true);
+    let { keys, pattern: pattern2 } = parse(route, true);
     this.routes.push({ keys, pattern: pattern2, method: "", handlers, midx: MAP[""] });
     return this;
   }
   add(method, route, ...fns) {
-    let { keys, pattern: pattern2 } = parse2(route);
+    let { keys, pattern: pattern2 } = parse(route);
     let handlers = [].concat.apply([], fns);
     this.routes.push({ keys, pattern: pattern2, method, handlers, midx: MAP[method] });
     return this;
@@ -70778,7 +70215,7 @@ var Trouter = class {
 
 // node_modules/@polka/url/build.mjs
 var qs = __toESM(require("querystring"), 1);
-function parse4(req) {
+function parse3(req) {
   let raw = req.url;
   if (raw == null)
     return;
@@ -70812,7 +70249,7 @@ var mount = (fn) => fn instanceof Polka ? fn.attach : fn;
 var Polka = class extends Trouter {
   constructor(opts = {}) {
     super();
-    this.parse = parse4;
+    this.parse = parse3;
     this.server = opts.server;
     this.handler = this.handler.bind(this);
     this.onError = opts.onError || onError;
@@ -71065,7 +70502,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "192yxtn"
+  version_hash: "6x1v1z"
 };
 function get_hooks() {
   return {};
@@ -71073,7 +70510,465 @@ function get_hooks() {
 
 // .svelte-kit/output/server/index.js
 init_chunks();
-init_devalue();
+
+// node_modules/devalue/src/utils.js
+var escaped = {
+  "<": "\\u003C",
+  "\\": "\\\\",
+  "\b": "\\b",
+  "\f": "\\f",
+  "\n": "\\n",
+  "\r": "\\r",
+  "	": "\\t",
+  "\u2028": "\\u2028",
+  "\u2029": "\\u2029"
+};
+var DevalueError = class extends Error {
+  /**
+   * @param {string} message
+   * @param {string[]} keys
+   */
+  constructor(message, keys) {
+    super(message);
+    this.name = "DevalueError";
+    this.path = keys.join("");
+  }
+};
+function is_primitive(thing) {
+  return Object(thing) !== thing;
+}
+var object_proto_names = /* @__PURE__ */ Object.getOwnPropertyNames(
+  Object.prototype
+).sort().join("\0");
+function is_plain_object(thing) {
+  const proto = Object.getPrototypeOf(thing);
+  return proto === Object.prototype || proto === null || Object.getOwnPropertyNames(proto).sort().join("\0") === object_proto_names;
+}
+function get_type(thing) {
+  return Object.prototype.toString.call(thing).slice(8, -1);
+}
+function get_escaped_char(char) {
+  switch (char) {
+    case '"':
+      return '\\"';
+    case "<":
+      return "\\u003C";
+    case "\\":
+      return "\\\\";
+    case "\n":
+      return "\\n";
+    case "\r":
+      return "\\r";
+    case "	":
+      return "\\t";
+    case "\b":
+      return "\\b";
+    case "\f":
+      return "\\f";
+    case "\u2028":
+      return "\\u2028";
+    case "\u2029":
+      return "\\u2029";
+    default:
+      return char < " " ? `\\u${char.charCodeAt(0).toString(16).padStart(4, "0")}` : "";
+  }
+}
+function stringify_string(str) {
+  let result = "";
+  let last_pos = 0;
+  const len = str.length;
+  for (let i = 0; i < len; i += 1) {
+    const char = str[i];
+    const replacement = get_escaped_char(char);
+    if (replacement) {
+      result += str.slice(last_pos, i) + replacement;
+      last_pos = i + 1;
+    }
+  }
+  return `"${last_pos === 0 ? str : result + str.slice(last_pos)}"`;
+}
+
+// node_modules/devalue/src/uneval.js
+var chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_$";
+var unsafe_chars = /[<\b\f\n\r\t\0\u2028\u2029]/g;
+var reserved = /^(?:do|if|in|for|int|let|new|try|var|byte|case|char|else|enum|goto|long|this|void|with|await|break|catch|class|const|final|float|short|super|throw|while|yield|delete|double|export|import|native|return|switch|throws|typeof|boolean|default|extends|finally|package|private|abstract|continue|debugger|function|volatile|interface|protected|transient|implements|instanceof|synchronized)$/;
+function uneval(value, replacer) {
+  const counts = /* @__PURE__ */ new Map();
+  const keys = [];
+  const custom = /* @__PURE__ */ new Map();
+  function walk(thing) {
+    if (typeof thing === "function") {
+      throw new DevalueError(`Cannot stringify a function`, keys);
+    }
+    if (!is_primitive(thing)) {
+      if (counts.has(thing)) {
+        counts.set(thing, counts.get(thing) + 1);
+        return;
+      }
+      counts.set(thing, 1);
+      if (replacer) {
+        const str2 = replacer(thing);
+        if (typeof str2 === "string") {
+          custom.set(thing, str2);
+          return;
+        }
+      }
+      const type = get_type(thing);
+      switch (type) {
+        case "Number":
+        case "BigInt":
+        case "String":
+        case "Boolean":
+        case "Date":
+        case "RegExp":
+          return;
+        case "Array":
+          thing.forEach((value2, i) => {
+            keys.push(`[${i}]`);
+            walk(value2);
+            keys.pop();
+          });
+          break;
+        case "Set":
+          Array.from(thing).forEach(walk);
+          break;
+        case "Map":
+          for (const [key2, value2] of thing) {
+            keys.push(
+              `.get(${is_primitive(key2) ? stringify_primitive(key2) : "..."})`
+            );
+            walk(value2);
+            keys.pop();
+          }
+          break;
+        default:
+          if (!is_plain_object(thing)) {
+            throw new DevalueError(
+              `Cannot stringify arbitrary non-POJOs`,
+              keys
+            );
+          }
+          if (Object.getOwnPropertySymbols(thing).length > 0) {
+            throw new DevalueError(
+              `Cannot stringify POJOs with symbolic keys`,
+              keys
+            );
+          }
+          for (const key2 in thing) {
+            keys.push(`.${key2}`);
+            walk(thing[key2]);
+            keys.pop();
+          }
+      }
+    }
+  }
+  walk(value);
+  const names = /* @__PURE__ */ new Map();
+  Array.from(counts).filter((entry) => entry[1] > 1).sort((a, b) => b[1] - a[1]).forEach((entry, i) => {
+    names.set(entry[0], get_name(i));
+  });
+  function stringify2(thing) {
+    if (names.has(thing)) {
+      return names.get(thing);
+    }
+    if (is_primitive(thing)) {
+      return stringify_primitive(thing);
+    }
+    if (custom.has(thing)) {
+      return custom.get(thing);
+    }
+    const type = get_type(thing);
+    switch (type) {
+      case "Number":
+      case "String":
+      case "Boolean":
+        return `Object(${stringify2(thing.valueOf())})`;
+      case "RegExp":
+        return `new RegExp(${stringify_string(thing.source)}, "${thing.flags}")`;
+      case "Date":
+        return `new Date(${thing.getTime()})`;
+      case "Array":
+        const members = (
+          /** @type {any[]} */
+          thing.map(
+            (v, i) => i in thing ? stringify2(v) : ""
+          )
+        );
+        const tail = thing.length === 0 || thing.length - 1 in thing ? "" : ",";
+        return `[${members.join(",")}${tail}]`;
+      case "Set":
+      case "Map":
+        return `new ${type}([${Array.from(thing).map(stringify2).join(",")}])`;
+      default:
+        const obj = `{${Object.keys(thing).map((key2) => `${safe_key(key2)}:${stringify2(thing[key2])}`).join(",")}}`;
+        const proto = Object.getPrototypeOf(thing);
+        if (proto === null) {
+          return Object.keys(thing).length > 0 ? `Object.assign(Object.create(null),${obj})` : `Object.create(null)`;
+        }
+        return obj;
+    }
+  }
+  const str = stringify2(value);
+  if (names.size) {
+    const params = [];
+    const statements = [];
+    const values = [];
+    names.forEach((name, thing) => {
+      params.push(name);
+      if (custom.has(thing)) {
+        values.push(
+          /** @type {string} */
+          custom.get(thing)
+        );
+        return;
+      }
+      if (is_primitive(thing)) {
+        values.push(stringify_primitive(thing));
+        return;
+      }
+      const type = get_type(thing);
+      switch (type) {
+        case "Number":
+        case "String":
+        case "Boolean":
+          values.push(`Object(${stringify2(thing.valueOf())})`);
+          break;
+        case "RegExp":
+          values.push(thing.toString());
+          break;
+        case "Date":
+          values.push(`new Date(${thing.getTime()})`);
+          break;
+        case "Array":
+          values.push(`Array(${thing.length})`);
+          thing.forEach((v, i) => {
+            statements.push(`${name}[${i}]=${stringify2(v)}`);
+          });
+          break;
+        case "Set":
+          values.push(`new Set`);
+          statements.push(
+            `${name}.${Array.from(thing).map((v) => `add(${stringify2(v)})`).join(".")}`
+          );
+          break;
+        case "Map":
+          values.push(`new Map`);
+          statements.push(
+            `${name}.${Array.from(thing).map(([k, v]) => `set(${stringify2(k)}, ${stringify2(v)})`).join(".")}`
+          );
+          break;
+        default:
+          values.push(
+            Object.getPrototypeOf(thing) === null ? "Object.create(null)" : "{}"
+          );
+          Object.keys(thing).forEach((key2) => {
+            statements.push(
+              `${name}${safe_prop(key2)}=${stringify2(thing[key2])}`
+            );
+          });
+      }
+    });
+    statements.push(`return ${str}`);
+    return `(function(${params.join(",")}){${statements.join(
+      ";"
+    )}}(${values.join(",")}))`;
+  } else {
+    return str;
+  }
+}
+function get_name(num) {
+  let name = "";
+  do {
+    name = chars[num % chars.length] + name;
+    num = ~~(num / chars.length) - 1;
+  } while (num >= 0);
+  return reserved.test(name) ? `${name}0` : name;
+}
+function escape_unsafe_char(c) {
+  return escaped[c] || c;
+}
+function escape_unsafe_chars(str) {
+  return str.replace(unsafe_chars, escape_unsafe_char);
+}
+function safe_key(key2) {
+  return /^[_$a-zA-Z][_$a-zA-Z0-9]*$/.test(key2) ? key2 : escape_unsafe_chars(JSON.stringify(key2));
+}
+function safe_prop(key2) {
+  return /^[_$a-zA-Z][_$a-zA-Z0-9]*$/.test(key2) ? `.${key2}` : `[${escape_unsafe_chars(JSON.stringify(key2))}]`;
+}
+function stringify_primitive(thing) {
+  if (typeof thing === "string")
+    return stringify_string(thing);
+  if (thing === void 0)
+    return "void 0";
+  if (thing === 0 && 1 / thing < 0)
+    return "-0";
+  const str = String(thing);
+  if (typeof thing === "number")
+    return str.replace(/^(-)?0\./, "$1.");
+  if (typeof thing === "bigint")
+    return thing + "n";
+  return str;
+}
+
+// node_modules/devalue/src/constants.js
+var UNDEFINED = -1;
+var HOLE = -2;
+var NAN = -3;
+var POSITIVE_INFINITY = -4;
+var NEGATIVE_INFINITY = -5;
+var NEGATIVE_ZERO = -6;
+
+// node_modules/devalue/src/stringify.js
+function stringify(value, reducers) {
+  const stringified = [];
+  const indexes = /* @__PURE__ */ new Map();
+  const custom = [];
+  for (const key2 in reducers) {
+    custom.push({ key: key2, fn: reducers[key2] });
+  }
+  const keys = [];
+  let p = 0;
+  function flatten(thing) {
+    if (typeof thing === "function") {
+      throw new DevalueError(`Cannot stringify a function`, keys);
+    }
+    if (indexes.has(thing))
+      return indexes.get(thing);
+    if (thing === void 0)
+      return UNDEFINED;
+    if (Number.isNaN(thing))
+      return NAN;
+    if (thing === Infinity)
+      return POSITIVE_INFINITY;
+    if (thing === -Infinity)
+      return NEGATIVE_INFINITY;
+    if (thing === 0 && 1 / thing < 0)
+      return NEGATIVE_ZERO;
+    const index14 = p++;
+    indexes.set(thing, index14);
+    for (const { key: key2, fn } of custom) {
+      const value2 = fn(thing);
+      if (value2) {
+        stringified[index14] = `["${key2}",${flatten(value2)}]`;
+        return index14;
+      }
+    }
+    let str = "";
+    if (is_primitive(thing)) {
+      str = stringify_primitive2(thing);
+    } else {
+      const type = get_type(thing);
+      switch (type) {
+        case "Number":
+        case "String":
+        case "Boolean":
+          str = `["Object",${stringify_primitive2(thing)}]`;
+          break;
+        case "BigInt":
+          str = `["BigInt",${thing}]`;
+          break;
+        case "Date":
+          const valid = !isNaN(thing.getDate());
+          str = `["Date","${valid ? thing.toISOString() : ""}"]`;
+          break;
+        case "RegExp":
+          const { source, flags } = thing;
+          str = flags ? `["RegExp",${stringify_string(source)},"${flags}"]` : `["RegExp",${stringify_string(source)}]`;
+          break;
+        case "Array":
+          str = "[";
+          for (let i = 0; i < thing.length; i += 1) {
+            if (i > 0)
+              str += ",";
+            if (i in thing) {
+              keys.push(`[${i}]`);
+              str += flatten(thing[i]);
+              keys.pop();
+            } else {
+              str += HOLE;
+            }
+          }
+          str += "]";
+          break;
+        case "Set":
+          str = '["Set"';
+          for (const value2 of thing) {
+            str += `,${flatten(value2)}`;
+          }
+          str += "]";
+          break;
+        case "Map":
+          str = '["Map"';
+          for (const [key2, value2] of thing) {
+            keys.push(
+              `.get(${is_primitive(key2) ? stringify_primitive2(key2) : "..."})`
+            );
+            str += `,${flatten(key2)},${flatten(value2)}`;
+            keys.pop();
+          }
+          str += "]";
+          break;
+        default:
+          if (!is_plain_object(thing)) {
+            throw new DevalueError(
+              `Cannot stringify arbitrary non-POJOs`,
+              keys
+            );
+          }
+          if (Object.getOwnPropertySymbols(thing).length > 0) {
+            throw new DevalueError(
+              `Cannot stringify POJOs with symbolic keys`,
+              keys
+            );
+          }
+          if (Object.getPrototypeOf(thing) === null) {
+            str = '["null"';
+            for (const key2 in thing) {
+              keys.push(`.${key2}`);
+              str += `,${stringify_string(key2)},${flatten(thing[key2])}`;
+              keys.pop();
+            }
+            str += "]";
+          } else {
+            str = "{";
+            let started = false;
+            for (const key2 in thing) {
+              if (started)
+                str += ",";
+              started = true;
+              keys.push(`.${key2}`);
+              str += `${stringify_string(key2)}:${flatten(thing[key2])}`;
+              keys.pop();
+            }
+            str += "}";
+          }
+      }
+    }
+    stringified[index14] = str;
+    return index14;
+  }
+  const index13 = flatten(value);
+  if (index13 < 0)
+    return `${index13}`;
+  return `[${stringified.join(",")}]`;
+}
+function stringify_primitive2(thing) {
+  const type = typeof thing;
+  if (type === "string")
+    return stringify_string(thing);
+  if (thing instanceof String)
+    return stringify_string(thing.toString());
+  if (thing === void 0)
+    return UNDEFINED.toString();
+  if (thing === 0 && 1 / thing < 0)
+    return NEGATIVE_ZERO.toString();
+  if (type === "bigint")
+    return `["BigInt","${thing}"]`;
+  return String(thing);
+}
+
+// .svelte-kit/output/server/index.js
 init_index2();
 var import_cookie2 = __toESM(require_cookie(), 1);
 var set_cookie_parser2 = __toESM(require_set_cookie(), 1);

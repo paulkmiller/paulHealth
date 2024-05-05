@@ -2,7 +2,6 @@ import { c as create_ssr_component, e as escape, a as add_attribute, v as valida
 import { H as Hero } from "../../../chunks/Hero.js";
 import { I as InfoBlock, L as LogoRack, F as Faq } from "../../../chunks/Faq.js";
 import { D as Duplex } from "../../../chunks/Duplex.js";
-import { S as SEOMetaData } from "../../../chunks/SEOMetaData.js";
 import { I as IconBase } from "../../../chunks/IconBase.js";
 const Button_svelte_svelte_type_style_lang = "";
 const css$3 = {
@@ -133,7 +132,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     return `${validate_component(components[item.type] || missing_component, "svelte:component").$$render($$result, Object.assign({}, getComponentData(item)), {}, {})}`;
   })}
 
-  ${validate_component(SEOMetaData, "SEOMetaData").$$render($$result, { data }, {}, {})}`;
+  `;
 });
 export {
   Page as default
