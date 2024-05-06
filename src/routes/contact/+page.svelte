@@ -18,36 +18,6 @@
   let formMessage = ''
   let isError = false
 
-  let images = [];
-
-  onMount(() => {
-    let images = [
-    {
-      url: 'https://images.ctfassets.net/qhzqj9nbcut3/6xqhDbe6eNZtw72EM8aTJq/03ed8b20ada01cd3b471632e760553da/1624503325212.jpeg?fm=webp&q=80',
-      description: 'Image 1',
-    },
-    {
-      url: 'https://images.ctfassets.net/qhzqj9nbcut3/gulVfmDM5kqDvoyokkxUc/58945cc0e726d73c50c4e007f1315f73/ericperakslis.png?fm=webp&q=80',
-      description: 'Image 2',
-    },
-    {
-      url: 'https://images.ctfassets.net/qhzqj9nbcut3/7MChMvhkWDqS1h4s95sPN8/56d0a3bf88d005d350bd21dc0b87a64c/plutoSteve.jpeg?fm=webp&q=80',
-      description: 'Image 3',
-    },
-    {
-      url: 'https://images.ctfassets.net/qhzqj9nbcut3/3MPdd2EMExjErb9IwYhmYB/7c22aeed09a3b8f6a8109092ed6645c5/IMG_0880.jpg?fm=webp&q=80',
-      description: 'Image 4',
-    },
-    {
-      url: 'https://images.ctfassets.net/qhzqj9nbcut3/cOZldwWIoXLBu3To38cDT/ef76ab38ab8643f0d02bf52dd9ef7520/plutoRakesh.png?fm=webp&q=80',
-      description: 'Image 5',
-    },
-    {
-      url: 'https://images.ctfassets.net/qhzqj9nbcut3/75pyneu6JW070E7XExt0Eg/43c57a28351cce6470c843239d8e02cc/plutoRon.png?fm=webp&q=80',
-      description: 'Image 6',
-    },
-  ]
-  })
 
   // Google Play Console 405 Error Fix
   export async function GET() {
@@ -117,18 +87,15 @@
 <Container>
   <Row class="justify-content-center align-items-center justify-items-center pt-5 pb-5">
     <Col csm={12} md={6}>
-      <h1 style="width: fit-content; display: inline-block;">Feel free to say hi.</h1>
-      <p 
-        style="position: absolute; width: fit-content; display: inline-block; color: red; transform: rotate(15deg);"
+      <h1 style="width: fit-content; display: inline-block;">Feel free to say hi. <span 
+        style="position: absolute; width: fit-content; display: inline-block; color: red; transform: rotate(15deg); font-size: 1.25rem;"
         data-aos="fade-in"
         data-aos-delay="500">
         Hi! <span class="wave">👋</span>
-      </p>
+      </span></h1>
+      
     </Col>
     <Col csm={12} md={6}>
-      <!-- {#if formMessage}
-        <p class={isError ? 'error' : 'success'}>{formMessage}</p>
-      {/if} -->
       <form action="/contact" on:submit|preventDefault={submitForm} method="POST" id="contactForm">
         <div class="form-group">
           <label for="paulInputPassword1">Name</label>
@@ -223,7 +190,6 @@
   >
     <div class="left-container">
       <img src="https://images.ctfassets.net/edlwcd8ay884/2BvKT5oEH7IXor9AofvNSs/1f76cba456f15d61751dc779b10d71ea/IMG_20230309_194249_818.jpg" alt="">
-      <!-- <CarouselDefault /> -->
     </div>
     <div class="right-container">
       {#if data.duplexes[0].tagline}
