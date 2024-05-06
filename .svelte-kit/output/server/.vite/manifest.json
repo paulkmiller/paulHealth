@@ -28,7 +28,7 @@
     "src": "Faq.css"
   },
   "Hero.css": {
-    "file": "_app/immutable/assets/Hero.6d73411f.css",
+    "file": "_app/immutable/assets/Hero.cd29bc2b.css",
     "src": "Hero.css"
   },
   "IconBase.css": {
@@ -88,7 +88,7 @@
   },
   "_Hero.js": {
     "css": [
-      "_app/immutable/assets/Hero.6d73411f.css"
+      "_app/immutable/assets/Hero.cd29bc2b.css"
     ],
     "file": "chunks/Hero.js",
     "imports": [

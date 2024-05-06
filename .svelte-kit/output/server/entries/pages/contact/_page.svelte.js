@@ -68,14 +68,12 @@ ${validate_component(Container, "Container").$$render($$result, {}, {}, {
           default: () => {
             return `${validate_component(Col, "Col").$$render($$result, { csm: 12, md: 6 }, {}, {
               default: () => {
-                return `<h1 style="width: fit-content; display: inline-block;" class="svelte-1oataez">Feel free to say hi.</h1>
-      <p style="position: absolute; width: fit-content; display: inline-block; color: red; transform: rotate(15deg);" data-aos="fade-in" data-aos-delay="500" class="svelte-1oataez">Hi! <span class="wave svelte-1oataez">👋</span></p>`;
+                return `<h1 style="width: fit-content; display: inline-block;" class="svelte-1oataez">Feel free to say hi. <span style="position: absolute; width: fit-content; display: inline-block; color: red; transform: rotate(15deg); font-size: 1.25rem;" data-aos="fade-in" data-aos-delay="500">Hi! <span class="wave svelte-1oataez">👋</span></span></h1>`;
               }
             })}
     ${validate_component(Col, "Col").$$render($$result, { csm: 12, md: 6 }, {}, {
               default: () => {
-                return `
-      <form action="/contact" method="POST" id="contactForm"><div class="form-group svelte-1oataez"><label for="paulInputPassword1" class="svelte-1oataez">Name</label>
+                return `<form action="/contact" method="POST" id="contactForm"><div class="form-group svelte-1oataez"><label for="paulInputPassword1" class="svelte-1oataez">Name</label>
           <input type="text" class="form-control svelte-1oataez" id="paulInputPassword1" placeholder="Enter your name..." name="name" required${add_attribute("value", name, 0)}></div>
         <div class="form-group svelte-1oataez"><label for="paulInputEmail1" class="svelte-1oataez">Email address</label>
           <input type="email" class="form-control svelte-1oataez" id="paulInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address..." name="email" required${add_attribute("value", email, 0)}></div>
@@ -109,8 +107,7 @@ ${validate_component(Container, "Container").$$render($$result, {}, {}, {
     }
   })}
 
-<div class="duplex normal-container container svelte-1oataez"><div class="${"duplex-container normal-image " + escape(data.duplexes[0].containerLayout ? "" : "row-reverse", true) + " svelte-1oataez"}"><div class="left-container svelte-1oataez"><img src="https://images.ctfassets.net/edlwcd8ay884/2BvKT5oEH7IXor9AofvNSs/1f76cba456f15d61751dc779b10d71ea/IMG_20230309_194249_818.jpg" alt="">
-      </div>
+<div class="duplex normal-container container svelte-1oataez"><div class="${"duplex-container normal-image " + escape(data.duplexes[0].containerLayout ? "" : "row-reverse", true) + " svelte-1oataez"}"><div class="left-container svelte-1oataez"><img src="https://images.ctfassets.net/edlwcd8ay884/2BvKT5oEH7IXor9AofvNSs/1f76cba456f15d61751dc779b10d71ea/IMG_20230309_194249_818.jpg" alt=""></div>
     <div class="right-container svelte-1oataez">${data.duplexes[0].tagline ? `<p class="tagline svelte-1oataez">${escape(data.duplexes[0].tagline)}</p>` : ``}
       ${data.duplexes[0].headline ? `<h3 class="svelte-1oataez">${validate_component(TextWithLineBreaks, "TextWithLineBreaks").$$render($$result, { inputText: data.duplexes[0].headline }, {}, {})}</h3>` : ``}
       ${data.duplexes[0].bodyText ? `<p class="svelte-1oataez"><!-- HTML_TAG_START -->${data.duplexes[0].bodyText}<!-- HTML_TAG_END --></p>` : ``}
