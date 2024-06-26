@@ -1,4 +1,4 @@
-import { c as create_ssr_component, a as add_attribute, e as escape, v as validate_component } from "../../../../chunks/index3.js";
+import { c as create_ssr_component, h as add_attribute, i as escape, v as validate_component } from "../../../../chunks/index2.js";
 import { D as Duplex } from "../../../../chunks/Duplex.js";
 import { B as ButtonLink } from "../../../../chunks/ButtonLink.js";
 const _page_svelte_svelte_type_style_lang = "";

@@ -10,7 +10,7 @@ return {
 	assets: new Set(["Fonts/PolySans-Bulky.ttf","Fonts/PolySans-Bulky.woff","Fonts/PolySans-Median.ttf","Fonts/PolySans-Median.woff","Fonts/PolySans-Neutral.ttf","Fonts/PolySans-Neutral.woff","Fonts/PolySans-Slim.ttf","Fonts/PolySans-Slim.woff","astronaut.svg","earth.svg","favicon.png","moon.svg","overlay_stars.svg","paul_logo.svg","paul_logoDark.svg","playIconBackground.png","rocket.svg"]),
 	mimeTypes: {".ttf":"font/ttf",".woff":"font/woff",".svg":"image/svg+xml",".png":"image/png"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.c9d31645.js","app":"_app/immutable/entry/app.d67d80ab.js","imports":["_app/immutable/entry/start.c9d31645.js","_app/immutable/chunks/index.5d5a95b7.js","_app/immutable/chunks/singletons.68f964b5.js","_app/immutable/entry/app.d67d80ab.js","_app/immutable/chunks/index.5d5a95b7.js"],"stylesheets":[],"fonts":[]},
+		client: {"start":"_app/immutable/entry/start.fdd5d5ad.js","app":"_app/immutable/entry/app.0b832332.js","imports":["_app/immutable/entry/start.fdd5d5ad.js","_app/immutable/chunks/index.d3addbcb.js","_app/immutable/chunks/singletons.2f37cc61.js","_app/immutable/entry/app.0b832332.js","_app/immutable/chunks/index.d3addbcb.js"],"stylesheets":[],"fonts":[]},
 		nodes: [
 			__memo(() => import('../output/server/nodes/0.js')),
 			__memo(() => import('../output/server/nodes/1.js')),

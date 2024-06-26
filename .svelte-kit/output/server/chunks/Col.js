@@ -1,4 +1,4 @@
-import { c as create_ssr_component, p as compute_rest_props, q as spread, r as escape_object, t as escape_attribute_value } from "./index3.js";
+import { c as create_ssr_component, a as compute_rest_props, b as spread, e as escape_object, d as escape_attribute_value } from "./index2.js";
 import { i as isObject, g as getColumnSizeClass } from "./Row.js";
 const Col = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$restProps = compute_rest_props($$props, ["class", "xs", "sm", "md", "lg", "xl", "xxl"]);

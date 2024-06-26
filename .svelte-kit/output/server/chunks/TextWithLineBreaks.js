@@ -1,4 +1,4 @@
-import { c as create_ssr_component, d as each, a as add_attribute } from "./index3.js";
+import { c as create_ssr_component, f as each, h as add_attribute } from "./index2.js";
 const TextWithLineBreaks = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { inputText = "" } = $$props;
   let segments = inputText.split("<br/>");

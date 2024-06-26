@@ -1,4 +1,4 @@
-import { c as create_ssr_component, d as each, v as validate_component, m as missing_component } from "../../../../chunks/index3.js";
+import { c as create_ssr_component, f as each, v as validate_component, m as missing_component } from "../../../../chunks/index2.js";
 import { D as Duplex } from "../../../../chunks/Duplex.js";
 import { I as InfoBlock, L as LogoRack, F as Faq } from "../../../../chunks/Faq.js";
 import { H as Hero } from "../../../../chunks/Hero.js";

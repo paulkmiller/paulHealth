@@ -41,13 +41,13 @@
     ],
     "file": "chunks/ButtonLink.js",
     "imports": [
-      "_index3.js"
+      "_index2.js"
     ]
   },
   "_Col.js": {
     "file": "chunks/Col.js",
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_Row.js"
     ]
   },
@@ -57,7 +57,7 @@
     ],
     "file": "chunks/Duplex.js",
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_ButtonLink.js",
       "_TextWithLineBreaks.js"
     ]
@@ -68,8 +68,8 @@
     ],
     "file": "chunks/DynamicDuplex.js",
     "imports": [
-      "_index3.js",
       "_index2.js",
+      "_index3.js",
       "_ButtonLink.js"
     ]
   },
@@ -79,7 +79,7 @@
     ],
     "file": "chunks/Faq.js",
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_ButtonLink.js",
       "_stores.js",
       "_Row.js",
@@ -92,7 +92,7 @@
     ],
     "file": "chunks/Hero.js",
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_ButtonLink.js",
       "_TextWithLineBreaks.js"
     ]
@@ -103,19 +103,19 @@
     ],
     "file": "chunks/IconBase.js",
     "imports": [
-      "_index3.js"
+      "_index2.js"
     ]
   },
   "_Row.js": {
     "file": "chunks/Row.js",
     "imports": [
-      "_index3.js"
+      "_index2.js"
     ]
   },
   "_TextWithLineBreaks.js": {
     "file": "chunks/TextWithLineBreaks.js",
     "imports": [
-      "_index3.js"
+      "_index2.js"
     ]
   },
   "_contentful-fetch.js": {
@@ -128,18 +128,18 @@
     "file": "chunks/index.js"
   },
   "_index2.js": {
-    "file": "chunks/index2.js",
-    "imports": [
-      "_index3.js"
-    ]
+    "file": "chunks/index2.js"
   },
   "_index3.js": {
-    "file": "chunks/index3.js"
+    "file": "chunks/index3.js",
+    "imports": [
+      "_index2.js"
+    ]
   },
   "_internal.js": {
     "file": "chunks/internal.js",
     "imports": [
-      "_index3.js"
+      "_index2.js"
     ]
   },
   "_private.js": {
@@ -148,7 +148,7 @@
   "_stores.js": {
     "file": "chunks/stores.js",
     "imports": [
-      "_index3.js"
+      "_index2.js"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/server/index.js": {
@@ -156,7 +156,7 @@
     "imports": [
       "_internal.js",
       "_index.js",
-      "_index2.js"
+      "_index3.js"
     ],
     "isEntry": true,
     "src": "node_modules/@sveltejs/kit/src/runtime/server/index.js"
@@ -171,7 +171,7 @@
     ],
     "file": "entries/pages/_error.svelte.js",
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_ButtonLink.js"
     ],
     "isEntry": true,
@@ -196,24 +196,17 @@
     ],
     "file": "entries/pages/_layout.svelte.js",
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_IconBase.js",
       "_stores.js"
     ],
     "isEntry": true,
     "src": "src/routes/+layout.svelte"
   },
-  "src/routes/+page.css": {
-    "file": "_app/immutable/assets/_page.239c46b0.css",
-    "src": "src/routes/+page.css"
-  },
   "src/routes/+page.svelte": {
-    "css": [
-      "_app/immutable/assets/_page.239c46b0.css"
-    ],
     "file": "entries/pages/_page.svelte.js",
     "imports": [
-      "_index3.js"
+      "_index2.js"
     ],
     "isEntry": true,
     "src": "src/routes/+page.svelte"
@@ -237,7 +230,7 @@
     ],
     "file": "entries/pages/about/_page.svelte.js",
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_Hero.js",
       "_Faq.js",
       "_DynamicDuplex.js",
@@ -274,7 +267,7 @@
     ],
     "file": "entries/pages/contact/_page.svelte.js",
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_Hero.js",
       "_Row.js",
       "_Col.js",
@@ -286,9 +279,6 @@
   },
   "src/routes/contact/+server.js": {
     "file": "entries/endpoints/contact/_server.js",
-    "imports": [
-      "_private.js"
-    ],
     "isEntry": true,
     "src": "src/routes/contact/+server.js"
   },
@@ -312,7 +302,7 @@
     ],
     "file": "entries/pages/home/_page.svelte.js",
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_Hero.js",
       "_IconBase.js",
       "_ButtonLink.js",
@@ -342,7 +332,7 @@
     ],
     "file": "entries/pages/how-it-works/_page.svelte.js",
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_Hero.js",
       "_Faq.js",
       "_Duplex.js",
@@ -370,7 +360,7 @@
     ],
     "file": "entries/pages/legal/_page.svelte.js",
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_Hero.js",
       "_Faq.js",
       "_Duplex.js"
@@ -397,7 +387,7 @@
     ],
     "file": "entries/pages/news/_page.svelte.js",
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_Row.js",
       "_Col.js",
       "_Duplex.js",
@@ -425,7 +415,7 @@
     ],
     "file": "entries/pages/news/_slug_/_page.svelte.js",
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_Duplex.js",
       "_ButtonLink.js"
     ],
@@ -451,7 +441,7 @@
     ],
     "file": "entries/pages/news/all/_page.svelte.js",
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_Row.js",
       "_Col.js",
       "_ButtonLink.js"
@@ -471,7 +461,7 @@
   "src/routes/services/[slug]/+page.svelte": {
     "file": "entries/pages/services/_slug_/_page.svelte.js",
     "imports": [
-      "_index3.js",
+      "_index2.js",
       "_Duplex.js",
       "_Faq.js",
       "_Hero.js"

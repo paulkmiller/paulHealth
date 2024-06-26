@@ -28,7 +28,6 @@
 declare module '$env/static/private' {
 	export const CONTENTFUL_SPACE_ID: string;
 	export const CONTENTFUL_MANAGEMENT_TOKEN: string;
-	export const POSTMARK_ACCESS_TOKEN: string;
 	export const CONTENTFUL_ACCESS_TOKEN: string;
 	export const CONTENTFUL_ENVIRONMENT: string;
 	export const TERM_PROGRAM: string;
@@ -113,7 +112,6 @@ declare module '$env/dynamic/private' {
 	export const env: {
 		CONTENTFUL_SPACE_ID: string;
 		CONTENTFUL_MANAGEMENT_TOKEN: string;
-		POSTMARK_ACCESS_TOKEN: string;
 		CONTENTFUL_ACCESS_TOKEN: string;
 		CONTENTFUL_ENVIRONMENT: string;
 		TERM_PROGRAM: string;

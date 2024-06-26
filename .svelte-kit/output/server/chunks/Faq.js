@@ -1,4 +1,4 @@
-import { c as create_ssr_component, f as subscribe, e as escape, v as validate_component, a as add_attribute, d as each } from "./index3.js";
+import { c as create_ssr_component, p as subscribe, i as escape, v as validate_component, h as add_attribute, f as each } from "./index2.js";
 import { B as ButtonLink } from "./ButtonLink.js";
 import { p as page } from "./stores.js";
 import { C as Container, R as Row } from "./Row.js";

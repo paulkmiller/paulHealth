@@ -1,4 +1,4 @@
-import { c as create_ssr_component, a as add_attribute, e as escape, v as validate_component } from "../../../chunks/index3.js";
+import { c as create_ssr_component, h as add_attribute, i as escape, v as validate_component } from "../../../chunks/index2.js";
 import { H as Hero } from "../../../chunks/Hero.js";
 import { C as Container, R as Row } from "../../../chunks/Row.js";
 import { C as Col } from "../../../chunks/Col.js";

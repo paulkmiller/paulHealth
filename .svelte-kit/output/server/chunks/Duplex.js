@@ -1,4 +1,4 @@
-import { c as create_ssr_component, a as add_attribute, e as escape, v as validate_component } from "./index3.js";
+import { c as create_ssr_component, h as add_attribute, i as escape, v as validate_component } from "./index2.js";
 import { B as ButtonLink } from "./ButtonLink.js";
 import { T as TextWithLineBreaks } from "./TextWithLineBreaks.js";
 const NewsletterInput_svelte_svelte_type_style_lang = "";

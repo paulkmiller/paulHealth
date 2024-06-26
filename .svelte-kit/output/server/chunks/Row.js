@@ -1,4 +1,4 @@
-import { c as create_ssr_component, p as compute_rest_props, q as spread, r as escape_object, t as escape_attribute_value, a as add_attribute } from "./index3.js";
+import { c as create_ssr_component, a as compute_rest_props, b as spread, e as escape_object, d as escape_attribute_value, h as add_attribute } from "./index2.js";
 function isObject(value) {
   const type = typeof value;
   return value != null && (type == "object" || type == "function");

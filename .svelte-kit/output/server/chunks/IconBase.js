@@ -1,4 +1,4 @@
-import { c as create_ssr_component, a as add_attribute, e as escape } from "./index3.js";
+import { c as create_ssr_component, h as add_attribute, i as escape } from "./index2.js";
 const IconBase_svelte_svelte_type_style_lang = "";
 const css = {
   code: "svg.svelte-c8tyih{stroke:currentColor;fill:currentColor;stroke-width:0;width:100%;height:auto;max-height:100%}",

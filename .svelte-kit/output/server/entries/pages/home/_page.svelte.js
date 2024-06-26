@@ -1,4 +1,4 @@
-import { c as create_ssr_component, h as createEventDispatcher, d as each, v as validate_component, e as escape, o as onDestroy, a as add_attribute, m as missing_component } from "../../../chunks/index3.js";
+import { c as create_ssr_component, l as createEventDispatcher, f as each, v as validate_component, i as escape, o as onDestroy, h as add_attribute, m as missing_component } from "../../../chunks/index2.js";
 import { H as Hero } from "../../../chunks/Hero.js";
 /* empty css                                                      */import easyReactive from "easy-reactive";
 import { I as IconBase } from "../../../chunks/IconBase.js";
